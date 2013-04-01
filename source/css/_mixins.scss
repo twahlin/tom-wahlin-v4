@@ -1,0 +1,12 @@
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 768px) { @content; }
+  }
+}
+
+@mixin hide-text {
+	overflow: hidden;
+	height: 0;
+}
+
+$non-mobile-wrap-margin: 2%;
