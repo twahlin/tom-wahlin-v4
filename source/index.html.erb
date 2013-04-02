@@ -8,19 +8,66 @@ title: The Portfolio of Tom Wahlin
 </section>
 
 
+<h1>Friends</h1>
+<ul class="icons-discipline">
+  <% data.fpo.projectType.each do |f| %>
+  <li class="icon-<%= f %>"><%= f %></li>
+  <% end %>
+</ul>
 
 
-
-<section class="project-preview-block">
-	<ul class="project-images project-mobile-3">
-		<li>
-			<div class="mobile-phone"><%= image_tag 'fpo/mobile-screenshot.png', :title => 'this is the title', :alt => 'this is the alt' %></div>	
-		</li>
-		<li>
-			<div class="mobile-phone"><%= image_tag 'fpo/mobile-screenshot.png', :title => 'this is the title', :alt => 'this is the alt' %></div>	
-		</li>
-		<li>
-			<div class="mobile-phone"><%= image_tag 'fpo/mobile-screenshot.png', :title => 'this is the title', :alt => 'this is the alt' %></div>	
-		</li>
-	</ul>
+<section class="project-preview-wrap">
+	<div class="detail-preview">
+		<ul class="icons-discipline">
+			<li class="icon-desktop">Desktop</li>
+			<li class="icon-mobile">Mobile</li>
+			<li class="icon-print">Print</li>
+			<li class="icon-film">Film</li>												
+		</ul>
+		<h3>The Centurion Lounge</h3>
+		<p>Here are the details about the project</p>
+		<a class="cta" href="#">View Project</a>
+	</div>
+	<figure class="image-preview">
+		<ul class="project-images project-mobile">
+			<li>
+				<div class="holder-mobile-phone"><%= image_tag 'fpo/mobile-screenshot.png', :title => 'this is the title', :alt => 'this is the alt' %></div>	
+			</li>
+			<li>
+				<div class="holder-mobile-phone"><%= image_tag 'fpo/mobile-screenshot.png', :title => 'this is the title', :alt => 'this is the alt' %></div>	
+			</li>
+			<li>
+				<div class="holder-mobile-phone"><%= image_tag 'fpo/mobile-screenshot.png', :title => 'this is the title', :alt => 'this is the alt' %></div>	
+			</li>
+		</ul>
+	</figure>
 </section>
+
+<section class="project-preview-wrap">
+	<div class="detail-preview">
+		<ul class="icons-discipline">
+			<li class="icon-desktop">Desktop</li>
+			<li class="icon-mobile">Mobile</li>
+			<li class="icon-print">Print</li>	
+			<li class="icon-film">Film</li>						
+		</ul>
+		<h3>The Centurion Lounge</h3>
+		<p>Here are the details about the project</p>
+		<a class="cta" href="#">View Project</a>
+	</div>
+	<figure class="image-preview">
+		<ul class="project-images project-mobile-desktop">
+			<li>
+				<div class="holder-mobile-phone"><%= image_tag 'fpo/mobile-screenshot.png', :title => 'this is the title', :alt => 'this is the alt' %></div>	
+			</li>
+			<li>
+				<div class="holder-monitor"><%= image_tag 'fpo/desktop-screenshot.jpg', :title => 'this is the title', :alt => 'this is the alt' %></div>	
+			</li>
+		</ul>
+	</figure>
+</section>
+
+
+
+
+

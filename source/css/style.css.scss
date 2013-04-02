@@ -6,7 +6,7 @@ html {
 }
 
 body {
-	
+
 }
 
 /////////////
@@ -31,6 +31,7 @@ body {
 	position: fixed;
 	left: 0;
 	right: 0;
+	z-index: 4;
 	@include box-shadow(0px 1px 0 0 rgba(23,27,47,0.15));
 	@include breakpoint(desktop) {
 		left: $non-mobile-wrap-margin;
@@ -88,6 +89,45 @@ body {
 	}
 }
 
+//////////////////////////
+/// Discipline Icons ///
+///////////////////////
+
+.icons-discipline {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	li {
+		display: block;
+		float: left;
+		padding: 16px 0 0 0;
+		margin: 0 10px 0 0;
+		@include hide-text;
+	}
+	.icon-desktop {
+		background: url(../img/build/icon-desktop.png) no-repeat;
+		@include image-2x("../img/build/icon-desktop@2x.png", 18px, 16px); 
+		width: 18px;
+	}
+	.icon-mobile {
+		background: url(../img/build/icon-phone.png) no-repeat; 
+		@include image-2x("../img/build/icon-phone@2x.png", 10px, 16px); 		
+		width: 10px;
+	}
+	.icon-print {
+		background: url(../img/build/icon-print.png) no-repeat; 
+		@include image-2x("../img/build/icon-print@2x.png", 12px, 16px); 		
+		width: 12px;
+	}
+	.icon-film {
+		background: url(../img/build/icon-film.png) no-repeat; 
+		@include image-2x("../img/build/icon-film@2x.png", 14px, 16px); 		
+		width: 14px;
+	}
+}
+
+
+
 //////////////////
 /// Hero Area ///
 ////////////////
@@ -106,34 +146,71 @@ body {
 /// Content Holders ///
 //////////////////////
 
-.project-images {
-	list-style-type:none;
-	padding: 0;	
-	overflow: hidden;
+.holder-mobile-phone,
+.holder-monitor {
+	background: #171C2F;
+	@include box-shadow(inset 0px 0px 0px 2px rgba(23,28,47,1), inset 0px 0px 0px 4px rgba(252,252,252,0.50));	
+	img {
+		display: block;
+		@include box-shadow(0px 0px 0px 2px rgba(252,252,252,0.30));		
+	}	
 }
 
-
-
-.mobile-phone {
-	background: #171C2F;
+.holder-mobile-phone {
 	border-radius: 30px;
 	padding: 66px 16px;
 	width: 200px;
 	height: 355px;
-	@include box-shadow(inset 0px 0px 0px 2px rgba(23,28,47,1), inset 0px 0px 0px 4px rgba(252,252,252,0.50));
 	img {
-		display: block;
 		height: 355px;
 		width: 200px;
-		@include box-shadow(0px 0px 0px 2px rgba(252,252,252,0.30));
 	}
 }
 
-.project-mobile-3 {
-	background: blue;
+.holder-monitor {
+	border-radius: 15px;
+	padding: 36px;
+	height: 515px;
+	width: 687px;
+	img {
+		height: 515px;
+		width: 687px;
+	}	
+}
+
+
+/////////////////////////
+/// Project Previews ///
+///////////////////////
+
+.project-preview-wrap {
+	background: #F8F8F9;
+	border-bottom: 1px solid #E7E8EA;
+	min-height: 430px;
+	min-width: 800px;
 	position: relative;
-	height: 300px;
-	width: 70%;
+}
+
+//global outer wrap for image sets
+.image-preview {
+	height: 370px;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 30%;
+	overflow: hidden;
+	width: 70%;	
+}
+
+//global inner wrap for image sets
+.project-images {
+	position: relative;
+	margin: 0 auto;
+}
+
+.project-mobile {
+	max-width: 640px;
+	display: block;
 	li {
 		position: absolute;
 		top: 50px;
@@ -151,24 +228,21 @@ body {
 	}
 }
 
-/////////////////////////
-/// Project Previews ///
-///////////////////////
-
-.project-preview-block {
-/*	background: #F8F8F9;*/
-	background: aqua;
-	border-bottom: 1px solid #E7E8EA;
-	min-height: 430px;
-	min-width: 800px;
-	.project-images {
+.project-mobile-desktop {
+	max-width: 660px;
+	display: block;
+	.holder-mobile-phone {
 		position: absolute;
+		left: 0;
+		top: 50px;
+		z-index: 2;
 	}
-}
-
-.mini-test-wrap {
-	position: relative;
-	min-width: 800px;
+	.holder-monitor {
+		position: absolute;
+		left: 20%;
+		top: 0;
+		z-index: 1;
+	}
 }
 
 
