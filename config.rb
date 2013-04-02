@@ -78,19 +78,6 @@ end
 
 ### Customized Below ###
 
-set :markdown_engine, :redcarpet
-set :markdown,  :fenced_code_blocks => true,
-                :autolink => true, 
-                :smartypants => true
-
-# Initializing the blog
-activate :blog do |blog|
-  blog.prefix = "projects"
-  blog.permalink = ":title"
-  blog.layout = "blog"
-  blog.default_extension = ".markdown"
-end
-
 # Custom layout for project pages - these are the main projects in the portfolio
 page "/projects/*", :layout => "projects"
 
