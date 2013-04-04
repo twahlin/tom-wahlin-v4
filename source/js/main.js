@@ -14,39 +14,10 @@ $(document).ready(function() {
 	// 	});
 	// });
 	
-	// dependant on transit js -- spinny nav
-	$('.nav-rotate-up').click(function() {
-		$('.masthead-wrap').addClass("rotated").transition({
-			perspective: '0',
-		  rotateX: '90deg',
-			duration: 250
-		});
-	});
-	
-	$('.nav-rotate-down').click(function() {
-		$('.masthead-wrap').addClass("rotated").transition({
-			perspective: '0',
-		  rotateX: '-90deg',
-			duration: 250
-		});
-	});
-	
-	$('.section-2 .close-nav').click(function() {
-		console.log('here');
-		$('.masthead-wrap').removeClass("rotated").transition({
-			perspective: '0',
-		  rotateX: '-90deg',
-			duration: 250
-		});
-	});
-	
-	$('.section-3 .close-nav').click(function() {
-		console.log('here');
-		$('.masthead-wrap').removeClass("rotated").transition({
-			perspective: '0',
-		  rotateX: '90deg',
-			duration: 250
-		});
+	// dependant on transit js -- nav
+	$('.nav-toggle').click(function () {
+		console.log('here!');
+		$('.masthead').toggleClass('nav-push');
 	});
 	
 	
