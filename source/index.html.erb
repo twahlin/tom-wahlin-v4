@@ -2,10 +2,43 @@
 title: The Portfolio of Tom Wahlin
 ---
 
+
+
+
+
 <!-- Add your site or application content here -->
 <section class="hero">
 	hi
 </section>
+
+
+
+<!-- Blog Testing -->
+<% if paginate %>
+  <p>Page <%= page_number %> of <%= num_pages %></p>
+
+  <% if prev_page %>
+    <p><%= link_to 'Previous page', prev_page %></p>
+  <% end %>
+<% end %>
+
+<% page_articles.each_with_index do |article, i| %>
+  <h3><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h3>
+  <p><%= article.summary %></p>
+<% end %>
+
+<% if paginate %>
+  <% if next_page %>
+    <p><%= link_to 'Next page', next_page %></p>
+  <% end %>
+<% end %>
+
+
+
+
+
+
+
 
 <section class="project-preview-wrap">
 	<div class="detail-preview">
@@ -59,6 +92,6 @@ title: The Portfolio of Tom Wahlin
 </section>
 
 
-
+<!-- TEST -->
 <div style="padding-bottom: 200px;"></div>
 

@@ -17,6 +17,7 @@ body {
 	@include breakpoint(desktop) { 
 		margin: 0 $non-mobile-wrap-margin; 
 	}
+	padding-top: 44px;
 	position: relative;
 	overflow: hidden;
 }
@@ -126,6 +127,9 @@ h2 {
 
 .nav-push {
 	top: 0;
+	@include breakpoint(desktop) { 
+		top: -44px; 
+	}
 }
 
 .nav-push .nav-toggle {
