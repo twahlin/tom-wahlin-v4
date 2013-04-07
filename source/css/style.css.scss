@@ -34,7 +34,18 @@ a, a:visited { color: $link-blue; 	text-decoration: none; }
 	@include proxima-semibold;
 	@include text-shadow(0 1px 1px transparentize($dark-blue, .6));
 	@include border-radius(4px);
-	@include box-shadow(inset 0 -3px 0 0 transparentize($dark-blue, .6));
+	@include box-shadow(inset 0 -3px 0 0 transparentize($dark-blue, .4));
+	@include single-transition(all, 0.2s, ease-out, 0.2s);
+}
+
+.cta:hover {
+	background: transparentize($slate-blue, .1);
+	@include box-shadow(inset 0 -3px 0 0 transparentize($dark-blue, .4), 0 2px 10px transparentize($dark-blue, .7));
+}
+
+.cta:active {
+	padding: 11px 16px 9px 16px;
+	@include box-shadow(inset 0 -1px 0 0 transparentize($dark-blue, .4), 0 2px 10px transparentize($dark-blue, .7));
 }
 
 
@@ -42,113 +53,84 @@ a, a:visited { color: $link-blue; 	text-decoration: none; }
 /// Masthead ///
 ///////////////
 
-/*.masthead {
-	background: #fff;
-	height: 44px;
+h1 {
+	position: absolute;
+	top: 0;
+	left: 20px;
+	padding-top: 38px;
+	width: 46px;
 	top: 44px;
-	position: fixed;
-	left: 0;
-	right: 0;
-	z-index: 4;
-	@include box-shadow(0px 1px 0 0 rgba(23,27,47,0.15));
-	@include breakpoint(desktop) {
-		left: $non-mobile-wrap-margin;
-		right: $non-mobile-wrap-margin;
-		top: 0;
-	}
-	.masthead-wrap {
-		clear: both;
-		height: 44px;
-		color: aqua;
-		position: relative;	
-		width: 100%;
-	}
-	h1 {
-		background: aqua;
-		position: absolute;
-		top: 0;
-		left: 0;
-		@include hide-text;
+	@include breakpoint(desktop) { 
 		left: 50%;
-		margin-left: -50px;
-		padding-top: 100px;
-		width: 100px;
+		margin-left: -23px;
 	}
-	h2 {
-		float: left;
-		color: $dark-blue;
-		display: inline-block;
-		line-height: 44px;
-		font-size: 14px;
-		margin: 0;
-	}
-	ul {
+	a {
+		background: url(../img/build/logo-tom-wahlin.png) no-repeat center;
+		@include image-2x("../img/build/logo-tom-wahlin@2x.png", 46px, 38px);	
 		position: absolute;
-		top: -44px;
-		font-size: 14px;
-		width: 100%;
+		padding-top: 38px;
+		width: 46px;
+		top:0;
+		right: 0;
+		@include hide-text;
+	}
+}
+
+h2 {
+	text-align: center;
+	color: $slate-blue;
+	line-height: 44px;
+	font-size: 16px;
+	margin: 0;
+	a, a:visited {color: $slate-blue;}
+	@include breakpoint(desktop) { 
+		text-align: left;
+		float: left;
+	}
+	span {
+		display: none;
+		@include proxima-regular;
 		@include breakpoint(desktop) {
-			position: relative;
-			float: right;
-			top: 0;
-			line-height: 44px;
-		}
-		li {
-			@include breakpoint(desktop) {
-				float: right;
-				margin: 0 0 0 16px;
-							display: inline-block;
-			}
-			a {
-				display: block;
-				height: 20px;
-				width: 20%;
-			}
+			display: inline;
 		}
 	}
 }
-=
-.masthead:before {
-	content: "";
-	background: #000;
-	height: 44px;
-	width: 100%;
-	top: -44px;
-	display: block;
-	position: absolute;
-}*/
-
-/*.js .masthead {
-	top: 0;
-}*/
 
 .masthead {
-	background: $dark-cream;
+	background: $slate-blue;
 	height: 88px;
 	position: fixed;
+	top: -44px;
 	width: 100%;
 	z-index: 4;
 	position: fixed;
 	left: 0;
 	right: 0;
-}
-
-.js .masthead {
-	top: -44px;
-}
-
-.js .nav-push {
-	top: 0;
+	@include single-transition(all, .2s, ease-in-out);
+	@include breakpoint(desktop) {
+		background: #fff; 
+	}
 }
 
 .nav-toggle {
-	background: aqua;
+	background: url(../img/build/icon-menu.png) no-repeat center;
+	@include image-2x("../img/build/icon-menu@2x.png", 18px, 12px);
 	display: block;
 	position: absolute;
 	bottom: 0;
 	right: 0;
 	height: 44px;
 	width: 44px;
+	@include breakpoint(desktop) { display: none; }
+}
+
+.nav-push {
+	top: 0;
+}
+
+.nav-push .nav-toggle {
+	background: url(../img/build/icon-arrow.png) no-repeat center;
+	@include image-2x("../img/build/icon-arrow@2x.png", 10px, 12px);
 }
 
 .masthead-wrap {
@@ -156,54 +138,87 @@ a, a:visited { color: $link-blue; 	text-decoration: none; }
 	height: 44px;
 	margin: 44px 0 0 0;
 	@include box-shadow(0px 1px 0 0 transparentize($dark-blue, .75), 0px -1px 0 0 transparentize($dark-blue, .75));
+	@include breakpoint(desktop) {
+		margin: 44px $non-mobile-wrap-margin;
+		padding: 0 15px; 
+	}
 	nav {
 		position: absolute;
 		top: 0;
 		height: 30px;
 		width: 100%;
-		a {
-			background: url(../img/fpo/nav-img.png) no-repeat center;
-			@include image-2x("../img/fpo/nav-img@2x.png", 16px, 16px);
-			display: block;
-			padding-top: 44px;
-			width: 20%;
-			float: left;
-			@include hide-text;
+		@include breakpoint(desktop) { 
+			float: right;
+			position: relative; 
+			height: 44px;
+			width: auto;
 		}
+		ul {
+			li {
+				display: block;
+				position: relative;
+				height: 24px;
+				float: left;
+				width: 20%;
+				@include breakpoint(desktop) { 
+					width: auto;
+					float: left;
+					margin-left: 20px;
+				}
+				a {
+					display: block;
+					padding-top: 44px;
+					width: 100%;
+					margin-top: -60px;
+					float: left;
+					@include hide-text;
+					@include breakpoint(desktop) { 
+						position: relative; 
+						width: auto;
+						height: auto;
+						padding: 0;
+						margin: 0;
+						line-height: 44px;
+						width: auto;						
+					}
+				}
+			}
+		li:after {
+			background: transparentize($dark-blue, .9);			
+			content:"";
+			position: absolute;
+			left: -1px;
+			top: 12px;
+			height: 20px;
+			width: 2px;
+			@include breakpoint(desktop) { 
+				display: none;
+			}
+		}
+		li:first-child:after{display: none;}	
+		.nav-dribbble a { background: url(../img/build/icon-dribbble.png) no-repeat center; @include image-2x("../img/build/icon-dribbble@2x.png", 16px, 16px); @include breakpoint(desktop) { background: none; }}
+		.nav-linkedin a { background: url(../img/build/icon-linkedin.png) no-repeat center; @include image-2x("../img/build/icon-linkedin@2x.png", 16px, 16px); @include breakpoint(desktop) { background: none; }}
+		.nav-lastfm a { background: url(../img/build/icon-lastfm.png) no-repeat center; @include image-2x("../img/build/icon-lastfm@2x.png", 20px, 14px); @include breakpoint(desktop) { background: none; }}
+		.nav-twitter a { background: url(../img/build/icon-twitter.png) no-repeat center; @include image-2x("../img/build/icon-twitter@2x.png", 16px, 16px); @include breakpoint(desktop) { background: none; }}
+		.nav-facebook a { background: url(../img/build/icon-facebook.png) no-repeat center; @include image-2x("../img/build/icon-facebook@2x.png", 8px, 16px); @include breakpoint(desktop) { background: none; }}
+		}
+		ul li:nth-child(1) a { @include single-transition(all, .2s, cubic-bezier(0.175, 0.885, 0.320, 1.275)); }
+		ul li:nth-child(2) a { @include single-transition(all, .3s, cubic-bezier(0.175, 0.885, 0.320, 1.275)); }	
+		ul li:nth-child(3) a { @include single-transition(all, .4s, cubic-bezier(0.175, 0.885, 0.320, 1.275)); }
+		ul li:nth-child(4) a { @include single-transition(all, .5s, cubic-bezier(0.175, 0.885, 0.320, 1.275)); }
+		ul li:nth-child(5) a { @include single-transition(all, .6s, cubic-bezier(0.175, 0.885, 0.320, 1.275)); }
+		ul li .nav-open {
+			margin-top: 0;
+		}	
 	}
 }
 
-
-
-//////////////////////////
-/// Discipline Icons ///
-///////////////////////
-
-h1 {
-	background: url(../img/build/logo-tom-wahlin.png) no-repeat center;
-	@include image-2x("../img/build/logo-tom-wahlin@2x.png", 47px, 38px);
-	position: absolute;
+.no-js .masthead {
 	top: 0;
-	left: 20px;
-	@include hide-text;
-	padding-top: 38px;
-	width: 48px;
-	top: 44px;
-	
 }
 
-h2 {
-	text-align: center;
-	color: $dark-blue;
-	line-height: 44px;
-	font-size: 14px;
-	margin: 0;
-	span{
-		display: none;
-		@include breakpoint(desktop) {
-			display: inline;
-		}
-	}
+.no-js .masthead-wrap nav ul li a {
+	margin-top: 0;
 }
 
 //////////////////////////
@@ -244,8 +259,6 @@ h2 {
 	}
 }
 
-
-
 //////////////////
 /// Hero Area ///
 ////////////////
@@ -255,7 +268,7 @@ h2 {
 	display: block;
 	height: 400px;
 	background: red;
-  @include breakpoint(desktop) { 
+	@include breakpoint(desktop) { 
 		background: blue; 
 	}
 }
@@ -310,21 +323,21 @@ h2 {
 }
 
 .project-preview-wrap:nth-child(even)  {
-		background: $dark-cream;
+	background: $dark-cream;
 }
 
 .detail-preview {
-		padding: 40px 0 40px 40px;
-		width: 30%;
-		h3 {
-			color: $dark-blue;
-			line-height: 36px;
-			@include proxima-light;
-			margin: 0 0 18px 0;			
-		}
-		p {
-			margin: 0 0 25px 0;
-		}
+	padding: 40px 0 40px 40px;
+	width: 30%;
+	h3 {
+		color: $dark-blue;
+		line-height: 36px;
+		@include proxima-light;
+		margin: 0 0 18px 0;			
+	}
+	p {
+		margin: 0 0 25px 0;
+	}
 }
 
 //global outer wrap for image sets
@@ -388,20 +401,6 @@ h2 {
 ////////////////////////
 /// Experimentation ///
 //////////////////////
-
-//Example of media query mixin http://css-tricks.com/media-queries-sass-3-2-and-codekit/
-.page-wrap {
-  width: 75%;
-  @include breakpoint(papa-bear) { width: 60%; }
-  @include breakpoint(mama-bear) { width: 80%; }
-  @include breakpoint(baby-bear) { width: 95%; }
-}
-
-// Sprite Maker
-/*@import "img/sprite/*.png";
-@include all-my-icons-sprites;*/
-
-/*image_tag('../img/sprite/*.png')*/
 
 
 

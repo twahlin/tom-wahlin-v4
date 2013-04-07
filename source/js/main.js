@@ -16,8 +16,8 @@ $(document).ready(function() {
 	
 	// dependant on transit js -- nav
 	$('.nav-toggle').click(function () {
-		console.log('here!');
 		$('.masthead').toggleClass('nav-push');
+		$('.masthead-wrap nav ul li a').toggleClass('nav-open');
 	});
 	
 	
