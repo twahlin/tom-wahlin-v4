@@ -1,0 +1,6 @@
+<%
+  # Get all items from projects yml file
+  @portfolio = data.projects.portfolio
+%>
+
+<%= partial 'projects/item', collection: @portfolio %>

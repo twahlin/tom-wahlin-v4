@@ -1,0 +1,26 @@
+portfolio:
+- slug: roven-bashier
+  active: true
+  title: RovenBashier.com
+  categories:
+  - desktop
+  - mobile
+  summary: This is where the summary lives scooby doo
+  heroImageFormat: mobile-desktop
+- slug: open-receipt-match
+  active: true
+  title: BEEGOO
+  categories:
+  - mobile
+  summary: This is where the summary lives beepoo
+  heroImageFormat: mobile
+- slug: TEST
+  active: true
+  title: BEEGOO
+  categories:
+  - desktop
+  - mobile
+  - film
+  - print
+  summary: This is where the summary lives beepoo
+  heroImageFormat: mobile-desktop

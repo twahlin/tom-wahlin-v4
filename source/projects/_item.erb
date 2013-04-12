@@ -1,0 +1,22 @@
+<section class="project-preview-wrap">
+	<div class="detail-preview">
+		<ul class="icons-discipline">
+		  <% item.categories.each do |f| %>
+		  	<li class="icon-<%= f %>"><%= f %></li>
+		  <% end %>		
+		</ul>
+		<h3><%= item.title %></h3>
+		<p><%= item.summary %></p>		
+		<% link_to "/projects/#{item.slug}", class:'cta' do %>View Case Study<% end %>
+	</div>
+	<figure class="image-preview">
+		<ul class="project-images <%= item.heroImageFormat %>">
+			<% @previewImages = Dir.glob("source/img/projects/#{item.slug}/*[^@2x].{png,jpg}") %>
+				<% for previewImage in @previewImages %>
+				<% previewImagePath = previewImage.to_s %>
+				<% previewImagePath = previewImagePath.gsub!('source/', '') %>
+				<li><div><img src="<%= previewImagePath %>" /></div></li>
+			<% end %>
+		</ul>
+	</figure>
+</section>
