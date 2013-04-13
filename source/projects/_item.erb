@@ -10,7 +10,7 @@
 		<% link_to "/projects/#{item.slug}", class:'cta' do %>View Case Study<% end %>
 	</div>
 	<figure class="image-preview">
-		<ul class="project-images <%= item.heroImageFormat %>">
+		<ul class="project-images project-<%= item.heroImageFormat %>">
 			<% @previewImages = Dir.glob("source/img/projects/#{item.slug}/*[^@2x].{png,jpg}") %>
 				<% for previewImage in @previewImages %>
 				<% previewImagePath = previewImage.to_s %>

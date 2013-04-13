@@ -7,7 +7,7 @@ portfolio:
   - mobile
   summary: This is where the summary lives scooby doo
   heroImageFormat: mobile-desktop
-- slug: open-receipt-match
+- slug: open-receiptmatch
   active: true
   title: BEEGOO
   categories:

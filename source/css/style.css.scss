@@ -276,46 +276,41 @@ h2 {
 	height: 400px;
 	background: url(../img/build/hero.jpg) no-repeat 70% center;
 	background-size: 100%;
-	@include breakpoint(desktop) { 
-
-	}
 }
 
 ////////////////////////
 /// Content Holders ///
 //////////////////////
 
-.holder-mobile-phone,
-.holder-monitor {
+/*.holder-mobile-phone {
 	background: $dark-blue;
 	@include box-shadow(inset 0px 0px 0px 2px rgba(23,28,47,1), inset 0px 0px 0px 4px rgba(252,252,252,0.50));	
-	img {
-		display: block;
-		@include box-shadow(0px 0px 0px 2px rgba(252,252,252,0.30));		
-	}	
-}
-
-.holder-mobile-phone {
 	border-radius: 30px;
 	padding: 66px 16px;
 	width: 200px;
 	height: 355px;
 	img {
+		display: block;
+		@include box-shadow(0px 0px 0px 2px rgba(252,252,252,0.30));		
 		height: 355px;
 		width: 200px;
 	}
 }
 
 .holder-monitor {
+	background: $dark-blue;
+	@include box-shadow(inset 0px 0px 0px 2px rgba(23,28,47,1), inset 0px 0px 0px 4px rgba(252,252,252,0.50));	
 	border-radius: 15px;
 	padding: 36px;
 	height: 515px;
 	width: 687px;
 	img {
+		display: block;
+		@include box-shadow(0px 0px 0px 2px rgba(252,252,252,0.30));		
 		height: 515px;
 		width: 687px;
 	}	
-}
+}*/
 
 
 /////////////////////////
@@ -334,7 +329,7 @@ h2 {
 	background: $dark-cream;
 }
 
-.detail-preview {
+/*.detail-preview {
 	padding: 40px 0 40px 40px;
 	width: 30%;
 	h3 {
@@ -346,26 +341,31 @@ h2 {
 	p {
 		margin: 0 0 25px 0;
 	}
+}*/
+
+.detail-preview {
+	padding: 20px;
+	@include breakpoint(tablet) { 
+		padding: 40px;
+		width: 30%;
+	}
+	h3 {
+		color: $dark-blue;
+		line-height: 36px;
+		@include proxima-light;
+		margin: 0 0 18px 0;			
+	}
+	p {
+		margin: 0 0 25px 0;
+	}
 }
 
-//global outer wrap for image sets
-.image-preview {
-	height: 370px;
-	display: block;
-	position: absolute;
-	bottom: 0;
-	left: 35%;
-	overflow: hidden;
-	width: 70%;	
-}
+
 
 //global inner wrap for image sets
-.project-images {
-	position: relative;
-	margin: 0 auto;
-}
 
-.project-mobile {
+
+/*.project-mobile {
 	max-width: 640px;
 	display: block;
 	li {
@@ -383,25 +383,80 @@ h2 {
 		right: 0;
 		z-index: 1;		
 	}
+}*/
+
+///////////////////////////////
+/// Project Preview Images ///
+/////////////////////////////
+
+//global outer wrap for image sets
+.image-preview {
+	height: 185px;
+	display: block;
+	overflow: hidden;
+	@include breakpoint(tablet) { 
+		height: 370px;		
+		position: absolute;
+		bottom: 0;
+		left: 35%;		
+		width: 70%;	
+	}	
+}
+
+//global inner wrap for image sets
+.project-images {
+	position: relative;
+	margin: 0 auto;
 }
 
 .project-mobile-desktop {
-	max-width: 660px;
 	display: block;
-	.holder-mobile-phone {
-		position: absolute;
-		left: 0;
-		top: 50px;
-		z-index: 2;
+	@include breakpoint(tablet) { 
+		max-width: 660px;
 	}
-	.holder-monitor {
+	li:first-child div {
 		position: absolute;
-		left: 20%;
+		left: 20px;
+		top: 25px;
+		z-index: 2;
+		@include holder-mobile-phone;
+		@include breakpoint(tablet) { 
+			left: 0;
+			top: 50px;
+		}		
+	}
+	li:last-child div {
+		position: absolute;
+		left: 10%;
 		top: 0;
 		z-index: 1;
+		@include holder-monitor;
+		@include breakpoint(tablet) { 
+			left: 20%;
+		}						
 	}
 }
 
+.project-mobile {
+	max-width: 640px;
+	display: block;
+	li {
+		position: absolute;
+		top: 50px;
+		z-index: 2;
+		@include holder-mobile-phone;	
+	}
+	li:first-child {
+		left: 50%;
+		margin-left: -116px;
+		top: 0;
+		z-index: 3;
+	}
+	li:last-child {
+		right: 0;
+		z-index: 1;		
+	}
+}
 
 ///////////////
 /// Footer ///
