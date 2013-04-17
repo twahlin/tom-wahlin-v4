@@ -5,9 +5,6 @@ $(document).ready(function() {
 		$('.masthead').toggleClass('nav-push');
 		$('.masthead-wrap nav ul li a').toggleClass('nav-open');
 	});
-	
-	
-	// $('.detail-preview').waypoint('sticky');
 
 	//hide safari bar mobile web
 	window.addEventListener("load",function() {
@@ -17,9 +14,4 @@ $(document).ready(function() {
 			window.scrollTo(0, 1);
 			}, 0);
 		});	
-		
-		
-		
-		
-		
 });

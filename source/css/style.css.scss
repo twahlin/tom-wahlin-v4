@@ -13,6 +13,16 @@ body {
 /*	background: $slate-blue;*/
 }
 
+h3 {
+	line-height: 36px;
+	@include proxima-light;
+	margin: 0 0 18px 0;		
+}
+
+p {
+	margin: 0 0 25px 0;
+}
+
 /////////////
 /// Main ///
 ///////////
@@ -21,11 +31,11 @@ body {
 	@include breakpoint(large) { 
 		margin: 0 $non-mobile-wrap-margin; 
 	}
-	@include breakpoint(xl) { 
-/*		margin: 0 auto; 
-		max-width: 1200px;*/
-/*		border-left: 5px #fff solid;
-		border-right: 5px #fff solid;		*/
+	@include breakpoint(max) { 
+		margin: 0 auto; 
+		max-width: 1600px;
+		border-left: 5px #fff solid;
+		border-right: 5px #fff solid;		
 	}
 	padding-top: 44px;
 	position: relative;
@@ -314,8 +324,10 @@ h2 {
 }
 
 .detail-preview {
+	padding: 20px 20px 40px 20px;
 	max-width: 500px;
 	@include breakpoint(medium) { 
+		padding: 30px;
 		width: 40%;
 		max-width: 260px;
 		float: left;
@@ -324,29 +336,12 @@ h2 {
 		max-width: 500px;
 		width: 30%;
 	}
-	h3 {
-		color: $dark-blue;
-		line-height: 36px;
-		@include proxima-light;
-		margin: 0 0 18px 0;			
-	}
-	p {
-		margin: 0 0 25px 0;
-	}
 	.cta {
 		display: block;
 		text-align: center;
 		@include breakpoint(small) { 
 			display: inline-block;
 		}		
-	}
-}
-
-// separate padding for when there's a feed of images This allows image overflow off screen
-.project-preview-wrap .detail-preview {
-	padding: 20px 20px 40px 20px;
-	@include breakpoint(medium) { 
-		padding: 30px;
 	}
 }
 
@@ -435,29 +430,43 @@ h2 {
 /// Detail Page///
 /////////////////
 
-
-
-
 .detail-page-wrap {
+	clear: both;
 	padding: 20px 20px 40px 20px;
+	background: $dark-cream;
+	border: 1px solid #E7E8EA;	
 	@include breakpoint(medium) { 
 		padding: 30px;
 	}
 }
 
-.project-image-col {
-	width: 100%;
-	@include breakpoint(medium) { 
-		margin-top: 50px;
-		float: right;
-		width: 55%;
+.project-details {
+	max-width: 420px;
+	margin-bottom: 40px;
+	@include breakpoint(large) {
+		position: fixed;
+		float: left;
+		width: 250px;
 	}
+	@include breakpoint(xl) {
+		width: 300px;
+	}	
+	h4 {
+		font-size: 12px;
+		text-transform: uppercase;
+		margin: 0;
+	}
+}
+
+.project-image-col {
 	@include breakpoint(large) { 
-		width: 64%;
+		margin-top: 60px;
+		float: right;
+		width: calc(100% - 290px);		
 	}
 	@include breakpoint(xl) { 
-		width: 65%;
-	}
+		width: calc(100% - 340px);		
+	}	
 	img {
 		display: block;
 		margin-bottom: 20px;
@@ -473,16 +482,6 @@ h2 {
 /////////////
 
 footer {padding: 0 15px}
-
-
-////////////////////
-/// Detail Page ///
-//////////////////
-
-.detail-page-wrap {
-	background: $dark-cream;
-	border: 1px solid #E7E8EA;
-}
 
 
 ///////////////////

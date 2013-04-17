@@ -13,6 +13,9 @@ portfolio:
   - CSS
   - Javascript
   company: Tom Wahlin LLC
+  cta:
+    ctaText: View Live Project
+    ctaLink: http://www.rovenbashier.com/portfolio_2012/
 - slug: open-receiptmatch
   active: true
   title: OPEN ReceiptMatch

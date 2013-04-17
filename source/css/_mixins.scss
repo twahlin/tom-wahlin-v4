@@ -29,6 +29,9 @@ $dark-cream: rgba(248, 248, 248, 1);
   @if $point == xl {
     @media (min-width: 960px) { @content; }
   }
+  @if $point == max {
+    @media (min-width: 1600px) { @content; }
+  }
 }
 
 //Hide Text
@@ -58,7 +61,7 @@ $dark-cream: rgba(248, 248, 248, 1);
 	border-radius: 20px;
 	padding: 44px 10px;
 	@include breakpoint(small) { 
-		@include box-shadow(inset 0px 0px 0px 1px rgba(23,28,47,1), inset 0px 0px 0px 4px rgba(252,252,252,0.50));			
+		@include box-shadow(inset 0px 0px 0px 2px rgba(23,28,47,1), inset 0px 0px 0px 4px rgba(252,252,252,0.50));			
 		border-radius: 30px;
 		padding: 66px 16px;
 	}
