@@ -1,19 +1,32 @@
 portfolio:
 - slug: roven-bashier
   active: true
-  title: RovenBashier.com
+  title: The Portfolio of Roven Bashier
   categories:
   - desktop
   - mobile
-  summary: This is where the summary lives scooby doo
+  summary: Coded an easily editable system for a fellow designer, Roven Bashier. Worked with Roven on how to keep the site easily editable, and create a system that would be able to hold all his work smoothly.
   heroImageFormat: mobile-desktop
+  role: Front-end Development
+  technologyUsed:
+  - XHTML
+  - CSS
+  - Javascript
+  company: Tom Wahlin LLC
 - slug: open-receiptmatch
   active: true
-  title: BEEGOO
+  title: OPEN ReceiptMatch
   categories:
   - mobile
   summary: This is where the summary lives beepoo
   heroImageFormat: mobile
+- slug: basilica-block-party
+  active: true
+  title: Basilica Block Party
+  categories:
+  - print
+  summary: This is where the summary lives beepoo
+  heroImageFormat: default  
 - slug: TEST
   active: true
   title: BEEGOO

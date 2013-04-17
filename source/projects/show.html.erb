@@ -1,0 +1,54 @@
+
+<%
+item = @item
+
+content_for(:title)       { h strip_tags("#{item.title}: #{item.project} | space150 work") }
+content_for(:description) { h strip_tags(smartypants(markdownify(item.body))) }
+content_for(:keywords)    { h strip_tags("#{item.client}, #{item.project}, #{item.services}") }
+content_for :title, "Title for specific page"
+%>
+
+<% if item.vimeo %>
+	<% end %>
+
+	<section class="detail-page-wrap clearfix">
+		<div class="detail-preview"> 
+			<div class="sticky-deets"> <!-- Sticky deets for sticky waypoint -->
+				<ul class="icons-discipline">
+				<% item.categories.each do |f| %>
+				<li class="icon-<%= f %>"><%= f %></li>
+				<% end %>		
+			</ul>
+			<h3><%= item.title %></h3>
+			<p><%= item.summary %></p>
+			<% if item.role %>
+			<h4>Role</h4>
+			<%= item.role %>
+			<% end %>
+
+			<% if item.technologyUsed %>
+			<h4>Technology Used</h4>
+			<% item.technologyUsed.each do |tech| %>
+			<li><%= tech %></li>
+			<% end %>
+			<% end %>
+
+			<% if item.company %>
+			<h4>Company</h4>
+			<%= item.company %>
+			<% end %>		
+		</div>
+	</div>
+
+
+
+	<div class="project-image-col clearfix">
+	<%= image_tag 'fpo/desktop-screenshot.jpg', :title => 'RovenBashier.com Desktop Layout', :alt => 'RovenBashier.com Desktop Layout' %>
+	<p>This is a small blurb Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut libero est. Proin mollis suscipit nunc, et accumsan magna fermentum eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut libero est. </p>
+	<%= image_tag 'fpo/desktop-screenshot.jpg', :title => 'RovenBashier.com Desktop Layout', :alt => 'RovenBashier.com Desktop Layout' %>
+	<%= image_tag 'fpo/desktop-screenshot.jpg', :title => 'RovenBashier.com Desktop Layout', :alt => 'RovenBashier.com Desktop Layout' %>
+</div>
+</section>
+
+
+

@@ -1,4 +1,6 @@
 @import "compass";
+@import "normalize";
+@import "main";
 @import "mixins";
 
 html {
@@ -8,7 +10,7 @@ html {
 }
 
 body {
-
+/*	background: $slate-blue;*/
 }
 
 /////////////
@@ -16,8 +18,14 @@ body {
 ///////////
 
 .wrap-main {
-	@include breakpoint(desktop) { 
+	@include breakpoint(large) { 
 		margin: 0 $non-mobile-wrap-margin; 
+	}
+	@include breakpoint(xl) { 
+/*		margin: 0 auto; 
+		max-width: 1200px;*/
+/*		border-left: 5px #fff solid;
+		border-right: 5px #fff solid;		*/
 	}
 	padding-top: 44px;
 	position: relative;
@@ -63,7 +71,7 @@ h1 {
 	padding-top: 38px;
 	width: 46px;
 	top: 44px;
-	@include breakpoint(desktop) { 
+	@include breakpoint(large) { 
 		left: 50%;
 		margin-left: -23px;
 	}
@@ -85,15 +93,18 @@ h2 {
 	line-height: 44px;
 	font-size: 16px;
 	margin: 0;
+	@include breakpoint(large) { 
+		font-size: 14px;
+	}
 	a, a:visited {color: $slate-blue;}
-	@include breakpoint(desktop) { 
+	@include breakpoint(large) { 
 		text-align: left;
 		float: left;
 	}
 	span {
 		display: none;
 		@include proxima-regular;
-		@include breakpoint(desktop) {
+		@include breakpoint(large) {
 			display: inline;
 		}
 	}
@@ -110,7 +121,7 @@ h2 {
 	left: 0;
 	right: 0;
 	@include single-transition(all, .2s, ease-in-out);
-	@include breakpoint(desktop) {
+	@include breakpoint(large) {
 		background: #fff; 
 	}
 }
@@ -125,12 +136,12 @@ h2 {
 	right: 0;
 	height: 44px;
 	width: 44px;
-	@include breakpoint(desktop) { display: none; }
+	@include breakpoint(large) { display: none; }
 }
 
 .nav-push {
 	top: 0;
-	@include breakpoint(desktop) { 
+	@include breakpoint(large) { 
 		top: -44px; 
 	}
 }
@@ -145,7 +156,7 @@ h2 {
 	height: 44px;
 	margin: 44px 0 0 0;
 	@include box-shadow(0px 1px 0 0 transparentize($dark-blue, .75), 0px -1px 0 0 transparentize($dark-blue, .75));
-	@include breakpoint(desktop) {
+	@include breakpoint(large) {
 		margin: 44px $non-mobile-wrap-margin;
 		padding: 0 15px; 
 	}
@@ -154,7 +165,8 @@ h2 {
 		top: 0;
 		height: 30px;
 		width: 100%;
-		@include breakpoint(desktop) { 
+		font-size: 14px;
+		@include breakpoint(large) { 
 			float: right;
 			position: relative; 
 			height: 44px;
@@ -167,7 +179,7 @@ h2 {
 				height: 24px;
 				float: left;
 				width: 20%;
-				@include breakpoint(desktop) { 
+				@include breakpoint(large) { 
 					width: auto;
 					float: left;
 					margin-left: 20px;
@@ -179,7 +191,7 @@ h2 {
 					margin-top: -60px;
 					float: left;
 					@include hide-text;
-					@include breakpoint(desktop) { 
+					@include breakpoint(large) { 
 						position: relative; 
 						width: auto;
 						height: auto;
@@ -198,16 +210,16 @@ h2 {
 			top: 12px;
 			height: 20px;
 			width: 2px;
-			@include breakpoint(desktop) { 
+			@include breakpoint(large) { 
 				display: none;
 			}
 		}
 		li:first-child:after{display: none;}	
-		.nav-dribbble a { background: url(../img/build/icon-dribbble.png) no-repeat center; @include image-2x("../img/build/icon-dribbble@2x.png", 16px, 16px); @include breakpoint(desktop) { background: none; }}
-		.nav-linkedin a { background: url(../img/build/icon-linkedin.png) no-repeat center; @include image-2x("../img/build/icon-linkedin@2x.png", 16px, 16px); @include breakpoint(desktop) { background: none; }}
-		.nav-lastfm a { background: url(../img/build/icon-lastfm.png) no-repeat center; @include image-2x("../img/build/icon-lastfm@2x.png", 20px, 14px); @include breakpoint(desktop) { background: none; }}
-		.nav-twitter a { background: url(../img/build/icon-twitter.png) no-repeat center; @include image-2x("../img/build/icon-twitter@2x.png", 16px, 16px); @include breakpoint(desktop) { background: none; }}
-		.nav-facebook a { background: url(../img/build/icon-facebook.png) no-repeat center; @include image-2x("../img/build/icon-facebook@2x.png", 8px, 16px); @include breakpoint(desktop) { background: none; }}
+		.nav-dribbble a { background: url(../img/build/icon-dribbble.png) no-repeat center; @include image-2x("../img/build/icon-dribbble@2x.png", 16px, 16px); @include breakpoint(large) { background: none; }}
+		.nav-linkedin a { background: url(../img/build/icon-linkedin.png) no-repeat center; @include image-2x("../img/build/icon-linkedin@2x.png", 16px, 16px); @include breakpoint(large) { background: none; }}
+		.nav-lastfm a { background: url(../img/build/icon-lastfm.png) no-repeat center; @include image-2x("../img/build/icon-lastfm@2x.png", 20px, 14px); @include breakpoint(large) { background: none; }}
+		.nav-twitter a { background: url(../img/build/icon-twitter.png) no-repeat center; @include image-2x("../img/build/icon-twitter@2x.png", 16px, 16px); @include breakpoint(large) { background: none; }}
+		.nav-facebook a { background: url(../img/build/icon-facebook.png) no-repeat center; @include image-2x("../img/build/icon-facebook@2x.png", 8px, 16px); @include breakpoint(large) { background: none; }}
 		}
 		ul li:nth-child(1) a { @include single-transition(all, .2s, cubic-bezier(0.175, 0.885, 0.320, 1.275)); }
 		ul li:nth-child(2) a { @include single-transition(all, .3s, cubic-bezier(0.175, 0.885, 0.320, 1.275)); }	
@@ -236,7 +248,10 @@ h2 {
 	clear: both;
 	display: inline-block;
 	overflow: hidden;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
+	@include breakpoint(large) {
+		margin-bottom: 40px;
+	}
 	li {
 		display: block;
 		float: left;
@@ -278,40 +293,6 @@ h2 {
 	background-size: 100%;
 }
 
-////////////////////////
-/// Content Holders ///
-//////////////////////
-
-/*.holder-mobile-phone {
-	background: $dark-blue;
-	@include box-shadow(inset 0px 0px 0px 2px rgba(23,28,47,1), inset 0px 0px 0px 4px rgba(252,252,252,0.50));	
-	border-radius: 30px;
-	padding: 66px 16px;
-	width: 200px;
-	height: 355px;
-	img {
-		display: block;
-		@include box-shadow(0px 0px 0px 2px rgba(252,252,252,0.30));		
-		height: 355px;
-		width: 200px;
-	}
-}
-
-.holder-monitor {
-	background: $dark-blue;
-	@include box-shadow(inset 0px 0px 0px 2px rgba(23,28,47,1), inset 0px 0px 0px 4px rgba(252,252,252,0.50));	
-	border-radius: 15px;
-	padding: 36px;
-	height: 515px;
-	width: 687px;
-	img {
-		display: block;
-		@include box-shadow(0px 0px 0px 2px rgba(252,252,252,0.30));		
-		height: 515px;
-		width: 687px;
-	}	
-}*/
-
 
 /////////////////////////
 /// Project Previews ///
@@ -320,33 +301,27 @@ h2 {
 .project-preview-wrap {
 	background: $light-cream;
 	border-bottom: 1px solid #E7E8EA;
-	min-height: 430px;
-	min-width: 800px;
+	border-left: 1px solid #E7E8EA;
+	border-right: 1px solid #E7E8EA;	
 	position: relative;
+	@include breakpoint(medium) { 
+		min-height: 430px;
+	}
 }
 
 .project-preview-wrap:nth-child(even)  {
 	background: $dark-cream;
 }
 
-/*.detail-preview {
-	padding: 40px 0 40px 40px;
-	width: 30%;
-	h3 {
-		color: $dark-blue;
-		line-height: 36px;
-		@include proxima-light;
-		margin: 0 0 18px 0;			
-	}
-	p {
-		margin: 0 0 25px 0;
-	}
-}*/
-
 .detail-preview {
-	padding: 20px;
-	@include breakpoint(tablet) { 
-		padding: 40px;
+	max-width: 500px;
+	@include breakpoint(medium) { 
+		width: 40%;
+		max-width: 260px;
+		float: left;
+	}
+	@include breakpoint(xl) { 
+		max-width: 500px;
 		width: 30%;
 	}
 	h3 {
@@ -358,49 +333,42 @@ h2 {
 	p {
 		margin: 0 0 25px 0;
 	}
+	.cta {
+		display: block;
+		text-align: center;
+		@include breakpoint(small) { 
+			display: inline-block;
+		}		
+	}
 }
 
-
-
-//global inner wrap for image sets
-
-
-/*.project-mobile {
-	max-width: 640px;
-	display: block;
-	li {
-		position: absolute;
-		top: 50px;
-		z-index: 2;
+// separate padding for when there's a feed of images This allows image overflow off screen
+.project-preview-wrap .detail-preview {
+	padding: 20px 20px 40px 20px;
+	@include breakpoint(medium) { 
+		padding: 30px;
 	}
-	li:first-child {
-		left: 50%;
-		margin-left: -116px;
-		top: 0;
-		z-index: 3;
-	}
-	li:last-child {
-		right: 0;
-		z-index: 1;		
-	}
-}*/
-
-///////////////////////////////
-/// Project Preview Images ///
-/////////////////////////////
+}
 
 //global outer wrap for image sets
 .image-preview {
-	height: 185px;
+	height: 200px;
 	display: block;
 	overflow: hidden;
-	@include breakpoint(tablet) { 
+	padding: 0 20px;
+	@include breakpoint(small) { 
+		height: 300px;
+	}
+	@include breakpoint(medium) { 
 		height: 370px;		
 		position: absolute;
 		bottom: 0;
-		left: 35%;		
-		width: 70%;	
+		left: 310px;		
+		width: 70%;
 	}	
+	@include breakpoint(xl) { 
+		left: 35%;
+	}
 }
 
 //global inner wrap for image sets
@@ -410,64 +378,118 @@ h2 {
 }
 
 .project-mobile-desktop {
-	display: block;
-	@include breakpoint(tablet) { 
-		max-width: 660px;
+	li div {
+		position: absolute;
 	}
 	li:first-child div {
-		position: absolute;
-		left: 20px;
-		top: 25px;
-		z-index: 2;
+		top: 30px;
 		@include holder-mobile-phone;
-		@include breakpoint(tablet) { 
-			left: 0;
+		z-index: 2;	
+		@include breakpoint(small) { 
 			top: 50px;
-		}		
+		}	
 	}
 	li:last-child div {
-		position: absolute;
-		left: 10%;
-		top: 0;
+		left: 20%;
 		z-index: 1;
-		@include holder-monitor;
-		@include breakpoint(tablet) { 
-			left: 20%;
-		}						
+		@include holder-monitor;				
 	}
 }
 
 .project-mobile {
 	max-width: 640px;
-	display: block;
-	li {
+	li div {
 		position: absolute;
-		top: 50px;
+		top: 30px;
 		z-index: 2;
 		@include holder-mobile-phone;	
+		@include breakpoint(small) { 
+			top: 50px;
+		}
 	}
-	li:first-child {
+	li:first-child div {
 		left: 50%;
-		margin-left: -116px;
+		margin-left: -77.5px;
 		top: 0;
 		z-index: 3;
+		@include breakpoint(small) { 
+			margin-left: -116px;
+		}		
 	}
-	li:last-child {
+	li:last-child div {
 		right: 0;
 		z-index: 1;		
+	}
+}
+
+.project-default{
+	li div img {
+		display: block;
+		width: 100%;
+		max-width: 640px;
+		margin: 0 auto;
+	}
+}
+
+///////////////////
+/// Detail Page///
+/////////////////
+
+
+
+
+.detail-page-wrap {
+	padding: 20px 20px 40px 20px;
+	@include breakpoint(medium) { 
+		padding: 30px;
+	}
+}
+
+.project-image-col {
+	width: 100%;
+	@include breakpoint(medium) { 
+		margin-top: 50px;
+		float: right;
+		width: 55%;
+	}
+	@include breakpoint(large) { 
+		width: 64%;
+	}
+	@include breakpoint(xl) { 
+		width: 65%;
+	}
+	img {
+		display: block;
+		margin-bottom: 20px;
+		width: 100%;
+	}
+	p {
+		margin: 0 0 20px 0;
 	}
 }
 
 ///////////////
 /// Footer ///
 /////////////
+
 footer {padding: 0 15px}
 
 
-////////////////////////
-/// Experimentation ///
-//////////////////////
+////////////////////
+/// Detail Page ///
+//////////////////
+
+.detail-page-wrap {
+	background: $dark-cream;
+	border: 1px solid #E7E8EA;
+}
 
 
+///////////////////
+/// sticky nav ///
+/////////////////
 
+.stuck {
+	position: fixed;
+}
 

@@ -17,11 +17,17 @@ $dark-cream: rgba(248, 248, 248, 1);
 
 //Media Queries
 @mixin breakpoint($point) {
-  @if $point == tablet {
+  @if $point == small {
     @media (min-width: 480px) { @content; }
   }
-  @if $point == desktop {
+  @if $point == medium {
+    @media (min-width: 640px) { @content; }
+  }
+  @if $point == large {
     @media (min-width: 800px) { @content; }
+  }
+  @if $point == xl {
+    @media (min-width: 960px) { @content; }
   }
 }
 
@@ -49,9 +55,9 @@ $dark-cream: rgba(248, 248, 248, 1);
 @mixin holder-mobile-phone {
 	background: $dark-blue;
 	@include box-shadow(inset 0px 0px 0px 1px rgba(23,28,47,1), inset 0px 0px 0px 2px rgba(252,252,252,0.50));	
-	border-radius: 15px;
-	padding: 33px 8px;
-	@include breakpoint(tablet) { 
+	border-radius: 20px;
+	padding: 44px 10px;
+	@include breakpoint(small) { 
 		@include box-shadow(inset 0px 0px 0px 1px rgba(23,28,47,1), inset 0px 0px 0px 4px rgba(252,252,252,0.50));			
 		border-radius: 30px;
 		padding: 66px 16px;
@@ -59,9 +65,9 @@ $dark-cream: rgba(248, 248, 248, 1);
 	img {
 		display: block;
 		@include box-shadow(0px 0px 0px 1px rgba(252,252,252,0.30));		
-		height: 178px;
-		width: 100px;
-		@include breakpoint(tablet) { 
+		height: 237px;
+		width: 134px;
+		@include breakpoint(small) { 
 			@include box-shadow(0px 0px 0px 2px rgba(252,252,252,0.30));					
 			height: 355px;
 			width: 200px;
@@ -72,9 +78,9 @@ $dark-cream: rgba(248, 248, 248, 1);
 @mixin holder-monitor {
 	background: $dark-blue;
 	@include box-shadow(inset 0px 0px 0px 1px rgba(23,28,47,1), inset 0px 0px 0px 2px rgba(252,252,252,0.50));	
-	border-radius: 7px;
-	padding: 18px;
-	@include breakpoint(tablet) { 
+	border-radius: 10px;
+	padding: 24px;
+	@include breakpoint(small) { 
 		@include box-shadow(inset 0px 0px 0px 2px rgba(23,28,47,1), inset 0px 0px 0px 4px rgba(252,252,252,0.50));			
 		border-radius: 15px;
 		padding: 36px;
@@ -82,9 +88,9 @@ $dark-cream: rgba(248, 248, 248, 1);
 	img {
 		display: block;
 		@include box-shadow(0px 0px 0px 2px rgba(252,252,252,0.30));		
-		height: 258px;
-		width: 344px;
-		@include breakpoint(tablet) { 
+		height: 343px;
+		width: 458px;
+		@include breakpoint(small) { 
 			@include box-shadow(0px 0px 0px 2px rgba(252,252,252,0.30));		
 			height: 515px;
 			width: 687px;
