@@ -459,6 +459,7 @@ h2 {
 }
 
 .project-image-col {
+	max-width: 1024px;
 	@include breakpoint(large) { 
 		margin-top: 60px;
 		float: right;
@@ -469,11 +470,18 @@ h2 {
 	}	
 	img {
 		display: block;
-		margin-bottom: 20px;
+		margin: 0 0 20px 0;
 		width: 100%;
+		@include breakpoint(large) { 
+			margin: 0 0 40px 0;
+		}
 	}
 	p {
 		margin: 0 0 20px 0;
+		@include breakpoint(large) { 
+			margin: 0 0 40px 0;
+			max-width: 600px;
+		}
 	}
 }
 
