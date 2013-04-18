@@ -11,10 +11,10 @@
 	</div>
 	<figure class="image-preview">
 		<ul class="project-images project-<%= item.heroImageFormat %>">
-			<% @previewImages = Dir.glob("source/img/projects/#{item.slug}/hero-preview/*[^@2x].{png,jpg}") %>
+			<% @previewImages = Dir.glob("source/img/projects/#{item.slug}/hero-preview/*[x].{png,jpg,gif}") %>
 				<% for previewImage in @previewImages %>
 				<% previewImagePath = previewImage.to_s %>
-				<% previewImagePath = previewImagePath.gsub!('source/', '') %>
+				<% previewImagePath = previewImagePath.gsub!('source', '') %>
 				<li><div><img src="<%= previewImagePath %>" /></div></li>
 			<% end %>
 		</ul>
