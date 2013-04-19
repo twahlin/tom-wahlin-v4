@@ -1,4 +1,19 @@
 portfolio:
+- slug: centurion-lounge
+  active: true
+  title: The Centurion Lounge
+  categories:
+  - desktop
+  - mobile
+  summary: Leveraged a mobile-first approach to inform American Express Cardmembers about a new series of new airport lounges opening around the US.
+  heroImageFormat: mobile-desktop
+  role: Design
+  technologyUsed:
+  - Photoshop
+  company: space150
+  cta:
+    ctaText: View Live Project
+    ctaLink: http://thecenturionlounge.com/
 - slug: roven-bashier
   active: true
   title: The Portfolio of Roven Bashier

@@ -7,7 +7,13 @@ $(document).ready(function() {
 	});
 	
 	// responsive images, also @2x
-	$.fn.imageSwap({imageContainer: '.img-project', breakpoints: [320,321,960]})
+	$.fn.imageSwap({imageContainer: '.img-project', loadBestAvailable: true, monitorPixelDensity: true, breakpoints: [320,321,960]})
+	$.fn.imageSwap({imageContainer: '.img-hero-preview', loadBestAvailable: true, monitorPixelDensity: true, breakpoints: [320,480]})
+	
+	
+	
+	
+	
 
 	//hide safari bar mobile web - this should be edited, not great with mobile chrome
 	window.addEventListener("load",function() {

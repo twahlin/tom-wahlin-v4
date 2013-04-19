@@ -40,10 +40,7 @@ title:
 		<% @detailImages = Dir.glob("source/img/projects/#{item.slug}/detail/*[^x].{png}") %>
 			<% for detailImage in @detailImages %>
 			<% detailImagePath = detailImage.to_s %>
-			<% detailImagePath = detailImagePath.gsub!('source/img/projects/', '') %>
-			<% detailImagePath = detailImagePath.gsub!(item.slug, '') %>
-			<% detailImagePath = detailImagePath.gsub!('/detail/', '') %>
-			<% detailImagePath = detailImagePath.chomp(".png")   %>
+			<% detailImagePath = detailImagePath.gsub!('source/img/projects/', '').gsub!(item.slug, '').gsub!('/detail/', '').chomp(".png") %>
 			<% if detailImagePath.include? 'lg-' %>
 				<% detailImagePath = detailImagePath.gsub!('lg-', '') %>	
 				<img src="/img/projects/<%= item.slug %>/detail/<%= detailImagePath %>.png" class="img-project" srcset="
@@ -57,14 +54,6 @@ title:
 			<% end %>
 		<% end %>
 		
-		<!-- <img src="../img/fpo/responsive-fpo.png" class="img-project" srcset="
-			../img/fpo/sm-responsive-fpo.png 320w, 
-		  ../img/fpo/sm-responsive-fpo@2x.png 320w 2x,
-			../img/fpo/responsive-fpo.png 321w, 
-		  ../img/fpo/responsive-fpo@2x.png 321w 2x,
-			../img/fpo/lg-responsive-fpo.png 960w, 
-		  ../img/fpo/lg-responsive-fpo@2x.png 960w 2x" 
-		/> -->
 	<%= image_tag 'fpo/desktop-screenshot.jpg', :title => 'RovenBashier.com Desktop Layout', :alt => 'RovenBashier.com Desktop Layout' %>
 	<p>This is a small blurb Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut libero est. Proin mollis suscipit nunc, et accumsan magna fermentum eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut libero est. </p>
 	<%= image_tag 'fpo/desktop-screenshot.jpg', :title => 'RovenBashier.com Desktop Layout', :alt => 'RovenBashier.com Desktop Layout' %>
