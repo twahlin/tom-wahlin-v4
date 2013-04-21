@@ -31,27 +31,97 @@ portfolio:
   cta:
     ctaText: View Live Project
     ctaLink: http://www.rovenbashier.com/portfolio_2012/
-- slug: open-receiptmatch
+- slug: vente-privee
   active: true
-  title: OPEN ReceiptMatch
+  title: vente-privee
+  categories:
+  - desktop
+  summary: In France, vente-privee.com is very popular. The French version of this site was re-imagined for the US market. The immersive design strays from traditional sale-driven sites, and allows each brand to shine.
+  heroImageFormat: desktop
+  role: Design and HTML/CSS Prototyping
+  technologyUsed:
+  - Photoshop
+  - XHTML
+  - CSS
+  - Javascript
+  company: space150
+  cta:
+    ctaText: View Live Project
+    ctaLink: https://us.venteprivee.com/main/ 
+- slug: 3m-informatics
+  active: true
+  title: 3M Informatics
+  categories:
+  - desktop
+  summary: 3M is a leader in innovation. A user-friendly interface was created for a complex project that include a lot of data that needed to be analyzed and organized.
+  heroImageFormat: desktop
+  role: Design and HTML/CSS Prototyping
+  technologyUsed:
+  - Photoshop
+  - XHTML
+  - CSS
+  - Javascript
+  company: space150
+- slug: receipt-match
+  active: true
+  title: Receipt Match
   categories:
   - mobile
-  summary: This is where the summary lives beepoo
+  summary: Helped American Express iterate on their ReceiptMatch App and provided functionality recommendations based on industry standards and user feedback. Provided the tech team at Amex with assets and specifications for iOS and Android.
   heroImageFormat: mobile
+  role: Design and HTML/CSS Prototyping
+  technologyUsed:
+  - Photoshop
+  - XHTML
+  - CSS
+  - Javascript
+  company: space150
+  cta:
+    ctaText: View App Landing Page
+    ctaLink: http://www.americanexpress.com/us/small-business/openhome/receiptmatch 
 - slug: basilica-block-party
   active: true
   title: Basilica Block Party
   categories:
   - print
-  summary: This is where the summary lives beepoo
-  heroImageFormat: default  
-- slug: TEST
+  summary: Created a poster advertising campaign where each style of music was unique. Concepted and created logo for Twin Cities Metro.
+  heroImageFormat: default
+  role: Design
+  technologyUsed:
+  - InDesign
+  - Illustrator
+- slug: space150-v28
   active: true
-  title: BEEGOO
+  title: space150 Version 28
   categories:
   - desktop
   - mobile
-  - film
-  - print
-  summary: This is where the summary lives beepoo
+  summary: space150 re-creates their brand from the ground up every 150 days. Version 28 features include a responsive layout and an updated way of representing space150 as a company online.
   heroImageFormat: mobile-desktop
+  role: Design and HTML/CSS
+  technologyUsed:
+  - Photoshop
+  - XHTML
+  - CSS
+  - Javascript
+  company: space150
+  cta:
+    ctaText: View Live Site
+    ctaLink: http://v28.space150.com/
+- slug: is-your-child-ready
+  active: true
+  title: Is Your Child Ready?
+  categories:
+  - desktop
+  summary: Worked with Fallon to develop a website that prepares children for kindergarten.
+  heroImageFormat: desktop  
+  role: HTML/CSS
+  technologyUsed:
+  - Photoshop
+  - XHTML
+  - CSS
+  - Javascript
+  company: The Nerdery
+  cta:
+    ctaText: View Live Site
+    ctaLink: http://www.isyourchildready.com/

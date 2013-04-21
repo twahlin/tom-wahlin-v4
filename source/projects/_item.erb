@@ -11,24 +11,12 @@
 	</div>
 	<figure class="image-preview">
 		<ul class="project-images project-<%= item.heroImageFormat %>">
-			<% @previewImages = Dir.glob("source/img/projects/#{item.slug}/hero-preview/*[^x].{png}") %>
+			<% @previewImages = Dir.glob("source/img/projects/#{item.slug}/hero-preview/*.{png}") %>
 				<% for previewImage in @previewImages %>
 				<% previewImagePath = previewImage.to_s %>
 				<% previewImagePath = previewImagePath.gsub!('source/img/projects/', '').gsub!(item.slug, '').gsub!('/hero-preview/', '').chomp(".png") %>				
-					<% if previewImagePath.include? 'lg-' %>
-						<% previewImagePath = previewImagePath.gsub!('lg-', '') %>	
-						<li><div><img src="/img/projects/<%= item.slug %>/hero-preview/<%= previewImagePath %>.png" class="img-hero-preview" srcset="
-							/img/projects/<%= item.slug %>/hero-preview/<%= previewImagePath %>.png 320w,
-							/img/projects/<%= item.slug %>/hero-preview/<%= previewImagePath %>@2x.png 320w 2x, 
-							/img/projects/<%= item.slug %>/hero-preview/lg-<%= previewImagePath %>.png 480w, 
-							/img/projects/<%= item.slug %>/hero-preview/lg-<%= previewImagePath %>@2x.png 480w 2x"
-						/></div></li>
-				<% end %>
+					<li><div><img src="/img/projects/<%= item.slug %>/hero-preview/<%= previewImagePath %>.png" alt="<%= item.title %> preview image" class="img-hero-preview" /></div></li>
 			<% end %>
 		</ul>
 	</figure>
 </section>
-
-
-
-

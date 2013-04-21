@@ -417,6 +417,15 @@ h2 {
 	}
 }
 
+.project-desktop {
+	li div {
+		position: absolute;
+		left: 0;
+		z-index: 1;
+		@include holder-monitor;
+	}
+}
+
 .project-default{
 	li div img {
 		display: block;
