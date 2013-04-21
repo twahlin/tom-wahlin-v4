@@ -300,7 +300,6 @@ h2 {
 	display: table;
 	color: $light-cream;
 	@include dark-blue-text-shadow;
-	@include proxima-light;
 	height: 200px;
 	background: url(../img/build/hero-base.jpg) no-repeat 70% center;
 	background-size: 100%;
@@ -311,6 +310,7 @@ h2 {
 		height: 500px;
 	}
 	h3 {
+		@include proxima-extra-light;
 		display: none;
 		@include breakpoint(large) {
 			display: block;
@@ -325,8 +325,10 @@ h2 {
 		padding: 0 10%;
 		font-size: 16px;
 		text-align: center;
+		@include proxima-light;		
 		@include breakpoint(medium) {
 			font-size: 24px;
+			@include proxima-extra-light;			
 		}
 		@include breakpoint(large) {
 			display: block;
