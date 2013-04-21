@@ -15,6 +15,12 @@ $dark-cream: rgba(248, 248, 248, 1);
 @mixin proxima-regular-italic { font-weight: 400; font-style: italic;}
 @mixin proxima-semibold { font-weight: 600; font-style: normal;}
 
+//Text Shadows
+@mixin dark-blue-text-shadow {@include text-shadow(0 1px 1px transparentize($dark-blue, .6));}
+
+//box-shadows
+@mixin dark-blue-box-shadow {@include box-shadow(0 1px 1px 0 transparentize($dark-blue, .6));}
+
 //Media Queries
 @mixin breakpoint($point) {
   @if $point == small {
