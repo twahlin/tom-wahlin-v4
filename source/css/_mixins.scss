@@ -4,7 +4,7 @@ $non-mobile-wrap-margin: 10px;
 //Colors
 $dark-blue: rgba(23, 28, 47, 1);
 $slate-blue: rgba(90, 98, 118, 1);
-$link-blue: rgba(33, 59, 170, 1);
+$link-blue: rgba(90, 98, 118, 1);
 $light-cream: rgba(252, 252, 252, 1);
 $dark-cream: rgba(248, 248, 248, 1);
 
@@ -21,6 +21,7 @@ $dark-cream: rgba(248, 248, 248, 1);
 
 //box-shadows
 @mixin dark-blue-box-shadow {@include box-shadow(0 1px 1px 0 transparentize($dark-blue, .6));}
+@mixin inset-dark-blue-shadow-3 {@include box-shadow(inset 0 -3px 0 0 transparentize($dark-blue, .4));}
 
 //Media Queries
 @mixin breakpoint($point) {
@@ -50,7 +51,8 @@ $dark-cream: rgba(248, 248, 248, 1);
 	height: 0;
 }
 
-//Animations
+//Transitions
+@mixin nav-underline {@include transition(box-shadow .1s ease-in, color .1s ease);}
 @mixin hero-hover-animation {@include single-transition(background-position, .3s, ease-in-out);}
 
 // mixin for 2x images in css

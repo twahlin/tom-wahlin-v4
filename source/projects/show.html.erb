@@ -37,22 +37,19 @@ title:
 	<div class="project-image-col clearfix">
 		
 		<% #this really needs some cleanup - sorts throught images in a directory, then strips extra data besides base filename, creates srcset. Must be png. %>
-		<% @detailImages = Dir.glob("source/img/projects/#{item.slug}/detail/*[^x].{png}") %>
+
+		
+		
+		
+		
+		<% @detailImages = Dir.glob("source/img/projects/#{item.slug}/detail/*.{png}") %>
 			<% for detailImage in @detailImages %>
 			<% detailImagePath = detailImage.to_s %>
-			<% detailImagePath = detailImagePath.gsub!('source/img/projects/', '').gsub!(item.slug, '').gsub!('/detail/', '').chomp(".png") %>
-			<% if detailImagePath.include? 'lg-' %>
-				<% detailImagePath = detailImagePath.gsub!('lg-', '') %>	
-				<img src="/img/projects/<%= item.slug %>/detail/<%= detailImagePath %>.png" class="img-project" srcset="
-					/img/projects/<%= item.slug %>/detail/sm-<%= detailImagePath %>.png 320w,
-					/img/projects/<%= item.slug %>/detail/sm-<%= detailImagePath %>@2x.png 320w 2x, 
-					/img/projects/<%= item.slug %>/detail/<%= detailImagePath %>.png 321w, 
-					/img/projects/<%= item.slug %>/detail/<%= detailImagePath %>@2x.png 321w 2x,
-					/img/projects/<%= item.slug %>/detail/lg-<%= detailImagePath %>.png 960w, 
-					/img/projects/<%= item.slug %>/detail/lg-<%= detailImagePath %>@2x.png 960w 2x"
-				/>
-			<% end %>
+			<% detailImagePath = detailImagePath.gsub!('source/img/projects/', '').gsub!(item.slug, '').gsub!('/detail/', '').chomp(".png") %>				
+				<img src="/img/projects/<%= item.slug %>/detail/<%= detailImagePath %>.png" alt="<%= item.title %> portfolio image" />
 		<% end %>
+		
+		
 </div>
 </section>
 
