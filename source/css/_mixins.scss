@@ -22,6 +22,7 @@ $dark-cream: rgba(248, 248, 248, 1);
 //box-shadows
 @mixin dark-blue-box-shadow {@include box-shadow(0 1px 1px 0 transparentize($dark-blue, .6));}
 @mixin inset-dark-blue-shadow-3 {@include box-shadow(inset 0 -3px 0 0 transparentize($dark-blue, .4));}
+@mixin light-cream-shadow-3 {@include box-shadow(inset 0 3px 0 0 $light-cream);}
 
 //Media Queries
 @mixin breakpoint($point) {

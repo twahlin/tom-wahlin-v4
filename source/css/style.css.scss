@@ -220,7 +220,10 @@ h2 {
 				}
 				a:hover {
 					color: $dark-blue;
+					@include light-cream-shadow-3;
+					@include breakpoint(large) { 
 						@include inset-dark-blue-shadow-3;
+					}
 				}
 			}
 		li:after {
