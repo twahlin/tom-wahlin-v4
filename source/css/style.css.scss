@@ -581,7 +581,15 @@ h2 {
 /// Footer ///
 /////////////
 
-footer {padding: 0 15px}
+footer {
+	height: 44px;
+	line-height: 44px;
+	font-size: 14px;
+	color: $slate-blue;	
+	@include breakpoint(large) {
+		margin: 0 $non-mobile-wrap-margin;
+	}
+}
 
 
 ///////////////////

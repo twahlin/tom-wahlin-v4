@@ -133,7 +133,7 @@ $dark-cream: rgba(248, 248, 248, 1);
 	a {
 		height: 343px;
 		width: 458px;
-		background-size: 343px 458px;
+		background-size: 458px 343px;
 		@include breakpoint(small) { 
 			background-size: 687px 515px;
 			height: 515px;
