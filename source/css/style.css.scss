@@ -10,9 +10,12 @@ html {
 
 body {
 /*	background: $slate-blue;*/
+	font-size: 16px;
+	line-height: 22px;
 }
 
 h3 {
+	font-size: 36px;
 	line-height: 36px;
 	@include proxima-light;
 	margin: 0 0 18px 0;		
@@ -84,11 +87,10 @@ a, a:visited { color: $link-blue; 	text-decoration: none; }
 
 h1 {
 	position: absolute;
-	top: 0;
 	left: 20px;
 	padding-top: 38px;
 	width: 46px;
-	top: 44px;
+	top: 65px;
 	@include breakpoint(large) { 
 		left: 50%;
 		margin-left: -23px;
@@ -106,6 +108,7 @@ h1 {
 }
 
 h2 {
+	@include proxima-semibold;
 	text-align: center;
 	color: $slate-blue;
 	line-height: 44px;
@@ -345,15 +348,18 @@ h2 {
 	  vertical-align: middle;
 		padding: 0 10%;
 		font-size: 16px;
+		line-height: 22px;
 		text-align: center;
 		@include proxima-light;		
 		@include breakpoint(medium) {
 			font-size: 24px;
+			line-height: 33px;
 			@include proxima-extra-light;			
 		}
 		@include breakpoint(large) {
 			display: block;
 			font-size: 30px;
+			line-height: 42px;
 		}
 	}
 	.rule {
@@ -408,6 +414,7 @@ h2 {
 		width: 30%;
 	}
 	.cta {
+		line-height: 22px;
 		display: block;
 		text-align: center;
 		@include breakpoint(small) { 
