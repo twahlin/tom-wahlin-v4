@@ -1,6 +1,5 @@
 @import "compass";
-@import "normalize";
-@import "main";
+@import "reset";
 @import "mixins";
 
 html {
@@ -598,5 +597,56 @@ footer {
 
 .stuck {
 	position: fixed;
+}
+
+
+.outdated-browser {
+	font-family: Arial, "Lucida Grande", sans-serif;
+	color: #FCFCFC;
+	height: 100%;
+	background: #171C2F;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+	.outdated-browser-wrap {
+		padding-top: 120px;
+		margin: 0 auto;
+		width: 600px;
+		span {
+			background: url(../img/build/logo-old-browser.png) no-repeat;
+			display: block;
+			margin: 0 auto 30px auto;
+			overflow: hidden;
+			padding-top: 41px;
+			height: 0;
+			width: 50px;
+		}
+		h6 {
+			font-style: normal;	
+			font-size: 32px;
+			margin: 30px;
+			margin: 0 0 30px 0;
+		}
+		p {
+			margin: 0 0 30px 0;
+			font-size: 12px;
+			line-height: 18px;
+		}
+		.subhead {
+			font-size: 20px;
+			line-height: 28px;			
+		}
+		a {
+			color: #FCFCFC;
+			text-decoration: underline;
+		}
+		a:hover {
+			color: #5A6276;
+		}	
+	}	
 }
 
