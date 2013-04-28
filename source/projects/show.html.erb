@@ -37,11 +37,6 @@ title:
 	<div class="project-image-col clearfix">
 		
 		<% #this really needs some cleanup - sorts throught images in a directory, then strips extra data besides base filename, creates srcset. Must be png. %>
-
-		
-		
-		
-		
 		<% @detailImages = Dir.glob("source/img/projects/#{item.slug}/detail/*.{png}") %>
 			<% for detailImage in @detailImages %>
 			<% detailImagePath = detailImage.to_s %>
