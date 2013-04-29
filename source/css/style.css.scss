@@ -390,7 +390,6 @@ h2 {
 		min-height: 430px;
 	}
 	img {
-		opacity: 0;
 		width: 100%;
 		height: 100%;
 	}
@@ -452,7 +451,9 @@ h2 {
 		background-repeat: no-repeat;
 		display: block;
 		position: relative;
-		@include hero-hover-animation;			
+		img {
+		 @include hero-hover-animation;	
+		}		
 	}
 }
 
@@ -494,9 +495,9 @@ h2 {
 		@include breakpoint(small) { 
 			margin-left: -116px;
 		}
-		a:hover {
+		a:hover img {
 			@include breakpoint(small) { 
-				background-position: 0 -50px;
+				margin-top: -50px;
 			}
 		}		
 	}

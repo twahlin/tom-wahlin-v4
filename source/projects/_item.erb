@@ -18,7 +18,10 @@
 				<% for previewImage in @previewImages %>
 				<% previewImagePath = previewImage.to_s %>
 				<% previewImagePath = previewImagePath.gsub!('source/img/projects/', '').gsub!(item.slug, '').gsub!('/hero-preview/', '').chomp(".png") %>				
-					<li><div><a style="background-image: url(/img/projects/<%= item.slug %>/hero-preview/<%= previewImagePath %>.png)" ><img src="/img/projects/<%= item.slug %>/hero-preview/<%= previewImagePath %>.png" alt="<%= item.title %> preview image" /></a></div></li>
+					<li><div><a>
+					<img src="/img/projects/<%= item.slug %>/hero-preview/<%= previewImagePath %>.png" alt="<%= item.title %> preview image" />
+					<!-- <img src="bg.png" data-src="img2.jpg" data-src-retina="/img/projects/<%= item.slug %>/hero-preview/<%= previewImagePath %>.png" alt="<%= item.title %> preview image" /> 	 -->
+					</a></div></li>
 			<% end %>
 		</ul>
 	</figure>

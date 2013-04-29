@@ -5,6 +5,10 @@ $(document).ready(function() {
 		$('.masthead').toggleClass('nav-push');
 		$('.masthead-wrap nav ul li a').toggleClass('nav-open');
 	});	
+	
+	// //Retina images
+	// $("img").unveil();
+	
 
 	//hide safari bar mobile web - this should be edited, not great with mobile chrome
 	window.addEventListener("load",function() {
@@ -14,9 +18,4 @@ $(document).ready(function() {
 			window.scrollTo(0, 1);
 			}, 0);
 		});	
-});
-
-
-$(window).load(function () {
-
 });
