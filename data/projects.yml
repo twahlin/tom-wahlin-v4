@@ -5,7 +5,7 @@ portfolio:
   categories:
   - desktop
   - mobile
-  summary: Utilized a mobile-first approach to inform American Express Cardmembers about a new series of new airport lounges opening around the US.
+  summary: Utilized a mobile-first approach to inform American Express Cardmembers about a series of new airport lounges opening around the US.
   heroImageFormat: mobile-desktop
   role: Design
   technologyUsed:
@@ -19,7 +19,7 @@ portfolio:
   title: vente-privee
   categories:
   - desktop
-  summary: In France, vente-privee.com is very popular. The French version of this site was re-imagined for the US market. The immersive design strays from traditional sale-driven sites, and allows each brand to shine.
+  summary: In France, vente-privee.com is very popular. The French version of this site was re-imagined for the US market. The immersive design strays from traditional sales-driven sites, and allows each brand to shine.
   heroImageFormat: desktop
   role: Design and HTML/CSS Prototyping
   technologyUsed:

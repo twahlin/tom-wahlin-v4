@@ -361,6 +361,9 @@ h2 {
 			font-size: 30px;
 			line-height: 42px;
 		}
+		@include breakpoint(xl) {
+			padding: 0 18%;
+		}
 	}
 	.rule {
 		display: none;
