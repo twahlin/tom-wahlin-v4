@@ -62,7 +62,22 @@ portfolio:
   - XHTML
   - CSS
   - Javascript
-  company: space150      
+  company: space150
+- slug: mall-of-america-blog
+  active: true
+  title: Mall of America Blog
+  categories:
+  - desktop
+  - mobile
+  summary: Designed a flexible blog layout for Mall of America to hold varying levels of content & external feeds. Utilized a mobile-first approach.
+  heroImageFormat: mobile-desktop
+  role: Experience Design, Visual Design
+  technologyUsed:
+  - Photoshop
+  company: Tom Wahlin LLC
+  cta:
+    ctaText: View Live Project
+    ctaLink: http://blog.mallofamerica.com/      
 - slug: roven-bashier
   active: true
   title: The Portfolio of Roven Bashier
@@ -111,6 +126,17 @@ portfolio:
   cta:
     ctaText: View PDF
     ctaLink: /img/downloads/tom-wahlin-basilica-block-party.pdf 
+- slug: bww-5m-fans
+  active: true
+  title: Buffalo Wild Wings 5 Million Fans
+  categories:
+  - desktop
+  summary: Created a Facebook tab for Buffalo Wild Wings Fans in celebration of their 5 millionth fan on Facebook.
+  heroImageFormat: desktop
+  role: Design
+  technologyUsed:
+  - Photoshop
+  company: space150 
 - slug: is-your-child-ready
   active: true
   title: Is Your Child Ready?
