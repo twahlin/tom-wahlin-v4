@@ -125,32 +125,4 @@ portfolio:
   - Illustrator
   cta:
     ctaText: View PDF
-    ctaLink: /img/downloads/tom-wahlin-basilica-block-party.pdf 
-- slug: bww-5m-fans
-  active: true
-  title: Buffalo Wild Wings 5 Million Fans
-  categories:
-  - desktop
-  summary: Created a Facebook tab for Buffalo Wild Wings Fans in celebration of their 5 millionth fan on Facebook.
-  heroImageFormat: desktop
-  role: Design
-  technologyUsed:
-  - Photoshop
-  company: space150 
-- slug: is-your-child-ready
-  active: true
-  title: Is Your Child Ready?
-  categories:
-  - desktop
-  summary: Worked with Fallon to develop a website that prepares children for kindergarten.
-  heroImageFormat: desktop  
-  role: HTML/CSS
-  technologyUsed:
-  - Photoshop
-  - XHTML
-  - CSS
-  - Javascript
-  company: The Nerdery
-  cta:
-    ctaText: View Live Project
-    ctaLink: http://www.isyourchildready.com/
+    ctaLink: /img/downloads/tom-wahlin-basilica-block-party.pdf
