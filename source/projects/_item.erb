@@ -7,7 +7,7 @@
 		</ul>
 		<h3><%= item.title %></h3>
 		<p><%= item.summary %></p>		
-		<% link_to "/projects/#{item.slug}", class:'cta' do %>View Case Study<% end %>
+		<% link_to "/projects/#{item.slug}", class:'cta', title:'View Case Study' do %>View Case Study<% end %>
 	</div>
 	<figure class="image-preview">
 		<ul class="project-images project-<%= item.heroImageFormat %>">
@@ -15,8 +15,8 @@
 				<% for previewImage in @previewImages %>
 				<% previewImagePath = previewImage.to_s %>
 				<% previewImagePath = previewImagePath.gsub!('source/img/projects/', '').gsub!(item.slug, '').gsub!('/hero-preview/', '').chomp(".png") %>				
-					<li><div><a>
-					<img src="/img/projects/<%= item.slug %>/hero-preview/<%= previewImagePath %>.png" alt="<%= item.title %> preview image" />
+					<li><div><a href="/projects/<%= item.slug %>" title="View <%= item.title %> Case Study">
+						<img src="/img/projects/<%= item.slug %>/hero-preview/<%= previewImagePath %>.png" alt="<%= item.title %> preview image" />
 					</a></div></li>
 			<% end %>
 		</ul>
