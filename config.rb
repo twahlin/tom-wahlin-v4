@@ -85,6 +85,12 @@ activate :directory_indexes
 # livereload used for instant coding
 activate :livereload
 
+# Using redcarpet markdow
+set :markdown_engine, :redcarpet
+set :markdown,  :fenced_code_blocks => true,
+                :autolink => true, 
+                :smartypants => true
+
 # Generate individual portfolio pages
 data.projects.portfolio.select(&:active).each do |item|
   page "/projects/#{item.slug}.html", :proxy => "/projects/show.html", :ignore => true do
@@ -94,4 +100,10 @@ end
 
 page "/projects" do
   @previewImages = Dir.glob("source/img/projects/#{item.slug}/*[^@2x].{png,jpg,gif}")
+end
+
+activate :blog do |blog|
+  blog.prefix = "blog"
+  blog.permalink = ":year-:month-:day-:title"
+  blog.default_extension = ".markdown"
 end
