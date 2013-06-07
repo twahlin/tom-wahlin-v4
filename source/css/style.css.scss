@@ -661,3 +661,86 @@ footer {
 	}	
 }
 
+///////////////////////////
+/// Blog | Post Detail ///
+/////////////////////////
+
+.post-detail {
+	background: $dark-cream;
+	.post-hero {
+		display: table;
+		color: $light-cream;
+		height: 200px;
+		background-size: 100%;
+		width: 100%;
+		img {
+			display: block;
+			margin: 50px auto;
+			height: 125px;
+			width: 125px;
+		}
+		@include breakpoint(medium) {
+			height: 300px;
+			img {
+				margin: 50px auto;
+				height: 200px;
+				width: 200px;
+			}
+		}
+		@include breakpoint(large) {
+			height: 500px;
+			img {
+				margin: 125px auto;
+				height: 250px;
+				width: 250px;
+			}
+		}
+	}
+	.post-content {
+		padding: 30px 20px;
+		margin: 0 auto;
+		max-width: 600px;
+		.post-date {
+			display: block;
+			font-size: 11px;
+			margin-bottom: 10px;
+			@include proxima-semibold;		
+		}
+		.rule {
+			color: transparentize($dark-blue, .8);
+			display: block;
+			margin-bottom: 20px;
+		}
+		img {
+			display: block;
+			margin-bottom: 30px;
+			width: 100%;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
