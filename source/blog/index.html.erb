@@ -1,8 +1,15 @@
-<% blog.articles[0...5].each do |article| %>
-  <article>
+<div class="blog post-preview-list">
+<% blog.articles.each do |article| %>
+  <article class="post-preview">
+		<span class="post-date"><%= article.date.strftime('%Y.%m.%d') %></span>
+		<span class="rule">&mdash;</span>	
     <h3><a href="<%= article.url %>"><%= article.title %></a></h3>
-    <time><%= article.date.strftime('%b %e, %Y') %></time>
-    <p><%= article.data.teaser %></p>
     <p><a href="<%= article.url %>">Read more.</a></p>
   </article>
 <% end %>
+</div>
+
+
+
+
+	

@@ -21,6 +21,20 @@ h3 {
 	margin: 0 0 18px 0;		
 }
 
+h4 {
+	font-size: 24px;
+	line-height: 30px;
+	@include proxima-light;
+	margin: 0 0 18px 0;		
+}
+
+h5 {
+	font-size: 18px;
+	line-height: 30px;
+	@include proxima-regular;
+	margin: 0 0 14px 0;
+}
+
 p {
 	margin: 0 0 25px 0;
 }
@@ -665,8 +679,23 @@ footer {
 /// Blog | Post Detail ///
 /////////////////////////
 
+.blog {
+	background: $dark-cream;	
+}
+
+.post-date {
+	display: block;
+	font-size: 11px;
+	margin-bottom: 10px;
+	@include proxima-semibold;		
+}
+.rule {
+	color: transparentize($dark-blue, .8);
+	display: block;
+	margin-bottom: 20px;
+}
+
 .post-detail {
-	background: $dark-cream;
 	.post-hero {
 		display: table;
 		color: $light-cream;
@@ -700,27 +729,41 @@ footer {
 		padding: 30px 20px;
 		margin: 0 auto;
 		max-width: 600px;
-		.post-date {
-			display: block;
-			font-size: 11px;
-			margin-bottom: 10px;
-			@include proxima-semibold;		
-		}
-		.rule {
-			color: transparentize($dark-blue, .8);
-			display: block;
-			margin-bottom: 20px;
-		}
 		img {
 			display: block;
 			margin-bottom: 30px;
 			width: 100%;
 		}
+		a {
+			border-bottom: 1px solid $slate-blue;
+		}
+		a:hover {
+			border-bottom: 2px solid $slate-blue;
+		}
+		ul {
+			display: block;
+			padding-left: 10px;
+			margin-bottom: 20px;
+			li {
+				padding-left: 10px;
+				border-left: 1px solid transparentize($dark-blue, .8);
+				list-style-type: bullet;
+				margin-bottom: 10px;		
+			}
+		}
 	}
 }
 
-
-
+.post-preview-list {
+	padding: 80px 0 50px 0;
+	.post-preview {
+		border: 1px solid #E7E8EA;	
+		background: #fff;
+		padding: 20px;
+		margin: 0 auto 30px auto;
+		max-width: 600px;
+	}
+}
 
 
 

@@ -78,9 +78,6 @@ end
 
 ### Customized Below ###
 
-# Enables pretty urls without the file extension
-activate :directory_indexes
-
 
 # livereload used for instant coding
 activate :livereload
@@ -105,5 +102,10 @@ end
 activate :blog do |blog|
   blog.prefix = "blog"
   blog.permalink = ":year-:month-:day-:title"
+  blog.layout = "blog"
   blog.default_extension = ".markdown"
+  blog.summary_separator = /SPLIT_SUMMARY_BEFORE_THIS/  
 end
+
+# Enables pretty urls without the file extension
+activate :directory_indexes
