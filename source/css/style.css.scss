@@ -610,6 +610,7 @@ footer {
 	line-height: 44px;
 	font-size: 14px;
 	color: $slate-blue;	
+	margin: 0 10px;
 	@include breakpoint(large) {
 		margin: 0 $non-mobile-wrap-margin;
 	}

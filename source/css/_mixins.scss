@@ -77,18 +77,18 @@ $dark-cream: rgba(248, 248, 248, 1);
 	border-radius: 20px;
 	padding: 44px 10px;
 	@include breakpoint(small) { 
-		@include box-shadow(inset 0px 0px 0px 2px rgba(23,28,47,1), inset 0px 0px 0px 4px rgba(252,252,252,0.50));			
+		@include box-shadow(inset 0px 0px 0px 2px rgba(23,28,47,1), inset 0px 0px 0px 4px rgba(252,252,252,0.5));			
 		border-radius: 30px;
 		padding: 66px 16px;
 	}
 	a {
 		overflow: hidden;
-		@include box-shadow(0px 0px 0px 1px rgba(252,252,252,0.30));		
+		@include box-shadow(0px 0px 0px 2px rgba(252,252,252,0.10));
 		height: 237px;
 		width: 134px;
 		background-size: 134px 237px;
 		@include breakpoint(small) { 
-			@include box-shadow(0px 0px 0px 2px rgba(252,252,252,0.30));
+			@include box-shadow(0px 0px 0px 2px rgba(252,252,252,0.10));
 			background-size: 200px 355px;								
 			height: 355px;
 			width: 200px;
@@ -113,13 +113,13 @@ $dark-cream: rgba(248, 248, 248, 1);
 	} 
 	a {
 		overflow: hidden;
-		@include box-shadow(0px 0px 0px 2px rgba(252,252,252,0.30));		
+		@include box-shadow(0px 0px 0px 2px rgba(252,252,252,0.10));
 		height: 343px;
 		width: 458px;
 		background-size: 458px 343px;
 		@include breakpoint(small) { 
 			background-size: 687px 515px;
-			@include box-shadow(0px 0px 0px 2px rgba(252,252,252,0.30));		
+			@include box-shadow(0px 0px 0px 2px rgba(252,252,252,0.10));
 			height: 515px;
 			width: 687px;
 		}	

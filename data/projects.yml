@@ -1,4 +1,24 @@
 portfolio:
+- slug: cover-app
+  active: true
+  title: Cover
+  categories:
+  - desktop
+  - mobile
+  - print
+  summary: Second hire at Cover. Design and iterate on the mobile app, provide strategy recommendations and marketing materials. 
+  heroImageFormat: mobile
+  role: Product design, web design, product management, and marketing.
+  technologyUsed:
+  - Photoshop
+  - SketchApp
+  - XHTML
+  - CSS
+  - Javascript
+  company: Cover
+  cta:
+    ctaText: View App Landing Page
+    ctaLink: http://paywithcover.com
 - slug: centurion-lounge
   active: true
   title: The Centurion Lounge
