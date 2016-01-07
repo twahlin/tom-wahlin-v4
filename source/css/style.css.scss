@@ -9,7 +9,6 @@ html {
 }
 
 body {
-/*	background: $slate-blue;*/
 	font-size: 16px;
 	line-height: 22px;
 }
@@ -45,6 +44,92 @@ a {
 
 a:hover {
 	color: $dark-blue;
+}
+
+/////////////////////
+/// Introduction ///
+///////////////////
+
+.introduction-outer-wrap {
+  background: $slate-blue;
+  padding: 200px;
+  color: $light-cream;
+  .introduction-inner-wrap {
+    margin: 0 auto;
+    max-width: 500px;
+    @include proxima-light;
+  }
+}
+
+.intro-social-list {
+  ul {
+    margin-left: -5px;
+    li {
+      float: left;
+      margin-right: 20px;
+      a {
+        position: relative;
+        span {
+          display: block;
+          border: 2px solid $light-cream;
+          height: 40px;
+          position: relative;
+          width: 40px;
+          @include border-radius(50px);
+          @include single-transition(all, 0.1s, ease-out, 0.1s);  
+          svg {
+            position: absolute;
+            left: 10px;
+            fill: $light-cream;
+            top: 10px;
+            height: 21px;
+            width: 21px;
+          }
+        }
+      }
+      a:after {
+        @include single-transition(all, 0.1s, ease-out, 0.1s); 
+        background: #000;
+        opacity: 0;
+        display: block;
+        content:"";
+        width: 20px;
+        height: 2px;
+        border-radius: 20px;
+        position: absolute;
+        bottom: 0;
+        left: 11px;
+      }
+      a:hover span {
+        @include transform(translate(0px,-10px));
+        background: #50E3C2;
+        svg {
+          
+        }
+      }
+      a:hover:after {
+        opacity: .20;
+      }
+    }
+  }
+}
+
+.twitter-icon-svg-test {
+  width: 100%;
+  height: 100px;
+  display: block;
+  color: red;
+  background-repeat: no-repeat;
+  margin: 20px;
+  fill: red;
+}
+
+.twitter-icon-svg-test:hover {
+  fill: blue;
+}
+
+.icon-bear-2 {
+	background-repeat: no-repeat;
 }
 
 /////////////
