@@ -1,4 +1,59 @@
 portfolio:
+- slug: apple
+  active: true
+  title: Apple
+  categories:
+  - mobile
+  summary: Apple 
+  heroImageFormat: mobile
+  role: Apple
+  technologyUsed:
+  - Photoshop
+  - SketchApp
+  - XHTML
+  - CSS
+  - Javascript
+  company: Cover
+  cta:
+    ctaText: View App Landing Page
+    ctaLink: http://paywithcover.com
+- slug: wallpaper-disco
+  active: true
+  title: Wallpaper Disco
+  categories:
+  - desktop
+  - mobile
+  summary: Downloadable wallpapers to dance up your desktop and devices.
+  heroImageFormat: mobile-desktop
+  role: Sole Contributor
+  technologyUsed:
+  - Photoshop
+  - SketchApp
+  - XHTML
+  - CSS
+  - Javascript
+  company: Tom Wahlin LLC
+  cta:
+    ctaText: View Process
+    ctaLink: https://medium.com/keep-learning-keep-growing/100-days-of-making-3889635e8d8b
+- slug: coles-salon
+  active: true
+  title: Cole's Salon
+  categories:
+  - mobile
+  summary: Apple 
+  heroImageFormat: mobile
+  role: Apple
+  technologyUsed:
+  - Photoshop
+  - SketchApp
+  - XHTML
+  - CSS
+  - Javascript
+  company: Cover
+  cta:
+    ctaText: View App Landing Page
+    ctaLink: http://paywithcover.com
 - slug: cover-app
   active: true
   title: Cover

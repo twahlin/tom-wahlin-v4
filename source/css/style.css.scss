@@ -2,10 +2,13 @@
 @import "reset";
 @import "mixins";
 
+html, body {
+  height: 100%;
+}
+
 html {
 	font-family: "proxima-nova-1","proxima-nova-2", sans-serif;
 	color: $dark-blue;
-	
 }
 
 body {
@@ -50,101 +53,183 @@ a:hover {
 /// Introduction ///
 ///////////////////
 
-.introduction-outer-wrap {
-  background: $slate-blue;
-  padding: 200px;
-  color: $light-cream;
-  .introduction-inner-wrap {
-    margin: 0 auto;
-    max-width: 500px;
-    @include proxima-light;
+.index {
+  .wrap-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+		background: $slate-blue url(../img/build/bg-tom-photo.jpg) no-repeat bottom right;
+    background-size: 750px 750px;
+    padding: 0;
+    margin: 0;
+  	min-height: 100%;
+    position: relative;
+  	margin: 0 auto -44px; /* the bottom margin is the negative value of the footer's height */  
+  }
+  .push {
+  	height: 44px; /* '.push' must be the same height as 'footer' */
   }
 }
 
-.intro-social-list {
-  ul {
-    margin-left: -5px;
-    li {
-      float: left;
-      margin-right: 20px;
-      a {
-        position: relative;
-        span {
-          display: block;
-          border: 2px solid $light-cream;
-          height: 40px;
-          position: relative;
-          width: 40px;
-          @include border-radius(50px);
-          @include single-transition(all, 0.1s, ease-out, 0.1s);  
-          svg {
+  .introduction-inner-wrap {
+    color: $light-cream;
+    overflow: hidden;
+    padding: 30px;
+    max-width: 600px;
+    @include proxima-light;
+    h3 {
+      @include proxima-semibold;
+      font-size: 60px;
+      margin-bottom: 30px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 28px;
+    }
+    a, a:visited {
+      @include proxima-semibold;
+      position: relative;
+      @include single-transition(all, 0.2s, ease-out, 0.1s);
+      color: $light-cream;
+    }
+    a:after {
+      background: $light-cream;
+      content: '';
+      display: block;
+      opacity: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 2px;
+      color: $light-cream;
+      width: 100%;
+      transform: translateY(5px);
+      @include single-transition(all, 0.15s, ease-out, 0.15s);
+    }
+    a:hover:after {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    .intro-apple:hover {color: #ADADAD;}
+    .intro-apple:after {background: #D6D6D6;}
+    .intro-apple:hover:after {background: #ADADAD;}
+    
+    .intro-cover:hover {color: #C4A3F0;}
+    .intro-cover:after {background: #E1D1F7;}
+    .intro-cover:hover:after {background: #C4A3F0;}
+    
+    .intro-space:hover {color: #999999;}
+    .intro-space:after {background: #CCCCCC;}
+    .intro-space:hover:after {background: #999999;}
+    
+    .intro-nerdery:hover {color: #C4CCC8;}
+    .intro-nerdery:after {background: #DBE0DE;}
+    .intro-nerdery:hover:after {background: #C4CCC8;}
+    
+    .intro-wallpaper-disco:hover {color: #F5B7B1;}
+    .intro-wallpaper-disco:after {background: #FADBD8;}
+    .intro-wallpaper-disco:hover:after {background: #F5B7B1;}
+    
+    .intro-bullshit-sheriff:hover {color: #D9CEC3;}
+    .intro-bullshit-sheriff:after {background: #E8E1DB;}
+    .intro-bullshit-sheriff:hover:after {background: #D9CEC3;}
+    
+//    .intro-bullshit-sheriff {
+//      &:hover {
+//
+//        &:after {
+//
+//        };
+//      };
+//
+//      &:after {
+//
+//      };
+//    }
+    
+    .intro-social-list {
+      position: absolute;
+      left: 30px;
+      bottom: 74px;
+      ul {
+        li {
+          float: left;
+          margin-right: 20px;
+          a {
+            position: relative;
+            span {
+              display: block;
+              border: 2px solid $light-cream;
+              height: 36px;
+              position: relative;
+              width: 36px;
+              @include border-radius(50px);
+              @include single-transition(all, 0.1s, ease-out, 0.1s);
+              svg {
+                position: absolute;
+                left: 8px;
+                fill: $light-cream;
+                top: 8px;
+                height: 21px;
+                width: 21px;
+              }
+            }
+          }
+          a:after {
+            @include single-transition(all, 0.1s, ease-out, 0.1s);
+            background: #000;
+            opacity: 0;
+            display: block;
+            content:"";
+            width: 20px;
+            height: 2px;
+            border-radius: 20px;
             position: absolute;
-            left: 10px;
-            fill: $light-cream;
-            top: 10px;
-            height: 21px;
-            width: 21px;
+            bottom: 0;
+            left: 11px;
+          }
+          a:hover span {
+            @include transform(translate(0px,-10px));
+            background: #50E3C2;
+            svg {
+
+            }
+          }
+          a:hover:after {
+            opacity: .20;
           }
         }
       }
-      a:after {
-        @include single-transition(all, 0.1s, ease-out, 0.1s); 
-        background: #000;
-        opacity: 0;
-        display: block;
-        content:"";
-        width: 20px;
-        height: 2px;
-        border-radius: 20px;
-        position: absolute;
-        bottom: 0;
-        left: 11px;
-      }
-      a:hover span {
-        @include transform(translate(0px,-10px));
-        background: #50E3C2;
-        svg {
-          
-        }
-      }
-      a:hover:after {
-        opacity: .20;
-      }
     }
+
+    .twitter-icon-svg-test {
+      width: 100%;
+      height: 100px;
+      display: block;
+      color: red;
+      background-repeat: no-repeat;
+      margin: 20px;
+      fill: red;
+    }
+
+    .twitter-icon-svg-test:hover {
+      fill: blue;
+    }
+
+    .icon-bear-2 {
+      background-repeat: no-repeat;
+    }
+    
   }
-}
-
-.twitter-icon-svg-test {
-  width: 100%;
-  height: 100px;
-  display: block;
-  color: red;
-  background-repeat: no-repeat;
-  margin: 20px;
-  fill: red;
-}
-
-.twitter-icon-svg-test:hover {
-  fill: blue;
-}
-
-.icon-bear-2 {
-	background-repeat: no-repeat;
-}
 
 /////////////
 /// Main ///
 ///////////
 
 .wrap-main {
-	@include breakpoint(large) { 
-		margin: 0 $non-mobile-wrap-margin; 
-	}
 	@include breakpoint(max) { 
 		margin: 0 auto; 
 		max-width: 1600px;
-		border-left: 5px #fff solid;
-		border-right: 5px #fff solid;		
 	}
 	padding-top: 44px;
 	position: relative;
@@ -275,7 +360,7 @@ h2 {
 	margin: 44px 0 0 0;
 	@include box-shadow(0px 1px 0 0 transparentize($dark-blue, .75), 0px -1px 0 0 transparentize($dark-blue, .75));
 	@include breakpoint(large) {
-		margin: 44px $non-mobile-wrap-margin;
+		margin: 44px 0;
 		padding: 0 15px; 
 	}
 	nav {
@@ -691,14 +776,17 @@ h2 {
 /////////////
 
 footer {
+  background: $light-cream;
 	height: 44px;
 	line-height: 44px;
 	font-size: 14px;
 	color: $slate-blue;	
-	margin: 0 10px;
-	@include breakpoint(large) {
-		margin: 0 $non-mobile-wrap-margin;
-	}
+  padding: 0 15px;
+  z-index: 9999;
+  position: relative;
+  p {
+    margin-bottom: 0;
+  }
 }
 
 
@@ -850,26 +938,3 @@ footer {
 		max-width: 600px;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

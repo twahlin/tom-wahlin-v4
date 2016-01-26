@@ -8,7 +8,7 @@ title:
 		<div class="project-details"> 
 				<ul class="icons-discipline">
 				<% item.categories.each do |f| %>
-				<li class="icon-<%= f %>"><%= f %></li>
+					<li class="icon-<%= f %>"><%= f %></li>
 				<% end %>		
 			</ul>
 			<h3><%= item.title %></h3>
@@ -20,9 +20,7 @@ title:
 
 			<% if item.technologyUsed %>
 				<h4>Technology Used</h4>
-					<p><% item.technologyUsed.each do |tech| %><%= tech %>, 
-					<% end %>
-					</p>
+					<p><%= item.technologyUsed.join(", ") %></p>
 			<% end %>
 
 			<% if item.company %>
@@ -47,6 +45,5 @@ title:
 		
 </div>
 </section>
-
 
 
