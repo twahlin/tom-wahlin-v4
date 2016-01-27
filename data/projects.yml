@@ -4,9 +4,9 @@ portfolio:
   title: Apple
   categories:
   - mobile
-  summary: Apple 
+  summary: Various projecs with Apple—specifically focused on mobile. I'm unable to share these. In person is more fun.
   heroImageFormat: mobile
-  role: Apple
+  role: Product design, prototyping, and design team management.
   technologyUsed:
   - Photoshop
   - SketchApp
@@ -36,24 +36,6 @@ portfolio:
   cta:
     ctaText: View Process
     ctaLink: https://medium.com/keep-learning-keep-growing/100-days-of-making-3889635e8d8b
-- slug: coles-salon
-  active: true
-  title: Cole's Salon
-  categories:
-  - mobile
-  summary: Apple 
-  heroImageFormat: mobile
-  role: Apple
-  technologyUsed:
-  - Photoshop
-  - SketchApp
-  - XHTML
-  - CSS
-  - Javascript
-  company: Cover
-  cta:
-    ctaText: View App Landing Page
-    ctaLink: http://paywithcover.com
 - slug: cover-app
   active: true
   title: Cover
@@ -70,6 +52,26 @@ portfolio:
   - XHTML
   - CSS
   - Javascript
+  company: Cover
+  cta:
+    ctaText: View App Landing Page
+    ctaLink: http://paywithcover.com
+- slug: coles-salon
+  active: true
+  title: Cole's Salon
+  categories:
+  - desktop
+  - mobile
+  summary: Marketing website and other technical and design pieces.
+  heroImageFormat: mobile-desktop
+  role: Design, front-end development, wordpress, and marketing.
+  technologyUsed:
+  - Photoshop
+  - SketchApp
+  - XHTML
+  - CSS
+  - Javascript
+  - Wordpress
   company: Cover
   cta:
     ctaText: View App Landing Page
