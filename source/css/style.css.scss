@@ -55,26 +55,29 @@ a:hover {
 
 .index {
   .wrap-main {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-		background: $slate-blue url(../img/build/bg-tom-photo.jpg) no-repeat bottom right;
-    background-size: 750px 750px;
     padding: 0;
     margin: 0;
   	min-height: 100%;
     position: relative;
-  	margin: 0 auto -44px; /* the bottom margin is the negative value of the footer's height */  
+  	margin: 0 auto -44px;
+    background: $slate-blue;
+    @include breakpoint(large) {
+      display: flex;
+      flex-direction: column;
+  		background: $slate-blue url(../img/build/bg-tom-photo.jpg) no-repeat bottom right;
+      background-size: 750px 750px;
+    }
   }
   .push {
-  	height: 44px; /* '.push' must be the same height as 'footer' */
+  	height: 44px; 
   }
 }
 
   .introduction-inner-wrap {
     color: $light-cream;
     overflow: hidden;
-    padding: 30px;
+    padding: 94px 30px 30px 30px;
     max-width: 600px;
     @include proxima-light;
     h3 {
@@ -133,92 +136,100 @@ a:hover {
     .intro-bullshit-sheriff:hover {color: #D9CEC3;}
     .intro-bullshit-sheriff:after {background: #E8E1DB;}
     .intro-bullshit-sheriff:hover:after {background: #D9CEC3;}
-    
-//    .intro-bullshit-sheriff {
-//      &:hover {
-//
-//        &:after {
-//
-//        };
-//      };
-//
-//      &:after {
-//
-//      };
-//    }
-    
-    .intro-social-list {
-      position: absolute;
-      left: 30px;
-      bottom: 74px;
-      ul {
-        li {
-          float: left;
-          margin-right: 20px;
-          a {
-            position: relative;
-            span {
-              display: block;
-              border: 2px solid $light-cream;
-              height: 36px;
-              position: relative;
-              width: 36px;
-              @include border-radius(50px);
-              @include single-transition(all, 0.1s, ease-out, 0.1s);
-              svg {
-                position: absolute;
-                left: 8px;
-                fill: $light-cream;
-                top: 8px;
-                height: 21px;
-                width: 21px;
-              }
-            }
-          }
-          a:after {
-            @include single-transition(all, 0.1s, ease-out, 0.1s);
-            background: #000;
-            opacity: 0;
-            display: block;
-            content:"";
-            width: 20px;
-            height: 2px;
-            border-radius: 20px;
-            position: absolute;
-            bottom: 0;
-            left: 11px;
-          }
-          a:hover span {
-            @include transform(translate(0px,-10px));
-            background: #50E3C2;
-            svg {
 
-            }
+.intro-social-list {
+  @include breakpoint(large) { 
+    position: absolute;
+    left: 30px;
+    bottom: 74px;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li {
+      display: block;
+      margin-bottom: 40px;
+      flex: 25%;
+      @include breakpoint(large) { 
+        flex: none;
+        margin: 0 14px 0 0;
+      }
+      a {
+        position: relative;
+        display: block;
+        height: 44px;
+        width: 44px;
+        @include breakpoint(large) {
+          height: 36px;
+          width: 36px;
+        }
+        span {
+          display: block;
+        	@include box-shadow(inset 0 0 0 2px $light-cream);
+          position: relative;
+          height: 44px;
+          width: 44px;
+          @include border-radius(50px);
+          @include single-transition(all, 0.1s, ease-out, 0.1s);
+          margin-bottom: 20px;
+          @include breakpoint(large) {
+            height: 36px;
+            width: 36px;
           }
-          a:hover:after {
-            opacity: .20;
+          svg {
+            position: absolute;
+            fill: $light-cream;
           }
+          
         }
       }
+      a:hover span {
+        transform: translateY(-4px);
+      }
+      a:after {
+        @include single-transition(all, 0.1s, ease-out, 0.1s);
+        background: $dark-blue;
+        opacity: 0;
+        content:"";
+        width: 16px;
+        height: 2px;
+        position: absolute;
+        left: 10px;
+        border-radius: 20px;
+        transform: translateY(0);
+        display: block;
+        float: none;
+      }
+      a:hover:after {
+        opacity: .6;
+      }
     }
+    li:nth-child(4n+1) a { float: left; }
+    li:nth-child(4n+2) a { margin-left: 20%; @include breakpoint(large) { margin-left: 0; float: left; } }
+    li:nth-child(4n+3) a { float: right; margin-right: 20%; @include breakpoint(large) { margin-right: 0; float: left; } }
+    li:nth-child(4n+4) a { float: right; @include breakpoint(large) { float: left; }}
 
-    .twitter-icon-svg-test {
-      width: 100%;
-      height: 100px;
-      display: block;
-      color: red;
-      background-repeat: no-repeat;
-      margin: 20px;
-      fill: red;
-    }
-
-    .twitter-icon-svg-test:hover {
-      fill: blue;
-    }
-
-    .icon-bear-2 {
-      background-repeat: no-repeat;
-    }
+    .icon-social-dribbble span svg    { left: 10px; top: 10px; height: 24px; width: 24px; @include breakpoint(large) {left: 8px; top: 8px; height: 20px; width: 20px;}}
+    .icon-social-instagram span svg   { left: 10px; top: 10px; height: 24px; width: 24px; @include breakpoint(large) {left: 8px; top: 8px; height: 20px; width: 20px;}}
+    .icon-social-linkedin span svg    { left: 10px; top: 10px; height: 24px; width: 24px; @include breakpoint(large) {left: 8px; top: 8px; height: 20px; width: 20px;}}
+    .icon-social-medium span svg      { left: 10px; top: 10px; height: 24px; width: 24px; @include breakpoint(large) {left: 8px; top: 8px; height: 20px; width: 20px;}}
+    .icon-social-soundcloud span svg  { left: 8px; top: 8px; height: 28px; width: 28px;   @include breakpoint(large) {left: 6px; top: 6px; height: 24px; width: 24px;}}
+    .icon-social-twitter span svg     { left: 10px; top: 10px; height: 24px; width: 24px; @include breakpoint(large) {left: 8px; top: 8px; height: 20px; width: 20px;}}
+    .icon-social-facebook span svg    { left: 8px; top: 8px; height: 28px; width: 28px;   @include breakpoint(large) {left: 6px; top: 6px; height: 24px; width: 24px;}}
+    .icon-social-github span svg      { left: 10px; top: 10px; height: 24px; width: 24px; @include breakpoint(large) {left: 8px; top: 8px; height: 20px; width: 20px;}}
+    
+    .icon-social-dribbble a:hover span    { background-color: #F082AC; }
+    .icon-social-instagram a:hover span   { background-color: #5989AB; }
+    .icon-social-linkedin a:hover span    { background-color: #4DA0CB; }
+    .icon-social-medium a:hover span      { background-color: #4DCE96; }
+    .icon-social-soundcloud a:hover span  { background-color: #FF884D; }
+    .icon-social-twitter a:hover span     { background-color: #7FC0F2; }
+    .icon-social-facebook a:hover span    { background-color: #768BB7; }
+    .icon-social-github a:hover span      { background-color: #5D5B5C; }
+    
+  }
+}
     
   }
 
