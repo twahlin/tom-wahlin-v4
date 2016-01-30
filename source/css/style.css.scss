@@ -88,6 +88,7 @@ a:hover {
     p {
       font-size: 18px;
       line-height: 28px;
+      margin-bottom: 30px;
     }
     a, a:visited {
       @include proxima-semibold;
@@ -185,7 +186,9 @@ a:hover {
         }
       }
       a:hover span {
-        transform: translateY(-4px);
+        @include breakpoint(large) {
+          transform: translateY(-4px);
+        }
       }
       a:after {
         @include single-transition(all, 0.1s, ease-out, 0.1s);
@@ -202,7 +205,9 @@ a:hover {
         float: none;
       }
       a:hover:after {
-        opacity: .6;
+        @include breakpoint(large) {
+          opacity: .6;
+        }
       }
     }
     li:nth-child(4n+1) a { float: left; }
@@ -230,7 +235,18 @@ a:hover {
     
   }
 }
-    
+
+  }
+  
+  .introduction-inner-wrap:after {
+    @include breakpoint(large) { 
+      content:'';
+      background: $light-cream;
+      display: block;
+      height: 2px;
+      width: 86px;
+      margin-bottom: 40px;
+    } 
   }
 
 /////////////
@@ -728,6 +744,33 @@ h2 {
 	}
 }
 
+.preview-apple,
+.preview-apple:nth-child(even) {
+  background: #999 url(../img/build/icon-apple.svg) center 300px no-repeat;
+  background-size: 160px 160px;
+  color: $light-cream;
+  @include breakpoint(medium) {
+    background: #999 url(../img/build/icon-apple.svg) 65% center no-repeat;
+      background-size: 160px 160px;
+  }
+  .cta,
+  .cta:visited {
+    background: $light-cream;
+    color: #999;
+    text-shadow: none;
+    shadow: none;
+    @include box-shadow(0 2px 10px transparentize($dark-blue, 1), inset 0 0px 0 0 transparentize($dark-blue, 1));
+  }
+  .cta:hover {
+  	@include box-shadow(0 2px 10px transparentize($dark-blue, .7));
+  }
+
+  .cta:active {
+  	padding: 11px 16px 9px 16px;
+  	@include box-shadow(inset 0 -1px 0 0 transparentize($dark-blue, .4), 0 2px 10px transparentize($dark-blue, .7));
+  }
+}
+
 ///////////////////
 /// Detail Page///
 /////////////////
@@ -958,3 +1001,31 @@ footer {
 		max-width: 600px;
 	}
 }
+
+//////////////////////////////
+///////// Instafeed /////////
+////////////////////////////
+
+.instafeed {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  li {
+    display: block;
+    flex: 25%;
+    img {
+      width: 100%;
+      display: block;
+      height: auto;
+      
+    }
+  }
+}
+
+
+
+
+
+
+
+
