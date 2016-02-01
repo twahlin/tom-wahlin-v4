@@ -73,10 +73,10 @@ portfolio:
   - CSS
   - Javascript
   - Wordpress
-  company: Cover
+  company: Tom Wahlin LLC
   cta:
-    ctaText: View App Landing Page
-    ctaLink: http://paywithcover.com
+    ctaText: View Live Project
+    ctaLink: http://colessalon.com/
 - slug: centurion-lounge
   active: true
   title: The Centurion Lounge
@@ -156,23 +156,23 @@ portfolio:
   cta:
     ctaText: View Live Project
     ctaLink: http://blog.mallofamerica.com/      
-- slug: roven-bashier
-  active: true
-  title: The Portfolio of Roven Bashier
-  categories:
-  - desktop
-  - mobile
-  summary: Developed an easily editable system for a fellow designer, Roven Bashier. Worked with Roven to keep the site easily editable, and create a system that would be able to hold all his work smoothly.
-  heroImageFormat: mobile-desktop
-  role: Front-end Development
-  technologyUsed:
-  - XHTML
-  - CSS
-  - Javascript
-  company: Tom Wahlin LLC
-  cta:
-    ctaText: View Live Project
-    ctaLink: http://www.rovenbashier.com/portfolio_2012/
+# - slug: roven-bashier
+#   active: true
+#   title: The Portfolio of Roven Bashier
+#   categories:
+#   - desktop
+#   - mobile
+#   summary: Developed an easily editable system for a fellow designer, Roven Bashier. Worked with Roven to keep the site easily editable, and create a system that would be able to hold all his work smoothly.
+#   heroImageFormat: mobile-desktop
+#   role: Front-end Development
+#   technologyUsed:
+#   - XHTML
+#   - CSS
+#   - Javascript
+#   company: Tom Wahlin LLC
+#   cta:
+#     ctaText: View Live Project
+#     ctaLink: http://www.rovenbashier.com/portfolio_2012/
 - slug: receipt-match
   active: true
   title: Receipt Match
@@ -190,17 +190,17 @@ portfolio:
   cta:
     ctaText: View App Landing Page
     ctaLink: http://www.americanexpress.com/us/small-business/openhome/receiptmatch 
-- slug: basilica-block-party
-  active: true
-  title: Basilica Block Party
-  categories:
-  - print
-  summary: Created a poster advertising campaign where each style of music was unique. Concepted and created logo for Twin Cities Metro.
-  heroImageFormat: default
-  role: Design
-  technologyUsed:
-  - InDesign
-  - Illustrator
-  cta:
-    ctaText: View PDF
-    ctaLink: /img/downloads/tom-wahlin-basilica-block-party.pdf
+# - slug: basilica-block-party
+#   active: true
+#   title: Basilica Block Party
+#   categories:
+#   - print
+#   summary: Created a poster advertising campaign where each style of music was unique. Concepted and created logo for Twin Cities Metro.
+#   heroImageFormat: default
+#   role: Design
+#   technologyUsed:
+#   - InDesign
+#   - Illustrator
+#   cta:
+#     ctaText: View PDF
+#     ctaLink: /img/downloads/tom-wahlin-basilica-block-party.pdf
