@@ -357,7 +357,7 @@ h2 {
 	right: 0;
 	@include single-transition(all, .2s, ease-in-out);
 	@include breakpoint(large) {
-		background: #fff; 
+		background: $light-cream; 
 	}
 }
 
@@ -387,7 +387,7 @@ h2 {
 }
 
 .masthead-wrap {
-	background: #fff;
+	background: $light-cream;
 	height: 44px;
 	margin: 44px 0 0 0;
 	@include box-shadow(0px 1px 0 0 transparentize($dark-blue, .75), 0px -1px 0 0 transparentize($dark-blue, .75));
