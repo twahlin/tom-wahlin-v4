@@ -68,9 +68,10 @@ $dark-cream: rgba(248, 248, 248, 1);
 
 //Navigation Active
 @mixin nav-active {
-  color: $dark-blue;
+  color: $light-cream;
   @include light-cream-shadow-3;
-  @include breakpoint(large) { 
+  @include breakpoint(large) {
+    color: $dark-blue; 
     @include inset-dark-blue-shadow-3;
   }
 }

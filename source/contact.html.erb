@@ -1,0 +1,31 @@
+---
+title: Contact | The Portfolio of Tom Wahlin
+---
+
+<div class="wrap-inner">
+	<h3>Contact</h3>
+	<div class="contact-social-list"><%= partial "contact-list" %></div>
+</div>
+	
+	
+	
+<script type="text/javascript">
+	var feed = new Instafeed({
+        get: 'user',
+        userId: '165971',
+		limit: '12',
+		accessToken: '165971.1677ed0.c8e491f5ea2744389d5461cd07cd6944',
+		resolution: 'standard_resolution',
+		template: '<li><a href="{{link}}"><img src="{{image}}" /></a></li>'
+	});
+	feed.run();
+</script>
+
+
+<ul id="instafeed" class="instafeed"></ul>
+
+
+
+	
+	
+		

@@ -4,16 +4,17 @@ portfolio:
   title: Apple
   categories:
   - mobile
-  summary: Various projecs with Apple—specifically focused on mobile. I'm unable to share these. In person is more fun.
+  summary: Various projecs with Apple—specifically focused on mobile (unable to share publicly).
   heroImageFormat: mobile
   role: Product design, prototyping, and design team management.
   technologyUsed:
   - Photoshop
   - SketchApp
+  - Principle
   - XHTML
   - CSS
   - Javascript
-  company: Cover
+  company: Apple
   cta:
     ctaText: View App Landing Page
     ctaLink: http://paywithcover.com

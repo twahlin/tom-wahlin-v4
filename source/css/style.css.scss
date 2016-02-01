@@ -257,13 +257,21 @@ a:hover {
 ///////////
 
 .wrap-main {
-	@include breakpoint(max) { 
-		margin: 0 auto; 
-		max-width: 1600px;
-	}
-	padding-top: 44px;
-	position: relative;
-	overflow: hidden;
+  @include breakpoint(max) { 
+    margin: 0 auto; 
+    max-width: 1600px;
+  }
+  padding-top: 44px;
+  position: relative;
+  overflow: hidden;
+  .wrap-inner {
+    padding: 20px 20px 40px 20px;
+    @include breakpoint(medium) { 
+      padding: 30px;
+      width: 80%;
+      max-width: 600px;
+    }
+  }
 }
 
 a, a:visited { color: $link-blue; 	text-decoration: none; }
@@ -416,7 +424,7 @@ h2 {
 				position: relative;
 				height: 24px;
 				float: left;
-				width: 20%;
+				width: 33%;
 				@include breakpoint(large) { 
 					width: auto;
 					float: left;
@@ -424,24 +432,28 @@ h2 {
 				}
 				a {
 					display: block;
-					padding-top: 44px;
 					width: 100%;
 					margin-top: -60px;
+          line-height: 44px;
 					float: left;
-					@include hide-text;
+          text-align: center;
+          color: $light-cream;
 					@include breakpoint(large) { 
+            color: $slate-blue;
 						position: relative; 
 						width: auto;
 						height: auto;
 						padding: 0;
 						margin: 0;
-						line-height: 44px;
+            text-align: left;
 						width: auto;						
 					}
 				}
 				a:hover,
         a:active {
-          @include nav-active;
+          @include breakpoint(large) { 
+            @include nav-active;
+        }
 				}
 			}
 		li:after {
@@ -489,9 +501,9 @@ h2 {
 	margin-top: 0;
 }
 
-body.about .masthead-wrap nav ul li.nav-about a,
+body.contact .masthead-wrap nav ul li.nav-contact a,
 body.projects .masthead-wrap nav ul li.nav-projects a {
-  @include nav-active;
+    @include nav-active;
 }
 
 //////////////////////////
@@ -1026,6 +1038,51 @@ footer {
     }
   }
 }
+
+
+/////////////////////////////////
+///////// Contact Page /////////
+///////////////////////////////
+
+.contact-social-list {
+  ul {
+    li {
+      a {
+        height: 24px;
+        line-height: 24px;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 18px;
+        padding-left: 36px;
+        @include single-transition(all, 0.2s, ease-out, 0.1s);
+        em {
+
+        }
+        span {
+          svg {
+            fill: $slate-blue;
+            height: 24px;
+            width: 24px;
+            position: absolute;
+            left: 0;
+            @include single-transition(all, 0.2s, ease-out, 0.1s);
+          }
+        }
+      }
+      a:hover {
+        color: $dark-blue;
+        span {
+          svg {
+           fill: $dark-blue; 
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
 
 
 
