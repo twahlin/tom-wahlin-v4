@@ -66,6 +66,15 @@ $dark-cream: rgba(248, 248, 248, 1);
   }
 }
 
+//Navigation Active
+@mixin nav-active {
+  color: $dark-blue;
+  @include light-cream-shadow-3;
+  @include breakpoint(large) { 
+    @include inset-dark-blue-shadow-3;
+  }
+}
+
 //Calc functionality
 @mixin calc($property, $expression) {
   #{$property}: -moz-calc(#{$expression});

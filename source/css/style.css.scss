@@ -439,12 +439,9 @@ h2 {
 						width: auto;						
 					}
 				}
-				a:hover {
-					color: $dark-blue;
-					@include light-cream-shadow-3;
-					@include breakpoint(large) { 
-						@include inset-dark-blue-shadow-3;
-					}
+				a:hover,
+        a:active {
+          @include nav-active;
 				}
 			}
 		li:after {
@@ -472,11 +469,11 @@ h2 {
 		ul li:nth-child(4) a { @include single-transition(all, .5s, cubic-bezier(0.175, 0.885, 0.320, 1.275)); }
 		ul li:nth-child(5) a { @include single-transition(all, .6s, cubic-bezier(0.175, 0.885, 0.320, 1.275)); }
 		@include breakpoint(large) { 
-			ul li:nth-child(1) a { @include nav-underline; }
-			ul li:nth-child(2) a { @include nav-underline; }	
-			ul li:nth-child(3) a { @include nav-underline; }
-			ul li:nth-child(4) a { @include nav-underline; }
-			ul li:nth-child(5) a { @include nav-underline; }
+			ul li:nth-child(1) a,
+      ul li:nth-child(2) a,
+      ul li:nth-child(3) a,
+      ul li:nth-child(4) a,
+      ul li:nth-child(5) a { @include nav-underline; }
 		}
 		ul li .nav-open {
 			margin-top: 0;
@@ -490,6 +487,11 @@ h2 {
 
 .no-js .masthead-wrap nav ul li a {
 	margin-top: 0;
+}
+
+body.about .masthead-wrap nav ul li.nav-about a,
+body.projects .masthead-wrap nav ul li.nav-projects a {
+  @include nav-active;
 }
 
 //////////////////////////
