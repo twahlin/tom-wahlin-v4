@@ -281,6 +281,8 @@ a, a:visited { color: $link-blue; 	text-decoration: none; }
 //Buttons
 .cta,
 .cta:visited {
+  min-width: 140px;
+  text-align: center;
 	display: inline-block;
 	padding: 10px 16px;
 	color: $light-cream;
@@ -637,7 +639,7 @@ body.projects .masthead-wrap nav ul li.nav-projects a {
 }
 
 .detail-preview {
-	padding: 20px 20px 40px 20px;
+	padding: 30px 20px 40px 20px;
 	max-width: 500px;
 	@include breakpoint(medium) { 
 		padding: 30px;
@@ -795,7 +797,7 @@ body.projects .masthead-wrap nav ul li.nav-projects a {
 
 .detail-page-wrap {
 	clear: both;
-	padding: 20px 20px 40px 20px;
+	padding: 30px 20px 40px 20px;
 	background: $dark-cream;
 	border: 1px solid #E7E8EA;	
 	@include breakpoint(medium) { 
@@ -824,7 +826,7 @@ body.projects .masthead-wrap nav ul li.nav-projects a {
 		margin: 0;
 	}
   .cta {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 }
 
@@ -1033,9 +1035,10 @@ footer {
       display: flex;
     }
     .col-left {
-      padding: 30px 20px 30px 30px;
+      padding: 30px 20px 30px 20px;
       @include breakpoint(medium) {
         flex: 50%;
+        padding: 30px 20px 30px 30px;  
       }
       @include breakpoint(large) {
         flex: 30%;
