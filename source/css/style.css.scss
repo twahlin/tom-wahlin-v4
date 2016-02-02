@@ -882,7 +882,6 @@ footer {
 	position: fixed;
 }
 
-
 .outdated-browser {
 	font-family: Arial, "Lucida Grande", sans-serif;
 	color: #FCFCFC;
@@ -1023,67 +1022,102 @@ footer {
 	}
 }
 
-//////////////////////////////
-///////// Instafeed /////////
-////////////////////////////
-
-.instafeed {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  li {
-    display: block;
-    flex: 25%;
-    img {
-      width: 100%;
-      display: block;
-      height: auto;
-      
-    }
-  }
-}
-
-
 /////////////////////////////////
 ///////// Contact Page /////////
 ///////////////////////////////
 
-.contact-social-list {
-  ul {
-    li {
-      a {
-        height: 24px;
-        line-height: 24px;
-        position: relative;
-        display: inline-block;
-        margin-bottom: 18px;
-        padding-left: 36px;
-        @include single-transition(all, 0.2s, ease-out, 0.1s);
-        em {
-
-        }
-        span {
-          svg {
-            fill: $slate-blue;
-            height: 24px;
-            width: 24px;
-            position: absolute;
-            left: 0;
-            @include single-transition(all, 0.2s, ease-out, 0.1s);
-          }
-        }
+.contact {
+  background: $light-cream;
+  .contact-wrap {
+    @include breakpoint(medium) {
+      display: flex;
+    }
+    .col-left {
+      padding: 30px 20px 30px 30px;
+      @include breakpoint(medium) {
+        flex: 50%;
       }
-      a:hover {
-        color: $dark-blue;
-        span {
-          svg {
-           fill: $dark-blue; 
+      @include breakpoint(large) {
+        flex: 30%;
+      }
+      @include breakpoint(xl) {
+        flex: 25%;
+      }
+      .contact-social-list {
+        ul {
+          li {
+            a {
+              position: relative;
+              display: inline-block;
+              margin-bottom: 18px;
+              padding-left: 36px;
+              @include single-transition(all, 0.2s, ease-out, 0.1s);
+              em {
+
+              }
+              span {
+                svg {
+                  fill: $slate-blue;
+                  height: 24px;
+                  width: 24px;
+                  margin-top: -12px;
+                  top: 50%;
+                  position: absolute;
+                  left: 0;
+                  @include single-transition(all, 0.2s, ease-out, 0.1s);
+                }
+              }
+            }
+            a:hover {
+              color: $dark-blue;
+              span {
+                svg {
+                 fill: $dark-blue; 
+                }
+              }
+            }
           }
         }
       }
     }
+    .col-right {
+      @include breakpoint(medium) {
+        flex: 50%;
+      }
+      @include breakpoint(large) {
+        flex: 70%;
+      }
+      @include breakpoint(xl) {
+        flex: 75%;
+      }
+    }
+  }
+  .instafeed {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li {
+      display: block;
+      flex: 50%;
+      @include breakpoint(large) {
+        flex: 33.33%;
+      }
+      @include breakpoint(xxl) {
+        flex: 25%;
+      }
+      img {
+        width: 100%;
+        display: block;
+        height: auto;
+      
+      }
+    }
   }
 }
+
+
+
+
 
 
 

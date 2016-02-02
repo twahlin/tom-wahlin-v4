@@ -35,7 +35,26 @@ portfolio:
   - ctaText: View Process
     ctaLink: https://medium.com/keep-learning-keep-growing/100-days-of-making-3889635e8d8b#.3j4zd4pop
   - ctaText: View Live Project
-    ctaLink: http://wallpaperdisco.com  
+    ctaLink: http://wallpaperdisco.com
+- slug: bullshit-sheriff
+  active: true
+  title: Bullshit Sheriff
+  categories:
+  - desktop
+  - mobile
+  summary: Online P.I. turning social media into a more honest place.  
+  heroImageFormat: mobile-desktop
+  role: Design and front-end development
+  technologyUsed:
+  - Photoshop
+  - SketchApp
+  - XHTML
+  - CSS
+  - Javascript
+  company: Tom Wahlin LLC
+  cta:
+  - ctaText: View Live Project
+    ctaLink: http://bullshitsheriff.com/       
 - slug: cover-app
   active: true
   title: Cover
@@ -105,9 +124,6 @@ portfolio:
   - CSS
   - Javascript
   company: space150
-  cta:
-  - ctaText: View Live Project
-    ctaLink: https://us.venteprivee.com/main/
 - slug: space150-v28
   active: true
   title: space150 Version 28
@@ -123,9 +139,6 @@ portfolio:
   - CSS
   - Javascript
   company: space150
-  cta:
-  - ctaText: View Live Project
-    ctaLink: http://v28.space150.com/
 - slug: 3m-informatics
   active: true
   title: 3M Informatics
@@ -152,9 +165,6 @@ portfolio:
   technologyUsed:
   - Photoshop
   company: Tom Wahlin LLC
-  cta:
-  - ctaText: View Live Project
-    ctaLink: http://blog.mallofamerica.com/
 - slug: receipt-match
   active: true
   title: Receipt Match
