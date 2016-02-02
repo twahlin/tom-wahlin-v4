@@ -29,8 +29,10 @@ title:
 			<% end %>	
 			
 			<% if item.cta %>
-				<a class="cta" target="_blank" title="Link to <%= item.title %>" href="<%= item.cta.ctaLink %>"><%= item.cta.ctaText %></a>
-			<% end %>
+				<% item.cta.each do |c| %>
+					<a class="cta" target="_blank" title="Link to <%= c["ctaText"] %>" href="<%= c["ctaLink"] %>"><%= c["ctaText"]%></a>
+				<% end %>
+			<% end%>
 	</div>
 	<div class="project-image-col clearfix">
 		

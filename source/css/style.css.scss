@@ -62,6 +62,7 @@ a:hover {
     position: relative;
   	margin: 0 auto -44px;
     background: $slate-blue;
+    max-width: 100%;
     @include breakpoint(large) {
       display: flex;
       flex-direction: column;
@@ -763,7 +764,7 @@ body.projects .masthead-wrap nav ul li.nav-projects a {
 
 .preview-apple,
 .preview-apple:nth-child(even) {
-  background: #999 url(../img/build/icon-apple.svg) center 300px no-repeat;
+  background: #999 url(../img/build/icon-apple.svg) center 265px no-repeat;
   background-size: 160px 160px;
   color: $light-cream;
   @include breakpoint(medium) {
@@ -822,6 +823,9 @@ body.projects .masthead-wrap nav ul li.nav-projects a {
 		text-transform: uppercase;
 		margin: 0;
 	}
+  .cta {
+    margin-bottom: 20px;
+  }
 }
 
 .project-image-col {

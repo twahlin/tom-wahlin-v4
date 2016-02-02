@@ -1,4 +1,4 @@
-portfolio:
+portfolio:       
 - slug: apple
   active: true
   title: Apple
@@ -15,9 +15,6 @@ portfolio:
   - CSS
   - Javascript
   company: Apple
-  cta:
-    ctaText: View App Landing Page
-    ctaLink: http://paywithcover.com
 - slug: wallpaper-disco
   active: true
   title: Wallpaper Disco
@@ -35,8 +32,10 @@ portfolio:
   - Javascript
   company: Tom Wahlin LLC
   cta:
-    ctaText: View Live Project
-    ctaLink: http://wallpaperdisco.com
+  - ctaText: View Process
+    ctaLink: https://medium.com/keep-learning-keep-growing/100-days-of-making-3889635e8d8b#.3j4zd4pop
+  - ctaText: View Live Project
+    ctaLink: http://wallpaperdisco.com  
 - slug: cover-app
   active: true
   title: Cover
@@ -44,7 +43,7 @@ portfolio:
   - desktop
   - mobile
   - print
-  summary: Second hire at Cover. Design and iterate on the mobile app, provide strategy recommendations and marketing materials. 
+  summary: Second hire at Cover. Design and iterate on the mobile app, provide strategy recommendations and marketing materials.
   heroImageFormat: mobile
   role: Product design, web design, product management, and marketing.
   technologyUsed:
@@ -55,7 +54,7 @@ portfolio:
   - Javascript
   company: Cover
   cta:
-    ctaText: View App Landing Page
+  - ctaText: View App Landing Page
     ctaLink: http://paywithcover.com
 - slug: coles-salon
   active: true
@@ -75,7 +74,7 @@ portfolio:
   - Wordpress
   company: Tom Wahlin LLC
   cta:
-    ctaText: View Live Project
+  - ctaText: View Live Project
     ctaLink: http://colessalon.com/
 - slug: centurion-lounge
   active: true
@@ -90,7 +89,7 @@ portfolio:
   - Photoshop
   company: space150
   cta:
-    ctaText: View Live Project
+  - ctaText: View Live Project
     ctaLink: http://thecenturionlounge.com/
 - slug: vente-privee
   active: true
@@ -107,8 +106,8 @@ portfolio:
   - Javascript
   company: space150
   cta:
-    ctaText: View Live Project
-    ctaLink: https://us.venteprivee.com/main/  
+  - ctaText: View Live Project
+    ctaLink: https://us.venteprivee.com/main/
 - slug: space150-v28
   active: true
   title: space150 Version 28
@@ -125,8 +124,8 @@ portfolio:
   - Javascript
   company: space150
   cta:
-    ctaText: View Live Project
-    ctaLink: http://v28.space150.com/    
+  - ctaText: View Live Project
+    ctaLink: http://v28.space150.com/
 - slug: 3m-informatics
   active: true
   title: 3M Informatics
@@ -154,25 +153,8 @@ portfolio:
   - Photoshop
   company: Tom Wahlin LLC
   cta:
-    ctaText: View Live Project
-    ctaLink: http://blog.mallofamerica.com/      
-# - slug: roven-bashier
-#   active: true
-#   title: The Portfolio of Roven Bashier
-#   categories:
-#   - desktop
-#   - mobile
-#   summary: Developed an easily editable system for a fellow designer, Roven Bashier. Worked with Roven to keep the site easily editable, and create a system that would be able to hold all his work smoothly.
-#   heroImageFormat: mobile-desktop
-#   role: Front-end Development
-#   technologyUsed:
-#   - XHTML
-#   - CSS
-#   - Javascript
-#   company: Tom Wahlin LLC
-#   cta:
-#     ctaText: View Live Project
-#     ctaLink: http://www.rovenbashier.com/portfolio_2012/
+  - ctaText: View Live Project
+    ctaLink: http://blog.mallofamerica.com/
 - slug: receipt-match
   active: true
   title: Receipt Match
@@ -188,8 +170,21 @@ portfolio:
   - Javascript
   company: space150
   cta:
-    ctaText: View App Landing Page
-    ctaLink: http://www.americanexpress.com/us/small-business/openhome/receiptmatch 
+  - ctaText: View App Landing Page
+    ctaLink: http://www.americanexpress.com/us/small-business/openhome/receiptmatch
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+# Old Projects    
+    
+    
 # - slug: basilica-block-party
 #   active: true
 #   title: Basilica Block Party
@@ -202,5 +197,22 @@ portfolio:
 #   - InDesign
 #   - Illustrator
 #   cta:
-#     ctaText: View PDF
+#   - ctaText: View PDF
 #     ctaLink: /img/downloads/tom-wahlin-basilica-block-party.pdf
+# - slug: roven-bashier
+#   active: true
+#   title: The Portfolio of Roven Bashier
+#   categories:
+#   - desktop
+#   - mobile
+#   summary: Developed an easily editable system for a fellow designer, Roven Bashier. Worked with Roven to keep the site easily editable, and create a system that would be able to hold all his work smoothly.
+#   heroImageFormat: mobile-desktop
+#   role: Front-end Development
+#   technologyUsed:
+#   - XHTML
+#   - CSS
+#   - Javascript
+#   company: Tom Wahlin LLC
+#   cta:
+#   - ctaText: View Live Project
+#     ctaLink: http://www.rovenbashier.com/portfolio_2012/
