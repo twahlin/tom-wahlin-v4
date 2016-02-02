@@ -3,12 +3,12 @@ title: Archive | The Portfolio of Tom Wahlin
 ---
 
 <div class="wrap-inner">
-<% data.archive.years.each do |year|  %>
+	<% data.archive.years.each do |year|  %>
 	<h3><%= year["name"] %></h3>
-	<% year.projects.each do |project| %>
-		<ul>
-			<li><a target="_blank" href="<%= project["link"]%>"><%= project["title"]%> &rarr;</a></li>
-		</ul>
+	<ul>
+		<% year.projects.each do |project| %>
+		<li><a target="_blank" href="<%= project["link"]%>"><%= project["title"]%> &rarr;</a></li>
+		<% end %>
+	</ul>
 	<% end %>
-<% end %>
 </div>
