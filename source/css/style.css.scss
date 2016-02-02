@@ -346,9 +346,14 @@ h2 {
 	a, a:visited { 
     color: $slate-blue; 
     line-height: 44px;
+    height: 44px;
+    display: block;  
+    @include nav-underline;
   }
   a:hover, a:active {
-    
+    @include breakpoint(large) {
+      @include nav-active;
+    }
   }
 	span {
 		display: none;
@@ -1113,14 +1118,10 @@ footer {
         width: 100%;
         display: block;
         height: auto;
-      
       }
     }
   }
 }
-
-
-
 
 ////////////////////////////
 ///////// Archive /////////
