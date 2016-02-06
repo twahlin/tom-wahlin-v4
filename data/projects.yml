@@ -4,9 +4,9 @@ portfolio:
   title: Apple
   categories:
   - mobile
-  summary: Various projecs with Apple—specifically focused on mobile (unable to share publicly).
+  summary: Lead mobile-based projects with Apple. Inquire for more details.
   heroImageFormat: mobile
-  role: Product design, prototyping, and design team management.
+  role: Design team management, product design, and prototyping.
   technologyUsed:
   - Photoshop
   - SketchApp
@@ -23,7 +23,7 @@ portfolio:
   - mobile
   summary: Downloadable wallpapers to dance up your desktop and devices. 
   heroImageFormat: mobile-desktop
-  role: Sole Contributor
+  role: Sole Contributor (design, illustration, and front-end development)
   technologyUsed:
   - Photoshop
   - SketchApp
@@ -64,7 +64,7 @@ portfolio:
   - desktop
   - mobile
   - print
-  summary: Second hire at Cover. Design and iterate on the mobile app, provide strategy recommendations and marketing materials.
+  summary: Design and iterate on the mobile app, provide strategy recommendations and marketing materials.
   heroImageFormat: mobile
   role: Product design, web design, product management, and marketing.
   technologyUsed:
