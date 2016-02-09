@@ -16,7 +16,7 @@
 				<% previewImagePath = previewImage.to_s %>
 				<% previewImagePath = previewImagePath.gsub!('source/img/projects/', '').gsub!(item.slug, '').gsub!('/hero-preview/', '').chomp(".png") %>				
 					<li><div><a href="/projects/<%= item.slug %>" title="View <%= item.title %> Case Study">
-						<img src="/img/projects/<%= item.slug %>/hero-preview/<%= previewImagePath %>.png" alt="<%= item.title %> preview image" />
+						<img src="/img/projects/<%= item.slug %>/hero-preview/<%= previewImagePath %>.png" data-at2x="/img/projects/<%= item.slug %>/hero-preview/<%= previewImagePath %>@2x.png" alt="<%= item.title %> preview image" />
 					</a></div></li>
 			<% end %>
 		</ul>
