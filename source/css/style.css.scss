@@ -63,11 +63,16 @@ a:hover {
   	margin: 0 auto -44px;
     background: $slate-blue;
     max-width: 100%;
+	 background: $slate-blue url(../img/build/bg-mobile-tom-photo.jpg) no-repeat center bottom; 
+	 background-size: 100% auto;
     @include breakpoint(large) {
       display: flex;
       flex-direction: column;
-  		background: $slate-blue url(../img/build/bg-tom-photo.jpg) no-repeat bottom right;
-      background-size: 750px 750px;
+	   background: url(../img/build/bg-tom-photo.jpg) no-repeat center center fixed; 
+	   -webkit-background-size: cover;
+	   -moz-background-size: cover;
+	   -o-background-size: cover;
+	   background-size: cover;
     }
   }
   .push {
@@ -79,17 +84,25 @@ a:hover {
     color: $light-cream;
     overflow: hidden;
     padding: 94px 30px 30px 30px;
-    max-width: 600px;
+    max-width: 560px;
     @include proxima-light;
     h3 {
       @include proxima-semibold;
-      font-size: 60px;
-      margin-bottom: 30px;
+      font-size: 50px;
+      margin-bottom: 22px;
+		@include breakpoint(medium) { 
+	      font-size: 60px;
+	      margin-bottom: 30px;	
+		}
     }
     p {
-      font-size: 18px;
+      font-size: 16px;
       line-height: 28px;
       margin-bottom: 30px;
+		@include breakpoint(medium) { 
+	      font-size: 18px;
+	      line-height: 28px;	
+		}
     }
     a, a:visited {
       @include proxima-semibold;
@@ -140,6 +153,10 @@ a:hover {
     .intro-bullshit-sheriff:hover:after {background: #D9CEC3;}
 
 .intro-social-list {
+	display: none;
+	@include breakpoint(medium) { 
+		display: block;
+	}
   @include breakpoint(large) { 
     position: absolute;
     left: 30px;
@@ -152,11 +169,7 @@ a:hover {
     li {
       display: block;
       margin-bottom: 40px;
-      flex: 25%;
-      @include breakpoint(large) { 
-        flex: none;
-        margin: 0 14px 0 0;
-      }
+		margin: 0 14px 0 0;
       a {
         position: relative;
         display: block;
@@ -214,10 +227,7 @@ a:hover {
         }
       }
     }
-    li:nth-child(4n+1) a { float: left; }
-    li:nth-child(4n+2) a { margin-left: 20%; @include breakpoint(large) { margin-left: 0; float: left; } }
-    li:nth-child(4n+3) a { float: right; margin-right: 20%; @include breakpoint(large) { margin-right: 0; float: left; } }
-    li:nth-child(4n+4) a { float: right; @include breakpoint(large) { float: left; }}
+
 
     .icon-social-dribbble span svg    { left: 10px; top: 10px; height: 24px; width: 24px; @include breakpoint(large) {left: 8px; top: 8px; height: 20px; width: 20px;}}
     .icon-social-instagram span svg   { left: 10px; top: 10px; height: 24px; width: 24px; @include breakpoint(large) {left: 8px; top: 8px; height: 20px; width: 20px;}}
