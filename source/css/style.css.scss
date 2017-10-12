@@ -20,14 +20,14 @@ h3 {
 	font-size: 36px;
 	line-height: 36px;
 	@include proxima-light;
-	margin: 0 0 18px 0;		
+	margin: 0 0 18px 0;
 }
 h2
 h4 {
 	font-size: 24px;
 	line-height: 30px;
 	@include proxima-light;
-	margin: 0 0 18px 0;		
+	margin: 0 0 18px 0;
 }
 
 h5 {
@@ -63,12 +63,12 @@ a:hover {
   	margin: 0 auto -44px;
     background: $slate-blue;
     max-width: 100%;
-	 background: $slate-blue url(../img/build/bg-mobile-tom-photo.jpg) no-repeat center bottom; 
+	 background: $slate-blue url(../img/build/bg-mobile-tom-photo.jpg) no-repeat center bottom;
 	 background-size: 100% auto;
     @include breakpoint(large) {
       display: flex;
       flex-direction: column;
-	   background: url(../img/build/bg-tom-photo.jpg) no-repeat center center fixed; 
+	   background: url(../img/build/bg-tom-photo.jpg) no-repeat center center fixed;
 	   -webkit-background-size: cover;
 	   -moz-background-size: cover;
 	   -o-background-size: cover;
@@ -76,7 +76,7 @@ a:hover {
     }
   }
   .push {
-  	height: 44px; 
+  	height: 44px;
   }
 }
 
@@ -90,18 +90,18 @@ a:hover {
       @include proxima-semibold;
       font-size: 50px;
       margin-bottom: 22px;
-		@include breakpoint(medium) { 
+		@include breakpoint(medium) {
 	      font-size: 60px;
-	      margin-bottom: 30px;	
+	      margin-bottom: 30px;
 		}
     }
     p {
       font-size: 16px;
       line-height: 28px;
       margin-bottom: 30px;
-		@include breakpoint(medium) { 
+		@include breakpoint(medium) {
 	      font-size: 18px;
-	      line-height: 28px;	
+	      line-height: 28px;
 		}
     }
     a, a:visited {
@@ -128,36 +128,48 @@ a:hover {
       opacity: 1;
       transform: translateY(0px);
     }
+    .intro-packhacker:hover {color: #35F1BA;}
+    .intro-packhacker:after {background: #D6D6D6;}
+    .intro-packhacker:hover:after {background: #35F1BA;}
+
+    .intro-leverage:hover {color: #f07b7b;}
+    .intro-leverage:after {background: #D6D6D6;}
+    .intro-leverage:hover:after {background: #f07b7b;}
+
+    .intro-infatuation:hover {color: #7caef3;}
+    .intro-infatuation:after {background: #D6D6D6;}
+    .intro-infatuation:hover:after {background: #7caef3;}
+
     .intro-apple:hover {color: #ADADAD;}
     .intro-apple:after {background: #D6D6D6;}
     .intro-apple:hover:after {background: #ADADAD;}
-    
+
     .intro-cover:hover {color: #C4A3F0;}
     .intro-cover:after {background: #E1D1F7;}
     .intro-cover:hover:after {background: #C4A3F0;}
-    
+
     .intro-space:hover {color: #999999;}
     .intro-space:after {background: #CCCCCC;}
     .intro-space:hover:after {background: #999999;}
-    
+
     .intro-nerdery:hover {color: #C4CCC8;}
     .intro-nerdery:after {background: #DBE0DE;}
     .intro-nerdery:hover:after {background: #C4CCC8;}
-    
+
     .intro-wallpaper-disco:hover {color: #F5B7B1;}
     .intro-wallpaper-disco:after {background: #FADBD8;}
     .intro-wallpaper-disco:hover:after {background: #F5B7B1;}
-    
+
     .intro-bullshit-sheriff:hover {color: #D9CEC3;}
     .intro-bullshit-sheriff:after {background: #E8E1DB;}
     .intro-bullshit-sheriff:hover:after {background: #D9CEC3;}
 
 .intro-social-list {
 	display: none;
-	@include breakpoint(medium) { 
+	@include breakpoint(medium) {
 		display: block;
 	}
-  @include breakpoint(large) { 
+  @include breakpoint(large) {
     position: absolute;
     left: 30px;
     bottom: 74px;
@@ -199,7 +211,7 @@ a:hover {
             position: absolute;
             fill: $light-cream;
           }
-          
+
         }
       }
       a:hover span {
@@ -237,7 +249,7 @@ a:hover {
     .icon-social-twitter span svg     { left: 10px; top: 10px; height: 24px; width: 24px; @include breakpoint(large) {left: 8px; top: 8px; height: 20px; width: 20px;}}
     .icon-social-facebook span svg    { left: 8px; top: 8px; height: 28px; width: 28px;   @include breakpoint(large) {left: 6px; top: 6px; height: 24px; width: 24px;}}
     .icon-social-github span svg      { left: 10px; top: 10px; height: 24px; width: 24px; @include breakpoint(large) {left: 8px; top: 8px; height: 20px; width: 20px;}}
-    
+
     .icon-social-dribbble a:hover span    { background-color: #F082AC; }
     .icon-social-instagram a:hover span   { background-color: #5989AB; }
     .icon-social-linkedin a:hover span    { background-color: #4DA0CB; }
@@ -246,21 +258,21 @@ a:hover {
     .icon-social-twitter a:hover span     { background-color: #7FC0F2; }
     .icon-social-facebook a:hover span    { background-color: #768BB7; }
     .icon-social-github a:hover span      { background-color: #5D5B5C; }
-    
+
   }
 }
 
   }
-  
+
   .introduction-inner-wrap:after {
-    @include breakpoint(large) { 
+    @include breakpoint(large) {
       content:'';
       background: $light-cream;
       display: block;
       height: 2px;
       width: 86px;
       margin-bottom: 40px;
-    } 
+    }
   }
 
 /////////////
@@ -268,8 +280,8 @@ a:hover {
 ///////////
 
 .wrap-main {
-  @include breakpoint(max) { 
-    margin: 0 auto; 
+  @include breakpoint(max) {
+    margin: 0 auto;
     max-width: 1600px;
   }
   padding-top: 44px;
@@ -277,7 +289,7 @@ a:hover {
   overflow: hidden;
   .wrap-inner {
     padding: 30px 20px 40px 20px;
-    @include breakpoint(medium) { 
+    @include breakpoint(medium) {
       padding: 30px;
       width: 80%;
       max-width: 600px;
@@ -326,13 +338,13 @@ h1 {
 	padding-top: 38px;
 	width: 46px;
 	top: 65px;
-	@include breakpoint(large) { 
+	@include breakpoint(large) {
 		left: 50%;
 		margin-left: -23px;
 	}
 	a {
 		background: url(../img/build/logo-tom-wahlin.png) no-repeat center;
-		@include image-2x("../img/build/logo-tom-wahlin@2x.png", 46px, 38px);	
+		@include image-2x("../img/build/logo-tom-wahlin@2x.png", 46px, 38px);
 		position: absolute;
 		padding-top: 38px;
 		width: 46px;
@@ -348,16 +360,16 @@ h2 {
 	color: $slate-blue;
 	font-size: 16px;
 	margin: 0;
-	@include breakpoint(large) { 
+	@include breakpoint(large) {
 		font-size: 14px;
 		text-align: left;
 		float: left;
 	}
-	a, a:visited { 
-    color: $slate-blue; 
+	a, a:visited {
+    color: $slate-blue;
     line-height: 44px;
     height: 44px;
-    display: block;  
+    display: block;
     @include nav-underline;
   }
   a:hover, a:active {
@@ -386,7 +398,7 @@ h2 {
 	right: 0;
 	@include single-transition(all, .2s, ease-in-out);
 	@include breakpoint(large) {
-		background: $light-cream; 
+		background: $light-cream;
 	}
 }
 
@@ -405,8 +417,8 @@ h2 {
 
 .nav-push {
 	top: 0;
-	@include breakpoint(large) { 
-		top: -44px; 
+	@include breakpoint(large) {
+		top: -44px;
 	}
 }
 
@@ -422,7 +434,7 @@ h2 {
 	@include box-shadow(0px 1px 0 0 transparentize($dark-blue, .75), 0px -1px 0 0 transparentize($dark-blue, .75));
 	@include breakpoint(large) {
 		margin: 44px 0;
-		padding: 0 15px; 
+		padding: 0 15px;
 	}
 	nav {
 		position: absolute;
@@ -430,9 +442,9 @@ h2 {
 		height: 30px;
 		width: 100%;
 		font-size: 14px;
-		@include breakpoint(large) { 
+		@include breakpoint(large) {
 			float: right;
-			position: relative; 
+			position: relative;
 			height: 44px;
 			width: auto;
 		}
@@ -443,7 +455,7 @@ h2 {
 				height: 24px;
 				float: left;
 				width: 33%;
-				@include breakpoint(large) { 
+				@include breakpoint(large) {
 					width: auto;
 					float: left;
 					margin-left: 20px;
@@ -456,37 +468,37 @@ h2 {
 					float: left;
           text-align: center;
           color: $light-cream;
-					@include breakpoint(large) { 
+					@include breakpoint(large) {
             color: $slate-blue;
-						position: relative; 
+						position: relative;
 						width: auto;
 						height: auto;
 						padding: 0;
 						margin: 0;
             text-align: left;
-						width: auto;						
+						width: auto;
 					}
 				}
 				a:hover,
         a:active {
-          @include breakpoint(large) { 
+          @include breakpoint(large) {
             @include nav-active;
         }
 				}
 			}
 		li:after {
-			background: transparentize($dark-blue, .9);			
+			background: transparentize($dark-blue, .9);
 			content:"";
 			position: absolute;
 			left: -1px;
 			top: 12px;
 			height: 20px;
 			width: 2px;
-			@include breakpoint(large) { 
+			@include breakpoint(large) {
 				display: none;
 			}
 		}
-		li:first-child:after{display: none;}	
+		li:first-child:after{display: none;}
 		.nav-dribbble a { background: url(../img/build/icon-dribbble.png) no-repeat center; @include image-2x("../img/build/icon-dribbble@2x.png", 16px, 16px); @include breakpoint(large) { background: none; }}
 		.nav-linkedin a { background: url(../img/build/icon-linkedin.png) no-repeat center; @include image-2x("../img/build/icon-linkedin@2x.png", 16px, 16px); @include breakpoint(large) { background: none; }}
 		.nav-lastfm a { background: url(../img/build/icon-lastfm.png) no-repeat center; @include image-2x("../img/build/icon-lastfm@2x.png", 20px, 14px); @include breakpoint(large) { background: none; }}
@@ -494,11 +506,11 @@ h2 {
 		.nav-facebook a { background: url(../img/build/icon-facebook.png) no-repeat center; @include image-2x("../img/build/icon-facebook@2x.png", 8px, 16px); @include breakpoint(large) { background: none; }}
 		}
 		ul li:nth-child(1) a { @include single-transition(all, .2s, cubic-bezier(0.175, 0.885, 0.320, 1.275)); }
-		ul li:nth-child(2) a { @include single-transition(all, .3s, cubic-bezier(0.175, 0.885, 0.320, 1.275)); }	
+		ul li:nth-child(2) a { @include single-transition(all, .3s, cubic-bezier(0.175, 0.885, 0.320, 1.275)); }
 		ul li:nth-child(3) a { @include single-transition(all, .4s, cubic-bezier(0.175, 0.885, 0.320, 1.275)); }
 		ul li:nth-child(4) a { @include single-transition(all, .5s, cubic-bezier(0.175, 0.885, 0.320, 1.275)); }
 		ul li:nth-child(5) a { @include single-transition(all, .6s, cubic-bezier(0.175, 0.885, 0.320, 1.275)); }
-		@include breakpoint(large) { 
+		@include breakpoint(large) {
 			ul li:nth-child(1) a,
       ul li:nth-child(2) a,
       ul li:nth-child(3) a,
@@ -507,7 +519,7 @@ h2 {
 		}
 		ul li .nav-open {
 			margin-top: 0;
-		}	
+		}
 	}
 }
 
@@ -545,22 +557,22 @@ body.projects .masthead-wrap nav ul li.nav-projects a {
 	}
 	.icon-desktop {
 		background: url(../img/build/icon-desktop.png) no-repeat;
-		@include image-2x("../img/build/icon-desktop@2x.png", 18px, 16px); 
+		@include image-2x("../img/build/icon-desktop@2x.png", 18px, 16px);
 		width: 18px;
 	}
 	.icon-mobile {
-		background: url(../img/build/icon-phone.png) no-repeat; 
-		@include image-2x("../img/build/icon-phone@2x.png", 10px, 16px); 		
+		background: url(../img/build/icon-phone.png) no-repeat;
+		@include image-2x("../img/build/icon-phone@2x.png", 10px, 16px);
 		width: 10px;
 	}
 	.icon-print {
-		background: url(../img/build/icon-print.png) no-repeat; 
-		@include image-2x("../img/build/icon-print@2x.png", 12px, 16px); 		
+		background: url(../img/build/icon-print.png) no-repeat;
+		@include image-2x("../img/build/icon-print@2x.png", 12px, 16px);
 		width: 12px;
 	}
 	.icon-film {
-		background: url(../img/build/icon-film.png) no-repeat; 
-		@include image-2x("../img/build/icon-film@2x.png", 14px, 16px); 		
+		background: url(../img/build/icon-film.png) no-repeat;
+		@include image-2x("../img/build/icon-film@2x.png", 14px, 16px);
 		width: 14px;
 	}
 }
@@ -595,17 +607,17 @@ body.projects .masthead-wrap nav ul li.nav-projects a {
 		}
 	}
 	p {
-	  display: table-cell; 
+	  display: table-cell;
 	  vertical-align: middle;
 		padding: 0 10%;
 		font-size: 16px;
 		line-height: 22px;
 		text-align: center;
-		@include proxima-light;		
+		@include proxima-light;
 		@include breakpoint(medium) {
 			font-size: 24px;
 			line-height: 33px;
-			@include proxima-extra-light;			
+			@include proxima-extra-light;
 		}
 		@include breakpoint(large) {
 			display: block;
@@ -624,7 +636,7 @@ body.projects .masthead-wrap nav ul li.nav-projects a {
 			margin: 0 auto 30px auto;
 			height: 3px;
 			width: 150px;
-			@include dark-blue-box-shadow;			
+			@include dark-blue-box-shadow;
 		}
 	}
 }
@@ -638,9 +650,9 @@ body.projects .masthead-wrap nav ul li.nav-projects a {
 	background: $light-cream;
 	border-bottom: 1px solid #E7E8EA;
 	border-left: 1px solid #E7E8EA;
-	border-right: 1px solid #E7E8EA;	
+	border-right: 1px solid #E7E8EA;
 	position: relative;
-	@include breakpoint(medium) { 
+	@include breakpoint(medium) {
 		min-height: 430px;
 	}
 	img {
@@ -656,13 +668,13 @@ body.projects .masthead-wrap nav ul li.nav-projects a {
 .detail-preview {
 	padding: 30px 20px 40px 20px;
 	max-width: 500px;
-	@include breakpoint(medium) { 
+	@include breakpoint(medium) {
 		padding: 30px;
 		width: 40%;
 		max-width: 260px;
 		float: left;
 	}
-	@include breakpoint(xl) { 
+	@include breakpoint(xl) {
 		max-width: 500px;
 		width: 30%;
 	}
@@ -670,9 +682,9 @@ body.projects .masthead-wrap nav ul li.nav-projects a {
 		line-height: 22px;
 		display: block;
 		text-align: center;
-		@include breakpoint(small) { 
+		@include breakpoint(small) {
 			display: inline-block;
-		}		
+		}
 	}
 }
 
@@ -682,17 +694,17 @@ body.projects .masthead-wrap nav ul li.nav-projects a {
 	display: block;
 	overflow: hidden;
 	padding: 0 20px;
-	@include breakpoint(small) { 
+	@include breakpoint(small) {
 		height: 300px;
 	}
-	@include breakpoint(medium) { 
-		height: 370px;		
+	@include breakpoint(medium) {
+		height: 370px;
 		position: absolute;
 		bottom: 0;
-		left: 310px;		
+		left: 310px;
 		width: 70%;
-	}	
-	@include breakpoint(xl) { 
+	}
+	@include breakpoint(xl) {
 		left: 35%;
 	}
 }
@@ -706,8 +718,8 @@ body.projects .masthead-wrap nav ul li.nav-projects a {
 		display: block;
 		position: relative;
 		img {
-		 @include hero-hover-animation;	
-		}		
+		 @include hero-hover-animation;
+		}
 	}
 }
 
@@ -718,15 +730,15 @@ body.projects .masthead-wrap nav ul li.nav-projects a {
 	li:first-child div {
 		top: 30px;
 		@include holder-mobile-phone;
-		z-index: 2;	
-		@include breakpoint(small) { 
+		z-index: 2;
+		@include breakpoint(small) {
 			top: 50px;
-		}	
+		}
 	}
 	li:last-child div {
 		left: 20%;
 		z-index: 1;
-		@include holder-monitor;				
+		@include holder-monitor;
 	}
 }
 
@@ -736,8 +748,8 @@ body.projects .masthead-wrap nav ul li.nav-projects a {
 		position: absolute;
 		top: 30px;
 		z-index: 2;
-		@include holder-mobile-phone;	
-		@include breakpoint(small) { 
+		@include holder-mobile-phone;
+		@include breakpoint(small) {
 			top: 50px;
 		}
 	}
@@ -746,18 +758,18 @@ body.projects .masthead-wrap nav ul li.nav-projects a {
 		margin-left: -77.5px;
 		top: 0;
 		z-index: 3;
-		@include breakpoint(small) { 
+		@include breakpoint(small) {
 			margin-left: -116px;
 		}
 		a:hover img {
-			@include breakpoint(small) { 
+			@include breakpoint(small) {
 				margin-top: -50px;
 			}
-		}		
+		}
 	}
 	li:last-child div {
 		right: 0;
-		z-index: 1;		
+		z-index: 1;
 	}
 }
 
@@ -774,8 +786,8 @@ body.projects .masthead-wrap nav ul li.nav-projects a {
 	li div {
 		position: absolute;
 		left: 0;
-		z-index: 1;		
-		@include holder-default;		
+		z-index: 1;
+		@include holder-default;
 	}
 }
 
@@ -814,8 +826,8 @@ body.projects .masthead-wrap nav ul li.nav-projects a {
 	clear: both;
 	padding: 30px 20px 40px 20px;
 	background: $dark-cream;
-	border: 1px solid #E7E8EA;	
-	@include breakpoint(medium) { 
+	border: 1px solid #E7E8EA;
+	@include breakpoint(medium) {
 		padding: 30px;
 	}
 }
@@ -834,7 +846,7 @@ body.projects .masthead-wrap nav ul li.nav-projects a {
 	}
 	@include breakpoint(xl) {
 		width: 300px;
-	}	
+	}
 	h4 {
 		font-size: 12px;
 		text-transform: uppercase;
@@ -847,25 +859,25 @@ body.projects .masthead-wrap nav ul li.nav-projects a {
 
 .project-image-col {
 	max-width: 1024px;
-	@include breakpoint(large) { 
+	@include breakpoint(large) {
 		margin-top: 60px;
 		float: right;
-		width: calc(100% - 290px);		
+		width: calc(100% - 290px);
 	}
-	@include breakpoint(xl) { 
-		width: calc(100% - 340px);		
-	}	
+	@include breakpoint(xl) {
+		width: calc(100% - 340px);
+	}
 	img {
 		display: block;
 		margin: 0 0 20px 0;
 		width: 100%;
-		@include breakpoint(large) { 
+		@include breakpoint(large) {
 			margin: 0 0 40px 0;
 		}
 	}
 	p {
 		margin: 0 0 20px 0;
-		@include breakpoint(large) { 
+		@include breakpoint(large) {
 			margin: 0 0 40px 0;
 			max-width: 600px;
 		}
@@ -881,7 +893,7 @@ footer {
 	height: 44px;
 	line-height: 44px;
 	font-size: 14px;
-	color: $slate-blue;	
+	color: $slate-blue;
   padding: 0 15px;
   z-index: 9999;
   position: relative;
@@ -926,7 +938,7 @@ footer {
 			width: 50px;
 		}
 		h6 {
-			font-style: normal;	
+			font-style: normal;
 			font-size: 32px;
 			margin: 30px;
 			margin: 0 0 30px 0;
@@ -938,7 +950,7 @@ footer {
 		}
 		.subhead {
 			font-size: 20px;
-			line-height: 28px;			
+			line-height: 28px;
 		}
 		a {
 			color: #FCFCFC;
@@ -946,8 +958,8 @@ footer {
 		}
 		a:hover {
 			color: #5A6276;
-		}	
-	}	
+		}
+	}
 }
 
 ///////////////////////////
@@ -955,14 +967,14 @@ footer {
 /////////////////////////
 
 .blog {
-	background: $dark-cream;	
+	background: $dark-cream;
 }
 
 .post-date {
 	display: block;
 	font-size: 11px;
 	margin-bottom: 10px;
-	@include proxima-semibold;		
+	@include proxima-semibold;
 }
 .rule {
 	color: transparentize($dark-blue, .8);
@@ -1023,7 +1035,7 @@ footer {
 				padding-left: 10px;
 				border-left: 1px solid transparentize($dark-blue, .8);
 				list-style-type: bullet;
-				margin-bottom: 10px;		
+				margin-bottom: 10px;
 			}
 		}
 	}
@@ -1032,7 +1044,7 @@ footer {
 .post-preview-list {
 	padding: 80px 0 50px 0;
 	.post-preview {
-		border: 1px solid #E7E8EA;	
+		border: 1px solid #E7E8EA;
 		background: #fff;
 		padding: 20px;
 		margin: 0 auto 30px auto;
@@ -1054,7 +1066,7 @@ footer {
       padding: 30px 20px 30px 20px;
       @include breakpoint(medium) {
         flex: 50%;
-        padding: 30px 20px 30px 30px;  
+        padding: 30px 20px 30px 30px;
       }
       @include breakpoint(large) {
         flex: 30%;
@@ -1091,7 +1103,7 @@ footer {
               color: $dark-blue;
               span {
                 svg {
-                 fill: $dark-blue; 
+                 fill: $dark-blue;
                 }
               }
             }
@@ -1148,11 +1160,3 @@ footer {
     }
   }
 }
-
-
-
-
-
-
-
-
