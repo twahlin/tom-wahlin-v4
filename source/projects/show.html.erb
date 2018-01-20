@@ -1,15 +1,15 @@
 ---
-title: 
+title:
 ---
 
 <% item = @item %>
 
 	<section class="detail-page-wrap clearfix">
-		<div class="project-details"> 
+		<div class="project-details">
 				<ul class="icons-discipline">
 				<% item.categories.each do |f| %>
 					<li class="icon-<%= f %>"><%= f %></li>
-				<% end %>		
+				<% end %>
 			</ul>
 			<h3><%= item.title %></h3>
 			<p><%= item.summary %></p>
@@ -26,8 +26,8 @@ title:
 			<% if item.company %>
 				<h4>Company</h4>
 			<p><%= item.company %></p>
-			<% end %>	
-			
+			<% end %>
+
 			<% if item.cta %>
 				<% item.cta.each do |c| %>
 					<a class="cta" target="_blank" title="Link to <%= c["ctaText"] %>" href="<%= c["ctaLink"] %>"><%= c["ctaText"]%></a>
@@ -35,17 +35,15 @@ title:
 			<% end%>
 	</div>
 	<div class="project-image-col clearfix">
-		
+
 		<% #this really needs some cleanup - sorts throught images in a directory, then strips extra data besides base filename, creates srcset. Must be png. %>
-		<% @detailImages = Dir.glob("source/img/projects/#{item.slug}/detail/*.{png}") %>
+		<% @detailImages = Dir.glob("source/images/projects/#{item.slug}/detail/*.{png}").sort %>
 			<% for detailImage in @detailImages %>
 			<% detailImagePath = detailImage.to_s %>
-			<% detailImagePath = detailImagePath.gsub!('source/img/projects/', '').gsub!(item.slug, '').gsub!('/detail/', '').chomp(".png") %>				
-				<img src="/img/projects/<%= item.slug %>/detail/<%= detailImagePath %>.png" alt="<%= item.title %> portfolio image" />
+			<% detailImagePath = detailImagePath.gsub!('source/images/projects/', '').gsub!(item.slug, '').gsub!('/detail/', '').chomp(".png") %>
+				<img src="/images/projects/<%= item.slug %>/detail/<%= detailImagePath %>.png" alt="<%= item.title %> portfolio image" />
 		<% end %>
-		
-		
+
+
 </div>
 </section>
-
-

@@ -3,7 +3,7 @@
 ###
 
 # Susy grids in Compass
-# First: gem install susy --pre
+# First: gem install susy
 # require 'susy'
 
 # Change Compass configuration
@@ -47,25 +47,25 @@
 #   end
 # end
 
-set :css_dir, 'css'
+set :css_dir, 'stylesheets'
 
-set :js_dir, 'js'
+set :js_dir, 'javascripts'
 
-set :images_dir, 'img'
+set :images_dir, 'images'
 
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
-  activate :minify_css
+  # activate :minify_css
 
   # Minify Javascript on build
-  activate :minify_javascript
+  # activate :minify_javascript
 
   # Enable cache buster
-  activate :cache_buster
+  # activate :cache_buster
 
   # Use relative URLs
-  activate :relative_assets
+  # activate :relative_assets
 
   # Compress PNGs after build
   # First: gem install middleman-smusher
@@ -74,19 +74,8 @@ configure :build do
 
   # Or use a different image path
   # set :http_path, "/Content/images/"
+  activate :compass
 end
-
-### Customized Below ###
-
-
-# livereload used for instant coding
-activate :livereload
-
-# Using redcarpet markdow
-set :markdown_engine, :redcarpet
-set :markdown,  :fenced_code_blocks => true,
-                :autolink => true, 
-                :smartypants => true
 
 # Generate individual portfolio pages
 data.projects.portfolio.select(&:active).each do |item|
@@ -96,15 +85,7 @@ data.projects.portfolio.select(&:active).each do |item|
 end
 
 page "/projects" do
-  @previewImages = Dir.glob("source/img/projects/#{item.slug}/*[^@2x].{png,jpg,gif}")
-end
-
-activate :blog do |blog|
-  blog.prefix = "blog"
-  blog.permalink = ":year-:month-:day-:title"
-  blog.layout = "blog"
-  blog.default_extension = ".markdown"
-  blog.summary_separator = /SPLIT_SUMMARY_BEFORE_THIS/  
+  @previewImages = Dir.glob("source/images/projects/#{item.slug}/*[^@2x].{png,jpg,gif}")
 end
 
 # Enables pretty urls without the file extension

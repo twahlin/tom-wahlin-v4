@@ -3,20 +3,20 @@
 		<ul class="icons-discipline">
 		  <% item.categories.each do |f| %>
 		  	<li class="icon-<%= f %>"><%= f %></li>
-		  <% end %>		
+		  <% end %>
 		</ul>
 		<h3><%= item.title %></h3>
-		<p><%= item.summary %></p>		
+		<p><%= item.summary %></p>
 		<% link_to "/projects/#{item.slug}", class:'cta', title:'View Project' do %>View Project<% end %>
 	</div>
 	<figure class="image-preview">
 		<ul class="project-images project-<%= item.heroImageFormat %>">
-			<% @previewImages = Dir.glob("source/img/projects/#{item.slug}/hero-preview/*[^@2x].{png}") %>
+			<% @previewImages = Dir.glob("source/images/projects/#{item.slug}/hero-preview/*[^@2x].{png}").sort %>
 				<% for previewImage in @previewImages %>
 				<% previewImagePath = previewImage.to_s %>
-				<% previewImagePath = previewImagePath.gsub!('source/img/projects/', '').gsub!(item.slug, '').gsub!('/hero-preview/', '').chomp(".png") %>				
+				<% previewImagePath = previewImagePath.gsub!('source/images/projects/', '').gsub!(item.slug, '').gsub!('/hero-preview/', '').chomp(".png") %>
 					<li><div><a href="/projects/<%= item.slug %>" title="View <%= item.title %> Case Study">
-						<img src="/img/projects/<%= item.slug %>/hero-preview/<%= previewImagePath %>.png" data-at2x="/img/projects/<%= item.slug %>/hero-preview/<%= previewImagePath %>@2x.png" alt="<%= item.title %> preview image" />
+						<img src="/images/projects/<%= item.slug %>/hero-preview/<%= previewImagePath %>.png" data-at2x="/images/projects/<%= item.slug %>/hero-preview/<%= previewImagePath %>@2x.png" alt="<%= item.title %> preview image" />
 					</a></div></li>
 			<% end %>
 		</ul>

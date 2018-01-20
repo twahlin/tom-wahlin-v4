@@ -1,0 +1,1406 @@
+@import "compass";
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Tom Wahlin Added*/
+
+article, aside, figure, footer, header, hgroup, nav, section {
+  display: block;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+//Colors
+$dark-blue: rgba(23, 28, 47, 1);
+$slate-blue: rgba(90, 98, 118, 1);
+$link-blue: rgba(90, 98, 118, 1);
+$light-cream: rgba(252, 252, 252, 1);
+$dark-cream: rgba(248, 248, 248, 1);
+
+//Typography
+@mixin proxima-extra-light { font-weight: 100; font-style: normal;}
+@mixin proxima-light { font-weight: 300; font-style: normal;}
+@mixin proxima-light-italic { font-weight: 300; font-style: italic;}
+@mixin proxima-regular { font-weight: 400; font-style: normal;}
+@mixin proxima-regular-italic { font-weight: 400; font-style: italic;}
+@mixin proxima-semibold { font-weight: 600; font-style: normal;}
+
+//Text Shadows
+@mixin dark-blue-text-shadow {@include text-shadow(0 1px 1px transparentize($dark-blue, .6));}
+
+//box-shadows
+@mixin dark-blue-box-shadow {@include box-shadow(0 1px 1px 0 transparentize($dark-blue, .6));}
+@mixin inset-dark-blue-shadow-3 {@include box-shadow(inset 0 -3px 0 0 transparentize($dark-blue, .4));}
+@mixin light-cream-shadow-3 {@include box-shadow(inset 0 3px 0 0 $light-cream);}
+
+//Media Queries
+@mixin breakpoint($point) {
+  @if $point == small {
+    @media (min-width: 480px) { @content; }
+  }
+  @if $point == medium {
+    @media (min-width: 640px) { @content; }
+  }
+  @if $point == large {
+    @media (min-width: 800px) { @content; }
+  }
+  @if $point == xl {
+    @media (min-width: 960px) { @content; }
+  }
+  @if $point == xxl {
+    @media (min-width: 1200px) { @content; }
+  }
+  @if $point == max {
+    @media (min-width: 1600px) { @content; }
+  }
+}
+
+//Hide Text
+@mixin hide-text {
+	overflow: hidden;
+	height: 0;
+}
+
+//Transitions
+@mixin nav-underline {@include transition(box-shadow .1s ease-in, color .1s ease);}
+@mixin hero-hover-animation {@include single-transition(margin-top, .3s, ease-in-out);}
+
+// mixin for 2x images in css
+@mixin image-2x($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+         (-o-min-device-pixel-ratio: 2.6/2),
+         (-webkit-min-device-pixel-ratio: 1.3),
+         (min-device-pixel-ratio: 1.3),
+         (min-resolution: 1.3dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}
+
+//Navigation Active
+@mixin nav-active {
+  color: $light-cream;
+  @include light-cream-shadow-3;
+  @include breakpoint(large) {
+    color: $dark-blue;
+    @include inset-dark-blue-shadow-3;
+  }
+}
+
+//Calc functionality
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+//Preview Image Content Holdersbackground: $dark-blue;
+@mixin holder-mobile-phone {
+	background: $dark-blue;
+	@include box-shadow(inset 0px 0px 0px 1px rgba(23,28,47,1), inset 0px 0px 0px 2px rgba(252,252,252,0.50));
+	border-radius: 20px;
+	padding: 44px 10px;
+	@include breakpoint(small) {
+		@include box-shadow(inset 0px 0px 0px 2px rgba(23,28,47,1), inset 0px 0px 0px 3px rgba(252,252,252,0.3));
+		border-radius: 30px;
+		padding: 66px 16px;
+	}
+	a {
+		overflow: hidden;
+		@include box-shadow(0px 0px 0px 2px rgba(252,252,252,0.10));
+		height: 237px;
+		width: 134px;
+		background-size: 134px 237px;
+		@include breakpoint(small) {
+			@include box-shadow(0px 0px 0px 2px rgba(252,252,252,0.10));
+			background-size: 200px 355px;
+			height: 355px;
+			width: 200px;
+		}
+	}
+	@include breakpoint(small) {
+	a:hover img {
+		margin-top: -100px;
+	}
+}
+}
+
+@mixin holder-monitor {
+	background: $dark-blue;
+	@include box-shadow(inset 0px 0px 0px 1px rgba(23,28,47,1), inset 0px 0px 0px 2px rgba(252,252,252,0.50));
+	border-radius: 10px;
+	padding: 24px;
+	@include breakpoint(small) {
+		@include box-shadow(inset 0px 0px 0px 2px rgba(23,28,47,1), inset 0px 0px 0px 3px rgba(252,252,252,0.3));
+		border-radius: 15px;
+		padding: 36px;
+	}
+	a {
+		overflow: hidden;
+		@include box-shadow(0px 0px 0px 2px rgba(252,252,252,0.10));
+		height: 343px;
+		width: 458px;
+		background-size: 458px 343px;
+		@include breakpoint(small) {
+			background-size: 687px 515px;
+			@include box-shadow(0px 0px 0px 2px rgba(252,252,252,0.10));
+			height: 515px;
+			width: 687px;
+		}
+	}
+	@include breakpoint(small) {
+		a:hover img {
+			margin-top: -180px;
+		}
+	}
+}
+
+@mixin holder-default {
+	a {
+		height: 343px;
+		width: 458px;
+		background-size: 458px 343px;
+		@include breakpoint(small) {
+			background-size: 687px 515px;
+			height: 515px;
+			width: 687px;
+		}
+	}
+}
+
+
+html, body {
+  height: 100%;
+}
+
+html {
+	font-family: "proxima-nova-1","proxima-nova-2", sans-serif;
+	color: $dark-blue;
+}
+
+body {
+	font-size: 16px;
+	line-height: 22px;
+}
+
+h3 {
+	font-size: 36px;
+	line-height: 36px;
+	@include proxima-light;
+	margin: 0 0 18px 0;
+}
+h2
+h4 {
+	font-size: 24px;
+	line-height: 30px;
+	@include proxima-light;
+	margin: 0 0 18px 0;
+}
+
+h5 {
+	font-size: 18px;
+	line-height: 30px;
+	@include proxima-regular;
+	margin: 0 0 14px 0;
+}
+
+p {
+	margin: 0 0 25px 0;
+}
+
+a {
+	color: $link-blue;
+}
+
+a:hover {
+	color: $dark-blue;
+}
+
+/////////////////////
+/// Introduction ///
+///////////////////
+
+.index {
+  .wrap-main {
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  	min-height: 100%;
+    position: relative;
+  	margin: 0 auto -44px;
+    background: $slate-blue;
+    max-width: 100%;
+	 background: $slate-blue url(../images/build/bg-mobile-tom-photo.jpg) no-repeat center bottom;
+	 background-size: 100% auto;
+    @include breakpoint(large) {
+      display: flex;
+      flex-direction: column;
+	   background: url(../images/build/bg-tom-photo.jpg) no-repeat center center fixed;
+	   -webkit-background-size: cover;
+	   -moz-background-size: cover;
+	   -o-background-size: cover;
+	   background-size: cover;
+    }
+  }
+  .push {
+  	height: 44px;
+  }
+}
+
+  .introduction-inner-wrap {
+    color: $light-cream;
+    overflow: hidden;
+    padding: 94px 30px 30px 30px;
+    max-width: 560px;
+    @include proxima-light;
+    h3 {
+      @include proxima-semibold;
+      font-size: 50px;
+      margin-bottom: 22px;
+		@include breakpoint(medium) {
+	      font-size: 60px;
+	      margin-bottom: 30px;
+		}
+    }
+    p {
+      font-size: 16px;
+      line-height: 28px;
+      margin-bottom: 30px;
+		@include breakpoint(medium) {
+	      font-size: 18px;
+	      line-height: 28px;
+		}
+    }
+    a, a:visited {
+      @include proxima-semibold;
+      position: relative;
+      @include single-transition(all, 0.2s, ease-out, 0.1s);
+      color: $light-cream;
+    }
+    a:after {
+      background: $light-cream;
+      content: '';
+      display: block;
+      opacity: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 2px;
+      color: $light-cream;
+      width: 100%;
+      transform: translateY(5px);
+      @include single-transition(all, 0.15s, ease-out, 0.15s);
+    }
+    a:hover:after {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    .intro-packhacker:hover {color: #35F1BA;}
+    .intro-packhacker:after {background: #D6D6D6;}
+    .intro-packhacker:hover:after {background: #35F1BA;}
+
+    .intro-leverage:hover {color: #f07b7b;}
+    .intro-leverage:after {background: #D6D6D6;}
+    .intro-leverage:hover:after {background: #f07b7b;}
+
+    .intro-infatuation:hover {color: #7caef3;}
+    .intro-infatuation:after {background: #D6D6D6;}
+    .intro-infatuation:hover:after {background: #7caef3;}
+
+    .intro-apple:hover {color: #ADADAD;}
+    .intro-apple:after {background: #D6D6D6;}
+    .intro-apple:hover:after {background: #ADADAD;}
+
+    .intro-cover:hover {color: #C4A3F0;}
+    .intro-cover:after {background: #E1D1F7;}
+    .intro-cover:hover:after {background: #C4A3F0;}
+
+    .intro-space:hover {color: #999999;}
+    .intro-space:after {background: #CCCCCC;}
+    .intro-space:hover:after {background: #999999;}
+
+    .intro-nerdery:hover {color: #C4CCC8;}
+    .intro-nerdery:after {background: #DBE0DE;}
+    .intro-nerdery:hover:after {background: #C4CCC8;}
+
+    .intro-wallpaper-disco:hover {color: #F5B7B1;}
+    .intro-wallpaper-disco:after {background: #FADBD8;}
+    .intro-wallpaper-disco:hover:after {background: #F5B7B1;}
+
+    .intro-bullshit-sheriff:hover {color: #D9CEC3;}
+    .intro-bullshit-sheriff:after {background: #E8E1DB;}
+    .intro-bullshit-sheriff:hover:after {background: #D9CEC3;}
+
+.intro-social-list {
+	display: none;
+	@include breakpoint(medium) {
+		display: block;
+	}
+  @include breakpoint(large) {
+    position: absolute;
+    left: 30px;
+    bottom: 74px;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li {
+      display: block;
+      margin-bottom: 40px;
+		margin: 0 14px 0 0;
+      a {
+        position: relative;
+        display: block;
+        height: 44px;
+        width: 44px;
+        @include breakpoint(large) {
+          height: 36px;
+          width: 36px;
+        }
+        em {
+          display: none;
+        }
+        span {
+          display: block;
+        	@include box-shadow(inset 0 0 0 2px $light-cream);
+          position: relative;
+          height: 44px;
+          width: 44px;
+          @include border-radius(50px);
+          @include single-transition(all, 0.1s, ease-out, 0.1s);
+          margin-bottom: 20px;
+          @include breakpoint(large) {
+            height: 36px;
+            width: 36px;
+          }
+          svg {
+            position: absolute;
+            fill: $light-cream;
+          }
+
+        }
+      }
+      a:hover span {
+        @include breakpoint(large) {
+          transform: translateY(-4px);
+        }
+      }
+      a:after {
+        @include single-transition(all, 0.1s, ease-out, 0.1s);
+        background: $dark-blue;
+        opacity: 0;
+        content:"";
+        width: 16px;
+        height: 2px;
+        position: absolute;
+        left: 10px;
+        border-radius: 20px;
+        transform: translateY(0);
+        display: block;
+        float: none;
+      }
+      a:hover:after {
+        @include breakpoint(large) {
+          opacity: .6;
+        }
+      }
+    }
+
+
+    .icon-social-dribbble span svg    { left: 10px; top: 10px; height: 24px; width: 24px; @include breakpoint(large) {left: 8px; top: 8px; height: 20px; width: 20px;}}
+    .icon-social-instagram span svg   { left: 10px; top: 10px; height: 24px; width: 24px; @include breakpoint(large) {left: 8px; top: 8px; height: 20px; width: 20px;}}
+    .icon-social-linkedin span svg    { left: 10px; top: 10px; height: 24px; width: 24px; @include breakpoint(large) {left: 8px; top: 8px; height: 20px; width: 20px;}}
+    .icon-social-medium span svg      { left: 10px; top: 10px; height: 24px; width: 24px; @include breakpoint(large) {left: 8px; top: 8px; height: 20px; width: 20px;}}
+    .icon-social-soundcloud span svg  { left: 8px; top: 8px; height: 28px; width: 28px;   @include breakpoint(large) {left: 6px; top: 6px; height: 24px; width: 24px;}}
+    .icon-social-twitter span svg     { left: 10px; top: 10px; height: 24px; width: 24px; @include breakpoint(large) {left: 8px; top: 8px; height: 20px; width: 20px;}}
+    .icon-social-facebook span svg    { left: 8px; top: 8px; height: 28px; width: 28px;   @include breakpoint(large) {left: 6px; top: 6px; height: 24px; width: 24px;}}
+    .icon-social-github span svg      { left: 10px; top: 10px; height: 24px; width: 24px; @include breakpoint(large) {left: 8px; top: 8px; height: 20px; width: 20px;}}
+
+    .icon-social-dribbble a:hover span    { background-color: #F082AC; }
+    .icon-social-instagram a:hover span   { background-color: #5989AB; }
+    .icon-social-linkedin a:hover span    { background-color: #4DA0CB; }
+    .icon-social-medium a:hover span      { background-color: #4DCE96; }
+    .icon-social-soundcloud a:hover span  { background-color: #FF884D; }
+    .icon-social-twitter a:hover span     { background-color: #7FC0F2; }
+    .icon-social-facebook a:hover span    { background-color: #768BB7; }
+    .icon-social-github a:hover span      { background-color: #5D5B5C; }
+
+  }
+}
+
+  }
+
+  .introduction-inner-wrap:after {
+    @include breakpoint(large) {
+      content:'';
+      background: $light-cream;
+      display: block;
+      height: 2px;
+      width: 86px;
+      margin-bottom: 40px;
+    }
+  }
+
+/////////////
+/// Main ///
+///////////
+
+.wrap-main {
+  @include breakpoint(max) {
+    margin: 0 auto;
+    max-width: 1600px;
+  }
+  padding-top: 44px;
+  position: relative;
+  overflow: hidden;
+  .wrap-inner {
+    padding: 30px 20px 40px 20px;
+    @include breakpoint(medium) {
+      padding: 30px;
+      width: 80%;
+      max-width: 600px;
+    }
+  }
+}
+
+a, a:visited { color: $link-blue; 	text-decoration: none; }
+
+
+//Buttons
+.cta,
+.cta:visited {
+  min-width: 140px;
+  text-align: center;
+	display: inline-block;
+	padding: 10px 16px;
+	color: $light-cream;
+	background: $slate-blue;
+	@include proxima-semibold;
+	@include dark-blue-text-shadow;
+	@include border-radius(4px);
+	@include inset-dark-blue-shadow-3;
+	@include single-transition(all, 0.2s, ease-out, 0.2s);
+}
+
+.cta:hover {
+	background: transparentize($slate-blue, .1);
+	color: $light-cream;
+	@include box-shadow(inset 0 -3px 0 0 transparentize($dark-blue, .4), 0 2px 10px transparentize($dark-blue, .7));
+}
+
+.cta:active {
+	padding: 11px 16px 9px 16px;
+	@include box-shadow(inset 0 -1px 0 0 transparentize($dark-blue, .4), 0 2px 10px transparentize($dark-blue, .7));
+}
+
+
+/////////////////
+/// Masthead ///
+///////////////
+
+h1 {
+	position: absolute;
+	left: 20px;
+	padding-top: 38px;
+	width: 46px;
+	top: 65px;
+	@include breakpoint(large) {
+		left: 50%;
+		margin-left: -23px;
+	}
+	a {
+		background: url(../images/build/logo-tom-wahlin.png) no-repeat center;
+		@include image-2x("../images/build/logo-tom-wahlin@2x.png", 46px, 38px);
+		position: absolute;
+		padding-top: 38px;
+		width: 46px;
+		top:0;
+		right: 0;
+		@include hide-text;
+	}
+}
+
+h2 {
+	@include proxima-semibold;
+	text-align: center;
+	color: $slate-blue;
+	font-size: 16px;
+	margin: 0;
+	@include breakpoint(large) {
+		font-size: 14px;
+		text-align: left;
+		float: left;
+	}
+	a, a:visited {
+    color: $slate-blue;
+    line-height: 44px;
+    height: 44px;
+    display: block;
+    @include nav-underline;
+  }
+  a:hover, a:active {
+    @include breakpoint(large) {
+      @include nav-active;
+    }
+  }
+	span {
+		display: none;
+		@include proxima-regular;
+		@include breakpoint(large) {
+			display: inline;
+		}
+	}
+}
+
+.masthead {
+	background: $slate-blue;
+	height: 88px;
+	position: fixed;
+	top: -44px;
+	width: 100%;
+	z-index: 4;
+	position: fixed;
+	left: 0;
+	right: 0;
+	@include single-transition(all, .2s, ease-in-out);
+	@include breakpoint(large) {
+		background: $light-cream;
+	}
+}
+
+.nav-toggle {
+	background: url(../images/build/icon-menu.png) no-repeat center;
+	cursor: pointer;
+	@include image-2x("../images/build/icon-menu@2x.png", 18px, 12px);
+	display: block;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 44px;
+	width: 44px;
+	@include breakpoint(large) { display: none; }
+}
+
+.nav-push {
+	top: 0;
+	@include breakpoint(large) {
+		top: -44px;
+	}
+}
+
+.nav-push .nav-toggle {
+	background: url(../images/build/icon-arrow.png) no-repeat center;
+	@include image-2x("../images/build/icon-arrow@2x.png", 10px, 12px);
+}
+
+.masthead-wrap {
+	background: $light-cream;
+	height: 44px;
+	margin: 44px 0 0 0;
+	@include box-shadow(0px 1px 0 0 transparentize($dark-blue, .75), 0px -1px 0 0 transparentize($dark-blue, .75));
+	@include breakpoint(large) {
+		margin: 44px 0;
+		padding: 0 15px;
+	}
+	nav {
+		position: absolute;
+		top: 0;
+		height: 30px;
+		width: 100%;
+		font-size: 14px;
+		@include breakpoint(large) {
+			float: right;
+			position: relative;
+			height: 44px;
+			width: auto;
+		}
+		ul {
+			li {
+				display: block;
+				position: relative;
+				height: 24px;
+				float: left;
+				width: 33%;
+				@include breakpoint(large) {
+					width: auto;
+					float: left;
+					margin-left: 20px;
+				}
+				a {
+					display: block;
+					width: 100%;
+					margin-top: -60px;
+          line-height: 44px;
+					float: left;
+          text-align: center;
+          color: $light-cream;
+					@include breakpoint(large) {
+            color: $slate-blue;
+						position: relative;
+						width: auto;
+						height: auto;
+						padding: 0;
+						margin: 0;
+            text-align: left;
+						width: auto;
+					}
+				}
+				a:hover,
+        a:active {
+          @include breakpoint(large) {
+            @include nav-active;
+        }
+				}
+			}
+		li:after {
+			background: transparentize($dark-blue, .9);
+			content:"";
+			position: absolute;
+			left: -1px;
+			top: 12px;
+			height: 20px;
+			width: 2px;
+			@include breakpoint(large) {
+				display: none;
+			}
+		}
+		li:first-child:after{display: none;}
+		.nav-dribbble a { background: url(../images/build/icon-dribbble.png) no-repeat center; @include image-2x("../images/build/icon-dribbble@2x.png", 16px, 16px); @include breakpoint(large) { background: none; }}
+		.nav-linkedin a { background: url(../images/build/icon-linkedin.png) no-repeat center; @include image-2x("../images/build/icon-linkedin@2x.png", 16px, 16px); @include breakpoint(large) { background: none; }}
+		.nav-lastfm a { background: url(../images/build/icon-lastfm.png) no-repeat center; @include image-2x("../images/build/icon-lastfm@2x.png", 20px, 14px); @include breakpoint(large) { background: none; }}
+		.nav-twitter a { background: url(../images/build/icon-twitter.png) no-repeat center; @include image-2x("../images/build/icon-twitter@2x.png", 16px, 16px); @include breakpoint(large) { background: none; }}
+		.nav-facebook a { background: url(../images/build/icon-facebook.png) no-repeat center; @include image-2x("../images/build/icon-facebook@2x.png", 8px, 16px); @include breakpoint(large) { background: none; }}
+		}
+		ul li:nth-child(1) a { @include single-transition(all, .2s, cubic-bezier(0.175, 0.885, 0.320, 1.275)); }
+		ul li:nth-child(2) a { @include single-transition(all, .3s, cubic-bezier(0.175, 0.885, 0.320, 1.275)); }
+		ul li:nth-child(3) a { @include single-transition(all, .4s, cubic-bezier(0.175, 0.885, 0.320, 1.275)); }
+		ul li:nth-child(4) a { @include single-transition(all, .5s, cubic-bezier(0.175, 0.885, 0.320, 1.275)); }
+		ul li:nth-child(5) a { @include single-transition(all, .6s, cubic-bezier(0.175, 0.885, 0.320, 1.275)); }
+		@include breakpoint(large) {
+			ul li:nth-child(1) a,
+      ul li:nth-child(2) a,
+      ul li:nth-child(3) a,
+      ul li:nth-child(4) a,
+      ul li:nth-child(5) a { @include nav-underline; }
+		}
+		ul li .nav-open {
+			margin-top: 0;
+		}
+	}
+}
+
+.no-js .masthead {
+	top: 0;
+}
+
+.no-js .masthead-wrap nav ul li a {
+	margin-top: 0;
+}
+
+body.contact .masthead-wrap nav ul li.nav-contact a,
+body.projects .masthead-wrap nav ul li.nav-projects a {
+    @include nav-active;
+}
+
+//////////////////////////
+/// Discipline Icons ///
+///////////////////////
+
+.icons-discipline {
+	clear: both;
+	display: inline-block;
+	overflow: hidden;
+	margin-bottom: 30px;
+	@include breakpoint(large) {
+		margin-bottom: 40px;
+	}
+	li {
+		display: block;
+		float: left;
+		padding: 16px 0 0 0;
+		margin: 0 10px 0 0;
+		@include hide-text;
+	}
+	.icon-desktop {
+		background: url(../images/build/icon-desktop.png) no-repeat;
+		@include image-2x("../images/build/icon-desktop@2x.png", 18px, 16px);
+		width: 18px;
+	}
+	.icon-mobile {
+		background: url(../images/build/icon-phone.png) no-repeat;
+		@include image-2x("../images/build/icon-phone@2x.png", 10px, 16px);
+		width: 10px;
+	}
+	.icon-print {
+		background: url(../images/build/icon-print.png) no-repeat;
+		@include image-2x("../images/build/icon-print@2x.png", 12px, 16px);
+		width: 12px;
+	}
+	.icon-film {
+		background: url(../images/build/icon-film.png) no-repeat;
+		@include image-2x("../images/build/icon-film@2x.png", 14px, 16px);
+		width: 14px;
+	}
+}
+
+//////////////////
+/// Hero Area ///
+////////////////
+
+
+.hero {
+	display: table;
+	color: $light-cream;
+	@include dark-blue-text-shadow;
+	height: 200px;
+	background: url(../images/build/hero-base.jpg) no-repeat 70% center;
+	background-size: 100%;
+	width: 100%;
+	@include breakpoint(medium) {
+		height: 300px;
+	}
+	@include breakpoint(large) {
+		height: 500px;
+	}
+	h3 {
+		@include proxima-extra-light;
+		display: none;
+		@include breakpoint(large) {
+			display: block;
+			text-align: center;
+			font-size: 60px;
+			margin: 160px 0 50px 0;
+		}
+	}
+	p {
+	  display: table-cell;
+	  vertical-align: middle;
+		padding: 0 10%;
+		font-size: 16px;
+		line-height: 22px;
+		text-align: center;
+		@include proxima-light;
+		@include breakpoint(medium) {
+			font-size: 24px;
+			line-height: 33px;
+			@include proxima-extra-light;
+		}
+		@include breakpoint(large) {
+			display: block;
+			font-size: 30px;
+			line-height: 42px;
+		}
+		@include breakpoint(xl) {
+			padding: 0 18%;
+		}
+	}
+	.rule {
+		display: none;
+		@include breakpoint(large) {
+			background-color: $light-cream;
+			display: block;
+			margin: 0 auto 30px auto;
+			height: 3px;
+			width: 150px;
+			@include dark-blue-box-shadow;
+		}
+	}
+}
+
+
+/////////////////////////
+/// Project Previews ///
+///////////////////////
+
+.project-preview-wrap {
+	background: $light-cream;
+	border-bottom: 1px solid #E7E8EA;
+	border-left: 1px solid #E7E8EA;
+	border-right: 1px solid #E7E8EA;
+	position: relative;
+	@include breakpoint(medium) {
+		min-height: 430px;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.project-preview-wrap:nth-child(even)  {
+	background: $dark-cream;
+}
+
+.detail-preview {
+	padding: 30px 20px 40px 20px;
+	max-width: 500px;
+	@include breakpoint(medium) {
+		padding: 30px;
+		width: 40%;
+		max-width: 260px;
+		float: left;
+	}
+	@include breakpoint(xl) {
+		max-width: 500px;
+		width: 30%;
+	}
+	.cta {
+		line-height: 22px;
+		display: block;
+		text-align: center;
+		@include breakpoint(small) {
+			display: inline-block;
+		}
+	}
+}
+
+//global outer wrap for image sets
+.image-preview {
+	height: 200px;
+	display: block;
+	overflow: hidden;
+	padding: 0 20px;
+	@include breakpoint(small) {
+		height: 300px;
+	}
+	@include breakpoint(medium) {
+		height: 370px;
+		position: absolute;
+		bottom: 0;
+		left: 310px;
+		width: 70%;
+	}
+	@include breakpoint(xl) {
+		left: 35%;
+	}
+}
+
+//global inner wrap for image sets
+.project-images {
+	position: relative;
+	margin: 0 auto;
+	a {
+		background-repeat: no-repeat;
+		display: block;
+		position: relative;
+		img {
+		 @include hero-hover-animation;
+		}
+	}
+}
+
+.project-mobile-desktop {
+	li div {
+		position: absolute;
+	}
+	li:first-child div {
+		top: 30px;
+		@include holder-mobile-phone;
+		z-index: 2;
+		@include breakpoint(small) {
+			top: 50px;
+		}
+	}
+	li:last-child div {
+		left: 20%;
+		z-index: 1;
+		@include holder-monitor;
+	}
+}
+
+.project-mobile {
+	max-width: 640px;
+	li div {
+		position: absolute;
+		top: 30px;
+		z-index: 2;
+		@include holder-mobile-phone;
+		@include breakpoint(small) {
+			top: 50px;
+		}
+	}
+	li:first-child div {
+		left: 50%;
+		margin-left: -77.5px;
+		top: 0;
+		z-index: 3;
+		@include breakpoint(small) {
+			margin-left: -116px;
+		}
+		a:hover img {
+			@include breakpoint(small) {
+				margin-top: -50px;
+			}
+		}
+	}
+	li:last-child div {
+		right: 0;
+		z-index: 1;
+	}
+}
+
+.project-desktop {
+	li div {
+		position: absolute;
+		left: 0;
+		z-index: 1;
+		@include holder-monitor;
+	}
+}
+
+.project-default{
+	li div {
+		position: absolute;
+		left: 0;
+		z-index: 1;
+		@include holder-default;
+	}
+}
+
+.preview-apple,
+.preview-apple:nth-child(even) {
+  background: #999 url(../images/build/icon-apple.svg) center 275px no-repeat;
+  background-size: 160px 160px;
+  color: $light-cream;
+  @include breakpoint(medium) {
+    background: #999 url(../images/build/icon-apple.svg) 65% center no-repeat;
+      background-size: 160px 160px;
+  }
+  .cta,
+  .cta:visited {
+    background: $light-cream;
+    color: #999;
+    text-shadow: none;
+    shadow: none;
+    @include box-shadow(0 2px 10px transparentize($dark-blue, 1), inset 0 0px 0 0 transparentize($dark-blue, 1));
+  }
+  .cta:hover {
+  	@include box-shadow(0 2px 10px transparentize($dark-blue, .7));
+  }
+
+  .cta:active {
+  	padding: 11px 16px 9px 16px;
+  	@include box-shadow(inset 0 -1px 0 0 transparentize($dark-blue, .4), 0 2px 10px transparentize($dark-blue, .7));
+  }
+}
+
+///////////////////
+/// Detail Page///
+/////////////////
+
+.detail-page-wrap {
+	clear: both;
+	padding: 30px 20px 40px 20px;
+	background: $dark-cream;
+	border: 1px solid #E7E8EA;
+	@include breakpoint(medium) {
+		padding: 30px;
+	}
+}
+
+.project-details {
+	max-width: 420px;
+	margin-bottom: 40px;
+//  background: red;
+//  @include box-shadow(inset 0 -3px 0 0 transparentize($dark-blue, .4), 0 2px 10px transparentize($dark-blue, .7));
+	@include breakpoint(large) {
+		position: fixed;
+    //height: 100%;
+    //overflow: scroll;
+		float: left;
+		width: 250px;
+	}
+	@include breakpoint(xl) {
+		width: 300px;
+	}
+	h4 {
+		font-size: 12px;
+		text-transform: uppercase;
+		margin: 0;
+	}
+  .cta {
+    margin-bottom: 16px;
+  }
+}
+
+.project-image-col {
+	max-width: 1024px;
+	@include breakpoint(large) {
+		margin-top: 60px;
+		float: right;
+		width: calc(100% - 290px);
+	}
+	@include breakpoint(xl) {
+		width: calc(100% - 340px);
+	}
+	img {
+		display: block;
+		margin: 0 0 20px 0;
+		width: 100%;
+		@include breakpoint(large) {
+			margin: 0 0 40px 0;
+		}
+	}
+	p {
+		margin: 0 0 20px 0;
+		@include breakpoint(large) {
+			margin: 0 0 40px 0;
+			max-width: 600px;
+		}
+	}
+}
+
+///////////////
+/// Footer ///
+/////////////
+
+footer {
+  background: $light-cream;
+	height: 44px;
+	line-height: 44px;
+	font-size: 14px;
+	color: $slate-blue;
+  padding: 0 15px;
+  z-index: 9999;
+  position: relative;
+  @include box-shadow(0px -1px 0 0 transparentize($dark-blue, .75));
+  p {
+    margin-bottom: 0;
+  }
+}
+
+
+///////////////////
+/// sticky nav ///
+/////////////////
+
+.stuck {
+	position: fixed;
+}
+
+.outdated-browser {
+	font-family: Arial, "Lucida Grande", sans-serif;
+	color: #FCFCFC;
+	height: 100%;
+	background: #171C2F;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+	.outdated-browser-wrap {
+		padding-top: 120px;
+		margin: 0 auto;
+		width: 600px;
+		span {
+			background: url(../images/build/logo-old-browser.png) no-repeat;
+			display: block;
+			margin: 0 auto 30px auto;
+			overflow: hidden;
+			padding-top: 41px;
+			height: 0;
+			width: 50px;
+		}
+		h6 {
+			font-style: normal;
+			font-size: 32px;
+			margin: 30px;
+			margin: 0 0 30px 0;
+		}
+		p {
+			margin: 0 0 30px 0;
+			font-size: 12px;
+			line-height: 18px;
+		}
+		.subhead {
+			font-size: 20px;
+			line-height: 28px;
+		}
+		a {
+			color: #FCFCFC;
+			text-decoration: underline;
+		}
+		a:hover {
+			color: #5A6276;
+		}
+	}
+}
+
+///////////////////////////
+/// Blog | Post Detail ///
+/////////////////////////
+
+.blog {
+	background: $dark-cream;
+}
+
+.post-date {
+	display: block;
+	font-size: 11px;
+	margin-bottom: 10px;
+	@include proxima-semibold;
+}
+.rule {
+	color: transparentize($dark-blue, .8);
+	display: block;
+	margin-bottom: 20px;
+}
+
+.post-detail {
+	.post-hero {
+		display: table;
+		color: $light-cream;
+		height: 200px;
+		background-size: 100%;
+		width: 100%;
+		img {
+			display: block;
+			margin: 50px auto;
+			height: 125px;
+			width: 125px;
+		}
+		@include breakpoint(medium) {
+			height: 300px;
+			img {
+				margin: 50px auto;
+				height: 200px;
+				width: 200px;
+			}
+		}
+		@include breakpoint(large) {
+			height: 500px;
+			img {
+				margin: 125px auto;
+				height: 250px;
+				width: 250px;
+			}
+		}
+	}
+	.post-content {
+		padding: 30px 20px;
+		margin: 0 auto;
+		max-width: 600px;
+		img {
+			display: block;
+			margin-bottom: 30px;
+			width: 100%;
+		}
+		a {
+			border-bottom: 1px solid $slate-blue;
+		}
+		a:hover {
+			border-bottom: 2px solid $slate-blue;
+		}
+		ul {
+			display: block;
+			padding-left: 10px;
+			margin-bottom: 20px;
+			li {
+				padding-left: 10px;
+				border-left: 1px solid transparentize($dark-blue, .8);
+				list-style-type: bullet;
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+.post-preview-list {
+	padding: 80px 0 50px 0;
+	.post-preview {
+		border: 1px solid #E7E8EA;
+		background: #fff;
+		padding: 20px;
+		margin: 0 auto 30px auto;
+		max-width: 600px;
+	}
+}
+
+/////////////////////////////////
+///////// Contact Page /////////
+///////////////////////////////
+
+.contact {
+  background: $light-cream;
+  .contact-wrap {
+    @include breakpoint(medium) {
+      display: flex;
+    }
+    .col-left {
+      padding: 30px 20px 30px 20px;
+      @include breakpoint(medium) {
+        flex: 50%;
+        padding: 30px 20px 30px 30px;
+      }
+      @include breakpoint(large) {
+        flex: 30%;
+      }
+      @include breakpoint(xl) {
+        flex: 25%;
+      }
+      .contact-social-list {
+        ul {
+          li {
+            a {
+              position: relative;
+              display: inline-block;
+              margin-bottom: 18px;
+              padding-left: 36px;
+              @include single-transition(all, 0.2s, ease-out, 0.1s);
+              em {
+
+              }
+              span {
+                svg {
+                  fill: $slate-blue;
+                  height: 24px;
+                  width: 24px;
+                  margin-top: -12px;
+                  top: 50%;
+                  position: absolute;
+                  left: 0;
+                  @include single-transition(all, 0.2s, ease-out, 0.1s);
+                }
+              }
+            }
+            a:hover {
+              color: $dark-blue;
+              span {
+                svg {
+                 fill: $dark-blue;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .col-right {
+      @include breakpoint(medium) {
+        flex: 50%;
+      }
+      @include breakpoint(large) {
+        flex: 70%;
+      }
+      @include breakpoint(xl) {
+        flex: 75%;
+      }
+    }
+  }
+  .instafeed {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li {
+      display: block;
+      flex: 50%;
+      @include breakpoint(large) {
+        flex: 33.33%;
+      }
+      @include breakpoint(xxl) {
+        flex: 25%;
+      }
+      img {
+        width: 100%;
+        display: block;
+        height: auto;
+      }
+    }
+  }
+}
+
+////////////////////////////
+///////// Archive /////////
+///////////////////////////
+
+.projects_archive {
+  h3 {
+    margin-bottom: 16px;
+  }
+  ul {
+    margin-bottom: 40px;
+    li {
+      margin-bottom: 8px;
+    }
+  }
+}

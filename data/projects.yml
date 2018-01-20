@@ -1,10 +1,66 @@
-portfolio:       
+portfolio:
+- slug: pack-hacker
+  active: true
+  title: Pack Hacker
+  categories:
+  - desktop
+  - mobile
+  summary: Pack Hacker is a resource for the lightest, best looking, and most functional travel gear.
+  heroImageFormat: mobile-desktop
+  role: Founder (Writing, Editing, Reviewing, Designing, Coding, Photography, Videography, Accounting, Business Development, and everything in between)
+  technologyUsed:
+  - Wordpress (roots.io)
+  - Photoshop
+  - SketchApp
+  - Illustrator
+  company: Pack Hacker
+  cta:
+  - ctaText: View Live Website
+    ctaLink: https://packhacker.com/
+- slug: get-leverage
+  active: true
+  title: Leverage
+  categories:
+  - desktop
+  - mobile
+  summary: Acted as Head of Product for the Leverage Dashboard (Web App and Mobile App). Leverage is an outsourcing platform that gives you access to a team who can complete any task or project - for life and business.
+  heroImageFormat: mobile-desktop
+  role: Head of Product (Leverage Dashboard), Designer (Brand Iteration, Mobile)
+  technologyUsed:
+  - Photoshop
+  - SketchApp
+  - Illustrator
+  company: Leverage
+  cta:
+  - ctaText: View Product Landing Page
+    ctaLink: https://getleverage.com/
+- slug: the-infatuation
+  active: true
+  title: The Infatuation
+  categories:
+  - desktop
+  - mobile
+  summary: Acted as Creative Director across The Infatuation's Mobile Apps, Website, and Partnerships. Search thousands of reviews and guides and never have a mediocre meal again.
+  heroImageFormat: mobile-desktop
+  role: Creative Director (Branding, Partnerships, Web, Mobile), Product Designer (iOS and Android)
+  technologyUsed:
+  - Photoshop
+  - SketchApp
+  - Illustrator
+  company: The Infatuation
+  cta:
+  - ctaText: View Branding Process
+    ctaLink: https://medium.com/the-infatuation-team/rebranding-the-infatuation-a-company-with-a-passionate-audience-7-years-of-history-fe9ebccbc3d6
+  - ctaText: View Live Website
+    ctaLink: https://theinfatuation.com
+  - ctaText: View the iOS App
+    ctaLink: https://itunes.apple.com/us/app/the-infatuation/id465685575?mt=8
 - slug: apple
   active: true
   title: Apple
   categories:
   - mobile
-  summary: Lead mobile-based projects with Apple. Inquire for more details.
+  summary: Lead mobile-based projects with Apple. Email for more details.
   heroImageFormat: mobile
   role: Design team management, product design, and prototyping.
   technologyUsed:
@@ -21,7 +77,7 @@ portfolio:
   categories:
   - desktop
   - mobile
-  summary: Downloadable wallpapers to dance up your desktop and devices. 
+  summary: Downloadable wallpapers to dance up your desktop and devices.
   heroImageFormat: mobile-desktop
   role: Sole Contributor (design, illustration, and front-end development)
   technologyUsed:
@@ -44,7 +100,7 @@ portfolio:
   categories:
   - desktop
   - mobile
-  summary: Online P.I. turning social media into a more honest place (for April Fool's Day).  
+  summary: Online P.I. turning social media into a more honest place (for April Fool's Day).
   heroImageFormat: mobile-desktop
   role: Design and front-end development
   technologyUsed:
@@ -56,7 +112,7 @@ portfolio:
   company: Tom Wahlin LLC
   cta:
   - ctaText: View Live Project
-    ctaLink: http://bullshitsheriff.com/       
+    ctaLink: http://bullshitsheriff.com/
 - slug: cover-app
   active: true
   title: Cover
@@ -184,47 +240,3 @@ portfolio:
   cta:
   - ctaText: View App Landing Page
     ctaLink: http://www.americanexpress.com/us/small-business/openhome/receiptmatch
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-# Old Projects    
-    
-    
-# - slug: basilica-block-party
-#   active: true
-#   title: Basilica Block Party
-#   categories:
-#   - print
-#   summary: Created a poster advertising campaign where each style of music was unique. Concepted and created logo for Twin Cities Metro.
-#   heroImageFormat: default
-#   role: Design
-#   technologyUsed:
-#   - InDesign
-#   - Illustrator
-#   cta:
-#   - ctaText: View PDF
-#     ctaLink: /img/downloads/tom-wahlin-basilica-block-party.pdf
-# - slug: roven-bashier
-#   active: true
-#   title: The Portfolio of Roven Bashier
-#   categories:
-#   - desktop
-#   - mobile
-#   summary: Developed an easily editable system for a fellow designer, Roven Bashier. Worked with Roven to keep the site easily editable, and create a system that would be able to hold all his work smoothly.
-#   heroImageFormat: mobile-desktop
-#   role: Front-end Development
-#   technologyUsed:
-#   - XHTML
-#   - CSS
-#   - Javascript
-#   company: Tom Wahlin LLC
-#   cta:
-#   - ctaText: View Live Project
-#     ctaLink: http://www.rovenbashier.com/portfolio_2012/
