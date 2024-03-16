@@ -1,0 +1,1756 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 8, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+/* line 29, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 33, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+body {
+  line-height: 1; }
+
+/* line 36, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 39, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 42, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 47, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*Tom Wahlin Added*/
+/* line 54, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+article, aside, figure, footer, header, hgroup, nav, section {
+  display: block; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/* line 70, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+/* line 76, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.clearfix:after {
+  clear: both; }
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+/* line 85, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.clearfix {
+  *zoom: 1; }
+
+/* line 249, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+html, body {
+  height: 100%; }
+
+/* line 253, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+html {
+  font-family: "proxima-nova-1","proxima-nova-2", sans-serif;
+  color: #171c2f; }
+
+/* line 258, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+body {
+  font-size: 16px;
+  line-height: 22px; }
+
+/* line 263, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+h3 {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 300;
+  font-style: normal;
+  margin: 0 0 18px 0; }
+
+/* line 269, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+h2
+h4 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+  font-style: normal;
+  margin: 0 0 18px 0; }
+
+/* line 277, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+h5 {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0 0 14px 0; }
+
+/* line 284, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+p {
+  margin: 0 0 25px 0; }
+
+/* line 288, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+a {
+  color: #5a6276; }
+
+/* line 292, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+a:hover {
+  color: #171c2f; }
+
+/* line 301, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.index .wrap-main {
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  position: relative;
+  margin: 0 auto -44px;
+  background: #5a6276;
+  max-width: 100%;
+  background: #5a6276 url(../images/build/bg-mobile-tom-photo.jpg) no-repeat center bottom;
+  background-size: 100% auto; }
+  @media (min-width: 800px) {
+    /* line 301, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .index .wrap-main {
+      display: flex;
+      flex-direction: column;
+      background: url(../images/build/bg-tom-photo.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; } }
+/* line 322, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.index .push {
+  height: 44px; }
+
+/* line 327, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.introduction-inner-wrap {
+  color: #fcfcfc;
+  overflow: hidden;
+  padding: 94px 30px 30px 30px;
+  max-width: 560px;
+  font-weight: 300;
+  font-style: normal; }
+  /* line 333, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap h3 {
+    font-weight: 600;
+    font-style: normal;
+    font-size: 50px;
+    margin-bottom: 22px; }
+    @media (min-width: 640px) {
+      /* line 333, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .introduction-inner-wrap h3 {
+        font-size: 60px;
+        margin-bottom: 30px; } }
+  /* line 342, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap p {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 30px; }
+    @media (min-width: 640px) {
+      /* line 342, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .introduction-inner-wrap p {
+        font-size: 18px;
+        line-height: 28px; } }
+  /* line 351, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap a, .introduction-inner-wrap a:visited {
+    font-weight: 600;
+    font-style: normal;
+    position: relative;
+    -moz-transition: all 0.2s ease-out 0.1s;
+    -o-transition: all 0.2s ease-out 0.1s;
+    -webkit-transition: all 0.2s ease-out;
+    -webkit-transition-delay: 0.1s;
+    transition: all 0.2s ease-out 0.1s;
+    color: #fcfcfc; }
+  /* line 357, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap a:after {
+    background: #fcfcfc;
+    content: '';
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 2px;
+    color: #fcfcfc;
+    width: 100%;
+    transform: translateY(5px);
+    -moz-transition: all 0.15s ease-out 0.15s;
+    -o-transition: all 0.15s ease-out 0.15s;
+    -webkit-transition: all 0.15s ease-out;
+    -webkit-transition-delay: 0.15s;
+    transition: all 0.15s ease-out 0.15s; }
+  /* line 371, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap a:hover:after {
+    opacity: 1;
+    transform: translateY(0px); }
+  /* line 375, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-packhacker:hover {
+    color: #35F1BA; }
+  /* line 376, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-packhacker:after {
+    background: #D6D6D6; }
+  /* line 377, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-packhacker:hover:after {
+    background: #35F1BA; }
+  /* line 379, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-leverage:hover {
+    color: #f07b7b; }
+  /* line 380, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-leverage:after {
+    background: #D6D6D6; }
+  /* line 381, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-leverage:hover:after {
+    background: #f07b7b; }
+  /* line 383, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-infatuation:hover {
+    color: #7caef3; }
+  /* line 384, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-infatuation:after {
+    background: #D6D6D6; }
+  /* line 385, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-infatuation:hover:after {
+    background: #7caef3; }
+  /* line 387, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-apple:hover {
+    color: #ADADAD; }
+  /* line 388, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-apple:after {
+    background: #D6D6D6; }
+  /* line 389, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-apple:hover:after {
+    background: #ADADAD; }
+  /* line 391, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-cover:hover {
+    color: #C4A3F0; }
+  /* line 392, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-cover:after {
+    background: #E1D1F7; }
+  /* line 393, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-cover:hover:after {
+    background: #C4A3F0; }
+  /* line 395, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-space:hover {
+    color: #999999; }
+  /* line 396, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-space:after {
+    background: #CCCCCC; }
+  /* line 397, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-space:hover:after {
+    background: #999999; }
+  /* line 399, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-nerdery:hover {
+    color: #C4CCC8; }
+  /* line 400, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-nerdery:after {
+    background: #DBE0DE; }
+  /* line 401, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-nerdery:hover:after {
+    background: #C4CCC8; }
+  /* line 403, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-wallpaper-disco:hover {
+    color: #F5B7B1; }
+  /* line 404, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-wallpaper-disco:after {
+    background: #FADBD8; }
+  /* line 405, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-wallpaper-disco:hover:after {
+    background: #F5B7B1; }
+  /* line 407, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-bullshit-sheriff:hover {
+    color: #D9CEC3; }
+  /* line 408, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-bullshit-sheriff:after {
+    background: #E8E1DB; }
+  /* line 409, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-bullshit-sheriff:hover:after {
+    background: #D9CEC3; }
+  /* line 411, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap .intro-social-list {
+    display: none; }
+    @media (min-width: 640px) {
+      /* line 411, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .introduction-inner-wrap .intro-social-list {
+        display: block; } }
+    @media (min-width: 800px) {
+      /* line 411, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .introduction-inner-wrap .intro-social-list {
+        position: absolute;
+        left: 30px;
+        bottom: 74px; } }
+    /* line 421, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .introduction-inner-wrap .intro-social-list ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      /* line 425, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .introduction-inner-wrap .intro-social-list ul li {
+        display: block;
+        margin-bottom: 40px;
+        margin: 0 14px 0 0; }
+        /* line 429, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+        .introduction-inner-wrap .intro-social-list ul li a {
+          position: relative;
+          display: block;
+          height: 44px;
+          width: 44px; }
+          @media (min-width: 800px) {
+            /* line 429, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+            .introduction-inner-wrap .intro-social-list ul li a {
+              height: 36px;
+              width: 36px; } }
+          /* line 438, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+          .introduction-inner-wrap .intro-social-list ul li a em {
+            display: none; }
+          /* line 441, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+          .introduction-inner-wrap .intro-social-list ul li a span {
+            display: block;
+            -moz-box-shadow: inset 0 0 0 2px #fcfcfc;
+            -webkit-box-shadow: inset 0 0 0 2px #fcfcfc;
+            box-shadow: inset 0 0 0 2px #fcfcfc;
+            position: relative;
+            height: 44px;
+            width: 44px;
+            -moz-border-radius: 50px;
+            -webkit-border-radius: 50px;
+            border-radius: 50px;
+            -moz-transition: all 0.1s ease-out 0.1s;
+            -o-transition: all 0.1s ease-out 0.1s;
+            -webkit-transition: all 0.1s ease-out;
+            -webkit-transition-delay: 0.1s;
+            transition: all 0.1s ease-out 0.1s;
+            margin-bottom: 20px; }
+            @media (min-width: 800px) {
+              /* line 441, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+              .introduction-inner-wrap .intro-social-list ul li a span {
+                height: 36px;
+                width: 36px; } }
+            /* line 454, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+            .introduction-inner-wrap .intro-social-list ul li a span svg {
+              position: absolute;
+              fill: #fcfcfc; }
+        @media (min-width: 800px) {
+          /* line 461, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+          .introduction-inner-wrap .intro-social-list ul li a:hover span {
+            transform: translateY(-4px); } }
+        /* line 466, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+        .introduction-inner-wrap .intro-social-list ul li a:after {
+          -moz-transition: all 0.1s ease-out 0.1s;
+          -o-transition: all 0.1s ease-out 0.1s;
+          -webkit-transition: all 0.1s ease-out;
+          -webkit-transition-delay: 0.1s;
+          transition: all 0.1s ease-out 0.1s;
+          background: #171c2f;
+          opacity: 0;
+          content: "";
+          width: 16px;
+          height: 2px;
+          position: absolute;
+          left: 10px;
+          border-radius: 20px;
+          transform: translateY(0);
+          display: block;
+          float: none; }
+        @media (min-width: 800px) {
+          /* line 480, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+          .introduction-inner-wrap .intro-social-list ul li a:hover:after {
+            opacity: .6; } }
+      /* line 488, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .introduction-inner-wrap .intro-social-list ul .icon-social-dribbble span svg {
+        left: 10px;
+        top: 10px;
+        height: 24px;
+        width: 24px; }
+        @media (min-width: 800px) {
+          /* line 488, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+          .introduction-inner-wrap .intro-social-list ul .icon-social-dribbble span svg {
+            left: 8px;
+            top: 8px;
+            height: 20px;
+            width: 20px; } }
+      /* line 489, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .introduction-inner-wrap .intro-social-list ul .icon-social-instagram span svg {
+        left: 10px;
+        top: 10px;
+        height: 24px;
+        width: 24px; }
+        @media (min-width: 800px) {
+          /* line 489, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+          .introduction-inner-wrap .intro-social-list ul .icon-social-instagram span svg {
+            left: 8px;
+            top: 8px;
+            height: 20px;
+            width: 20px; } }
+      /* line 490, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .introduction-inner-wrap .intro-social-list ul .icon-social-linkedin span svg {
+        left: 10px;
+        top: 10px;
+        height: 24px;
+        width: 24px; }
+        @media (min-width: 800px) {
+          /* line 490, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+          .introduction-inner-wrap .intro-social-list ul .icon-social-linkedin span svg {
+            left: 8px;
+            top: 8px;
+            height: 20px;
+            width: 20px; } }
+      /* line 491, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .introduction-inner-wrap .intro-social-list ul .icon-social-medium span svg {
+        left: 10px;
+        top: 10px;
+        height: 24px;
+        width: 24px; }
+        @media (min-width: 800px) {
+          /* line 491, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+          .introduction-inner-wrap .intro-social-list ul .icon-social-medium span svg {
+            left: 8px;
+            top: 8px;
+            height: 20px;
+            width: 20px; } }
+      /* line 492, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .introduction-inner-wrap .intro-social-list ul .icon-social-soundcloud span svg {
+        left: 8px;
+        top: 8px;
+        height: 28px;
+        width: 28px; }
+        @media (min-width: 800px) {
+          /* line 492, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+          .introduction-inner-wrap .intro-social-list ul .icon-social-soundcloud span svg {
+            left: 6px;
+            top: 6px;
+            height: 24px;
+            width: 24px; } }
+      /* line 493, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .introduction-inner-wrap .intro-social-list ul .icon-social-twitter span svg {
+        left: 10px;
+        top: 10px;
+        height: 24px;
+        width: 24px; }
+        @media (min-width: 800px) {
+          /* line 493, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+          .introduction-inner-wrap .intro-social-list ul .icon-social-twitter span svg {
+            left: 8px;
+            top: 8px;
+            height: 20px;
+            width: 20px; } }
+      /* line 494, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .introduction-inner-wrap .intro-social-list ul .icon-social-facebook span svg {
+        left: 8px;
+        top: 8px;
+        height: 28px;
+        width: 28px; }
+        @media (min-width: 800px) {
+          /* line 494, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+          .introduction-inner-wrap .intro-social-list ul .icon-social-facebook span svg {
+            left: 6px;
+            top: 6px;
+            height: 24px;
+            width: 24px; } }
+      /* line 495, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .introduction-inner-wrap .intro-social-list ul .icon-social-github span svg {
+        left: 10px;
+        top: 10px;
+        height: 24px;
+        width: 24px; }
+        @media (min-width: 800px) {
+          /* line 495, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+          .introduction-inner-wrap .intro-social-list ul .icon-social-github span svg {
+            left: 8px;
+            top: 8px;
+            height: 20px;
+            width: 20px; } }
+      /* line 497, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .introduction-inner-wrap .intro-social-list ul .icon-social-dribbble a:hover span {
+        background-color: #F082AC; }
+      /* line 498, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .introduction-inner-wrap .intro-social-list ul .icon-social-instagram a:hover span {
+        background-color: #5989AB; }
+      /* line 499, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .introduction-inner-wrap .intro-social-list ul .icon-social-linkedin a:hover span {
+        background-color: #4DA0CB; }
+      /* line 500, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .introduction-inner-wrap .intro-social-list ul .icon-social-medium a:hover span {
+        background-color: #4DCE96; }
+      /* line 501, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .introduction-inner-wrap .intro-social-list ul .icon-social-soundcloud a:hover span {
+        background-color: #FF884D; }
+      /* line 502, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .introduction-inner-wrap .intro-social-list ul .icon-social-twitter a:hover span {
+        background-color: #7FC0F2; }
+      /* line 503, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .introduction-inner-wrap .intro-social-list ul .icon-social-facebook a:hover span {
+        background-color: #768BB7; }
+      /* line 504, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .introduction-inner-wrap .intro-social-list ul .icon-social-github a:hover span {
+        background-color: #5D5B5C; }
+
+@media (min-width: 800px) {
+  /* line 511, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .introduction-inner-wrap:after {
+    content: '';
+    background: #fcfcfc;
+    display: block;
+    height: 2px;
+    width: 86px;
+    margin-bottom: 40px; } }
+
+/* line 526, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.wrap-main {
+  padding-top: 44px;
+  position: relative;
+  overflow: hidden; }
+  @media (min-width: 1600px) {
+    /* line 526, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .wrap-main {
+      margin: 0 auto;
+      max-width: 1600px; } }
+  /* line 534, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .wrap-main .wrap-inner {
+    padding: 30px 20px 40px 20px; }
+    @media (min-width: 640px) {
+      /* line 534, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .wrap-main .wrap-inner {
+        padding: 30px;
+        width: 80%;
+        max-width: 600px; } }
+
+/* line 544, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+a, a:visited {
+  color: #5a6276;
+  text-decoration: none; }
+
+/* line 548, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.cta,
+.cta:visited {
+  min-width: 140px;
+  text-align: center;
+  display: inline-block;
+  padding: 10px 16px;
+  color: #fcfcfc;
+  background: #5a6276;
+  font-weight: 600;
+  font-style: normal;
+  text-shadow: 0 1px 1px rgba(23, 28, 47, 0.4);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: inset 0 -3px 0 0 rgba(23, 28, 47, 0.6);
+  -webkit-box-shadow: inset 0 -3px 0 0 rgba(23, 28, 47, 0.6);
+  box-shadow: inset 0 -3px 0 0 rgba(23, 28, 47, 0.6);
+  -moz-transition: all 0.2s ease-out 0.2s;
+  -o-transition: all 0.2s ease-out 0.2s;
+  -webkit-transition: all 0.2s ease-out;
+  -webkit-transition-delay: 0.2s;
+  transition: all 0.2s ease-out 0.2s; }
+
+/* line 563, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.cta:hover {
+  background: rgba(90, 98, 118, 0.9);
+  color: #fcfcfc;
+  -moz-box-shadow: inset 0 -3px 0 0 rgba(23, 28, 47, 0.6), 0 2px 10px rgba(23, 28, 47, 0.3);
+  -webkit-box-shadow: inset 0 -3px 0 0 rgba(23, 28, 47, 0.6), 0 2px 10px rgba(23, 28, 47, 0.3);
+  box-shadow: inset 0 -3px 0 0 rgba(23, 28, 47, 0.6), 0 2px 10px rgba(23, 28, 47, 0.3); }
+
+/* line 569, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.cta:active {
+  padding: 11px 16px 9px 16px;
+  -moz-box-shadow: inset 0 -1px 0 0 rgba(23, 28, 47, 0.6), 0 2px 10px rgba(23, 28, 47, 0.3);
+  -webkit-box-shadow: inset 0 -1px 0 0 rgba(23, 28, 47, 0.6), 0 2px 10px rgba(23, 28, 47, 0.3);
+  box-shadow: inset 0 -1px 0 0 rgba(23, 28, 47, 0.6), 0 2px 10px rgba(23, 28, 47, 0.3); }
+
+/* line 579, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+h1 {
+  position: absolute;
+  left: 20px;
+  padding-top: 38px;
+  width: 46px;
+  top: 65px; }
+  @media (min-width: 800px) {
+    /* line 579, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    h1 {
+      left: 50%;
+      margin-left: -23px; } }
+  /* line 589, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  h1 a {
+    background: url(../images/build/logo-tom-wahlin.png) no-repeat center;
+    position: absolute;
+    padding-top: 38px;
+    width: 46px;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    height: 0; }
+    @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+      /* line 589, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      h1 a {
+        /* on retina, use image that's scaled by 2 */
+        background-image: url("../images/build/logo-tom-wahlin@2x.png");
+        background-size: 46px 38px; } }
+
+/* line 601, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+h2 {
+  font-weight: 600;
+  font-style: normal;
+  text-align: center;
+  color: #5a6276;
+  font-size: 16px;
+  margin: 0; }
+  @media (min-width: 800px) {
+    /* line 601, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    h2 {
+      font-size: 14px;
+      text-align: left;
+      float: left; } }
+  /* line 612, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  h2 a, h2 a:visited {
+    color: #5a6276;
+    line-height: 44px;
+    height: 44px;
+    display: block;
+    -moz-transition: box-shadow 0.1s ease-in, color 0.1s ease;
+    -o-transition: box-shadow 0.1s ease-in, color 0.1s ease;
+    -webkit-transition: box-shadow 0.1s ease-in, color 0.1s ease;
+    transition: box-shadow 0.1s ease-in, color 0.1s ease; }
+  @media (min-width: 800px) {
+    /* line 619, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    h2 a:hover, h2 a:active {
+      color: #fcfcfc;
+      -moz-box-shadow: inset 0 3px 0 0 #fcfcfc;
+      -webkit-box-shadow: inset 0 3px 0 0 #fcfcfc;
+      box-shadow: inset 0 3px 0 0 #fcfcfc; } }
+  @media (min-width: 800px) and (min-width: 800px) {
+    /* line 619, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    h2 a:hover, h2 a:active {
+      color: #171c2f;
+      -moz-box-shadow: inset 0 -3px 0 0 rgba(23, 28, 47, 0.6);
+      -webkit-box-shadow: inset 0 -3px 0 0 rgba(23, 28, 47, 0.6);
+      box-shadow: inset 0 -3px 0 0 rgba(23, 28, 47, 0.6); } }
+
+  /* line 624, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  h2 span {
+    display: none;
+    font-weight: 400;
+    font-style: normal; }
+    @media (min-width: 800px) {
+      /* line 624, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      h2 span {
+        display: inline; } }
+
+/* line 633, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.masthead {
+  background: #5a6276;
+  height: 88px;
+  position: fixed;
+  top: -44px;
+  width: 100%;
+  z-index: 4;
+  position: fixed;
+  left: 0;
+  right: 0;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+  @media (min-width: 800px) {
+    /* line 633, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .masthead {
+      background: #fcfcfc; } }
+
+/* line 649, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.nav-toggle {
+  background: url(../images/build/icon-menu.png) no-repeat center;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 44px;
+  width: 44px; }
+  @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+    /* line 649, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .nav-toggle {
+      /* on retina, use image that's scaled by 2 */
+      background-image: url("../images/build/icon-menu@2x.png");
+      background-size: 18px 12px; } }
+  @media (min-width: 800px) {
+    /* line 649, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .nav-toggle {
+      display: none; } }
+
+/* line 662, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.nav-push {
+  top: 0; }
+  @media (min-width: 800px) {
+    /* line 662, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .nav-push {
+      top: -44px; } }
+
+/* line 669, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.nav-push .nav-toggle {
+  background: url(../images/build/icon-arrow.png) no-repeat center; }
+  @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+    /* line 669, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .nav-push .nav-toggle {
+      /* on retina, use image that's scaled by 2 */
+      background-image: url("../images/build/icon-arrow@2x.png");
+      background-size: 10px 12px; } }
+
+/* line 674, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.masthead-wrap {
+  background: #fcfcfc;
+  height: 44px;
+  margin: 44px 0 0 0;
+  -moz-box-shadow: 0px 1px 0 0 rgba(23, 28, 47, 0.25), 0px -1px 0 0 rgba(23, 28, 47, 0.25);
+  -webkit-box-shadow: 0px 1px 0 0 rgba(23, 28, 47, 0.25), 0px -1px 0 0 rgba(23, 28, 47, 0.25);
+  box-shadow: 0px 1px 0 0 rgba(23, 28, 47, 0.25), 0px -1px 0 0 rgba(23, 28, 47, 0.25); }
+  @media (min-width: 800px) {
+    /* line 674, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .masthead-wrap {
+      margin: 44px 0;
+      padding: 0 15px; } }
+  /* line 683, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .masthead-wrap nav {
+    position: absolute;
+    top: 0;
+    height: 30px;
+    width: 100%;
+    font-size: 14px; }
+    @media (min-width: 800px) {
+      /* line 683, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .masthead-wrap nav {
+        float: right;
+        position: relative;
+        height: 44px;
+        width: auto; } }
+    /* line 696, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .masthead-wrap nav ul li {
+      display: block;
+      position: relative;
+      height: 24px;
+      float: left;
+      width: 33%; }
+      @media (min-width: 800px) {
+        /* line 696, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+        .masthead-wrap nav ul li {
+          width: auto;
+          float: left;
+          margin-left: 20px; } }
+      /* line 707, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .masthead-wrap nav ul li a {
+        display: block;
+        width: 100%;
+        margin-top: -60px;
+        line-height: 44px;
+        float: left;
+        text-align: center;
+        color: #fcfcfc; }
+        @media (min-width: 800px) {
+          /* line 707, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+          .masthead-wrap nav ul li a {
+            color: #5a6276;
+            position: relative;
+            width: auto;
+            height: auto;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+            width: auto; } }
+      @media (min-width: 800px) {
+        /* line 726, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+        .masthead-wrap nav ul li a:hover,
+        .masthead-wrap nav ul li a:active {
+          color: #fcfcfc;
+          -moz-box-shadow: inset 0 3px 0 0 #fcfcfc;
+          -webkit-box-shadow: inset 0 3px 0 0 #fcfcfc;
+          box-shadow: inset 0 3px 0 0 #fcfcfc; } }
+  @media (min-width: 800px) and (min-width: 800px) {
+    /* line 726, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .masthead-wrap nav ul li a:hover,
+    .masthead-wrap nav ul li a:active {
+      color: #171c2f;
+      -moz-box-shadow: inset 0 -3px 0 0 rgba(23, 28, 47, 0.6);
+      -webkit-box-shadow: inset 0 -3px 0 0 rgba(23, 28, 47, 0.6);
+      box-shadow: inset 0 -3px 0 0 rgba(23, 28, 47, 0.6); } }
+
+    /* line 733, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .masthead-wrap nav ul li:after {
+      background: rgba(23, 28, 47, 0.1);
+      content: "";
+      position: absolute;
+      left: -1px;
+      top: 12px;
+      height: 20px;
+      width: 2px; }
+      @media (min-width: 800px) {
+        /* line 733, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+        .masthead-wrap nav ul li:after {
+          display: none; } }
+    /* line 745, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .masthead-wrap nav ul li:first-child:after {
+      display: none; }
+    /* line 746, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .masthead-wrap nav ul .nav-dribbble a {
+      background: url(../images/build/icon-dribbble.png) no-repeat center; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 746, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+        .masthead-wrap nav ul .nav-dribbble a {
+          /* on retina, use image that's scaled by 2 */
+          background-image: url("../images/build/icon-dribbble@2x.png");
+          background-size: 16px 16px; } }
+      @media (min-width: 800px) {
+        /* line 746, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+        .masthead-wrap nav ul .nav-dribbble a {
+          background: none; } }
+    /* line 747, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .masthead-wrap nav ul .nav-linkedin a {
+      background: url(../images/build/icon-linkedin.png) no-repeat center; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 747, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+        .masthead-wrap nav ul .nav-linkedin a {
+          /* on retina, use image that's scaled by 2 */
+          background-image: url("../images/build/icon-linkedin@2x.png");
+          background-size: 16px 16px; } }
+      @media (min-width: 800px) {
+        /* line 747, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+        .masthead-wrap nav ul .nav-linkedin a {
+          background: none; } }
+    /* line 748, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .masthead-wrap nav ul .nav-lastfm a {
+      background: url(../images/build/icon-lastfm.png) no-repeat center; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 748, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+        .masthead-wrap nav ul .nav-lastfm a {
+          /* on retina, use image that's scaled by 2 */
+          background-image: url("../images/build/icon-lastfm@2x.png");
+          background-size: 20px 14px; } }
+      @media (min-width: 800px) {
+        /* line 748, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+        .masthead-wrap nav ul .nav-lastfm a {
+          background: none; } }
+    /* line 749, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .masthead-wrap nav ul .nav-twitter a {
+      background: url(../images/build/icon-twitter.png) no-repeat center; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 749, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+        .masthead-wrap nav ul .nav-twitter a {
+          /* on retina, use image that's scaled by 2 */
+          background-image: url("../images/build/icon-twitter@2x.png");
+          background-size: 16px 16px; } }
+      @media (min-width: 800px) {
+        /* line 749, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+        .masthead-wrap nav ul .nav-twitter a {
+          background: none; } }
+    /* line 750, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .masthead-wrap nav ul .nav-facebook a {
+      background: url(../images/build/icon-facebook.png) no-repeat center; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 750, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+        .masthead-wrap nav ul .nav-facebook a {
+          /* on retina, use image that's scaled by 2 */
+          background-image: url("../images/build/icon-facebook@2x.png");
+          background-size: 8px 16px; } }
+      @media (min-width: 800px) {
+        /* line 750, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+        .masthead-wrap nav ul .nav-facebook a {
+          background: none; } }
+    /* line 752, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .masthead-wrap nav ul li:nth-child(1) a {
+      -moz-transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      -o-transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      -webkit-transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    /* line 753, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .masthead-wrap nav ul li:nth-child(2) a {
+      -moz-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      -o-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    /* line 754, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .masthead-wrap nav ul li:nth-child(3) a {
+      -moz-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      -o-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      -webkit-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    /* line 755, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .masthead-wrap nav ul li:nth-child(4) a {
+      -moz-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      -o-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    /* line 756, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .masthead-wrap nav ul li:nth-child(5) a {
+      -moz-transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      -o-transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      -webkit-transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    @media (min-width: 800px) {
+      /* line 758, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .masthead-wrap nav ul li:nth-child(1) a,
+      .masthead-wrap nav ul li:nth-child(2) a,
+      .masthead-wrap nav ul li:nth-child(3) a,
+      .masthead-wrap nav ul li:nth-child(4) a,
+      .masthead-wrap nav ul li:nth-child(5) a {
+        -moz-transition: box-shadow 0.1s ease-in, color 0.1s ease;
+        -o-transition: box-shadow 0.1s ease-in, color 0.1s ease;
+        -webkit-transition: box-shadow 0.1s ease-in, color 0.1s ease;
+        transition: box-shadow 0.1s ease-in, color 0.1s ease; } }
+    /* line 764, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .masthead-wrap nav ul li .nav-open {
+      margin-top: 0; }
+
+/* line 770, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.no-js .masthead {
+  top: 0; }
+
+/* line 774, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.no-js .masthead-wrap nav ul li a {
+  margin-top: 0; }
+
+/* line 778, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+body.contact .masthead-wrap nav ul li.nav-contact a,
+body.projects .masthead-wrap nav ul li.nav-projects a {
+  color: #fcfcfc;
+  -moz-box-shadow: inset 0 3px 0 0 #fcfcfc;
+  -webkit-box-shadow: inset 0 3px 0 0 #fcfcfc;
+  box-shadow: inset 0 3px 0 0 #fcfcfc; }
+  @media (min-width: 800px) {
+    /* line 778, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    body.contact .masthead-wrap nav ul li.nav-contact a,
+    body.projects .masthead-wrap nav ul li.nav-projects a {
+      color: #171c2f;
+      -moz-box-shadow: inset 0 -3px 0 0 rgba(23, 28, 47, 0.6);
+      -webkit-box-shadow: inset 0 -3px 0 0 rgba(23, 28, 47, 0.6);
+      box-shadow: inset 0 -3px 0 0 rgba(23, 28, 47, 0.6); } }
+
+/* line 787, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.icons-discipline {
+  clear: both;
+  display: inline-block;
+  overflow: hidden;
+  margin-bottom: 30px; }
+  @media (min-width: 800px) {
+    /* line 787, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .icons-discipline {
+      margin-bottom: 40px; } }
+  /* line 795, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .icons-discipline li {
+    display: block;
+    float: left;
+    padding: 16px 0 0 0;
+    margin: 0 10px 0 0;
+    overflow: hidden;
+    height: 0; }
+  /* line 802, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .icons-discipline .icon-desktop {
+    background: url(../images/build/icon-desktop.png) no-repeat;
+    width: 18px; }
+    @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+      /* line 802, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .icons-discipline .icon-desktop {
+        /* on retina, use image that's scaled by 2 */
+        background-image: url("../images/build/icon-desktop@2x.png");
+        background-size: 18px 16px; } }
+  /* line 807, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .icons-discipline .icon-mobile {
+    background: url(../images/build/icon-phone.png) no-repeat;
+    width: 10px; }
+    @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+      /* line 807, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .icons-discipline .icon-mobile {
+        /* on retina, use image that's scaled by 2 */
+        background-image: url("../images/build/icon-phone@2x.png");
+        background-size: 10px 16px; } }
+  /* line 812, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .icons-discipline .icon-print {
+    background: url(../images/build/icon-print.png) no-repeat;
+    width: 12px; }
+    @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+      /* line 812, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .icons-discipline .icon-print {
+        /* on retina, use image that's scaled by 2 */
+        background-image: url("../images/build/icon-print@2x.png");
+        background-size: 12px 16px; } }
+  /* line 817, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .icons-discipline .icon-film {
+    background: url(../images/build/icon-film.png) no-repeat;
+    width: 14px; }
+    @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+      /* line 817, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .icons-discipline .icon-film {
+        /* on retina, use image that's scaled by 2 */
+        background-image: url("../images/build/icon-film@2x.png");
+        background-size: 14px 16px; } }
+
+/* line 829, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.hero {
+  display: table;
+  color: #fcfcfc;
+  text-shadow: 0 1px 1px rgba(23, 28, 47, 0.4);
+  height: 200px;
+  background: url(../images/build/hero-base.jpg) no-repeat 70% center;
+  background-size: 100%;
+  width: 100%; }
+  @media (min-width: 640px) {
+    /* line 829, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .hero {
+      height: 300px; } }
+  @media (min-width: 800px) {
+    /* line 829, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .hero {
+      height: 500px; } }
+  /* line 843, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .hero h3 {
+    font-weight: 100;
+    font-style: normal;
+    display: none; }
+    @media (min-width: 800px) {
+      /* line 843, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .hero h3 {
+        display: block;
+        text-align: center;
+        font-size: 60px;
+        margin: 160px 0 50px 0; } }
+  /* line 853, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .hero p {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 10%;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    font-weight: 300;
+    font-style: normal; }
+    @media (min-width: 640px) {
+      /* line 853, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .hero p {
+        font-size: 24px;
+        line-height: 33px;
+        font-weight: 100;
+        font-style: normal; } }
+    @media (min-width: 800px) {
+      /* line 853, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .hero p {
+        display: block;
+        font-size: 30px;
+        line-height: 42px; } }
+    @media (min-width: 960px) {
+      /* line 853, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .hero p {
+        padding: 0 18%; } }
+  /* line 875, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .hero .rule {
+    display: none; }
+    @media (min-width: 800px) {
+      /* line 875, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .hero .rule {
+        background-color: #fcfcfc;
+        display: block;
+        margin: 0 auto 30px auto;
+        height: 3px;
+        width: 150px;
+        -moz-box-shadow: 0 1px 1px 0 rgba(23, 28, 47, 0.4);
+        -webkit-box-shadow: 0 1px 1px 0 rgba(23, 28, 47, 0.4);
+        box-shadow: 0 1px 1px 0 rgba(23, 28, 47, 0.4); } }
+
+/* line 893, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.project-preview-wrap {
+  background: #fcfcfc;
+  border-bottom: 1px solid #E7E8EA;
+  border-left: 1px solid #E7E8EA;
+  border-right: 1px solid #E7E8EA;
+  position: relative; }
+  @media (min-width: 640px) {
+    /* line 893, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .project-preview-wrap {
+      min-height: 430px; } }
+  /* line 902, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .project-preview-wrap img {
+    width: 100%;
+    height: 100%; }
+
+/* line 908, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.project-preview-wrap:nth-child(even) {
+  background: #f8f8f8; }
+
+/* line 912, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.detail-preview {
+  padding: 30px 20px 40px 20px;
+  max-width: 500px; }
+  @media (min-width: 640px) {
+    /* line 912, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .detail-preview {
+      padding: 30px;
+      width: 40%;
+      max-width: 260px;
+      float: left; } }
+  @media (min-width: 960px) {
+    /* line 912, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .detail-preview {
+      max-width: 500px;
+      width: 30%; } }
+  /* line 925, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .detail-preview .cta {
+    line-height: 22px;
+    display: block;
+    text-align: center; }
+    @media (min-width: 480px) {
+      /* line 925, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .detail-preview .cta {
+        display: inline-block; } }
+
+/* line 936, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.image-preview {
+  height: 200px;
+  display: block;
+  overflow: hidden;
+  padding: 0 20px; }
+  @media (min-width: 480px) {
+    /* line 936, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .image-preview {
+      height: 300px; } }
+  @media (min-width: 640px) {
+    /* line 936, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .image-preview {
+      height: 370px;
+      position: absolute;
+      bottom: 0;
+      left: 310px;
+      width: 70%; } }
+  @media (min-width: 960px) {
+    /* line 936, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .image-preview {
+      left: 35%; } }
+
+/* line 957, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.project-images {
+  position: relative;
+  margin: 0 auto; }
+  /* line 960, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .project-images a {
+    background-repeat: no-repeat;
+    display: block;
+    position: relative; }
+    /* line 964, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .project-images a img {
+      -moz-transition: margin-top 0.3s ease-in-out;
+      -o-transition: margin-top 0.3s ease-in-out;
+      -webkit-transition: margin-top 0.3s ease-in-out;
+      transition: margin-top 0.3s ease-in-out; }
+
+/* line 971, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.project-mobile-desktop li div {
+  position: absolute; }
+/* line 974, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.project-mobile-desktop li:first-child div {
+  top: 30px;
+  background: #171c2f;
+  -moz-box-shadow: inset 0px 0px 0px 1px #171c2f, inset 0px 0px 0px 2px rgba(252, 252, 252, 0.5);
+  -webkit-box-shadow: inset 0px 0px 0px 1px #171c2f, inset 0px 0px 0px 2px rgba(252, 252, 252, 0.5);
+  box-shadow: inset 0px 0px 0px 1px #171c2f, inset 0px 0px 0px 2px rgba(252, 252, 252, 0.5);
+  border-radius: 20px;
+  padding: 44px 10px;
+  z-index: 2; }
+  @media (min-width: 480px) {
+    /* line 974, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .project-mobile-desktop li:first-child div {
+      -moz-box-shadow: inset 0px 0px 0px 2px #171c2f, inset 0px 0px 0px 3px rgba(252, 252, 252, 0.3);
+      -webkit-box-shadow: inset 0px 0px 0px 2px #171c2f, inset 0px 0px 0px 3px rgba(252, 252, 252, 0.3);
+      box-shadow: inset 0px 0px 0px 2px #171c2f, inset 0px 0px 0px 3px rgba(252, 252, 252, 0.3);
+      border-radius: 30px;
+      padding: 66px 16px; } }
+  /* line 185, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .project-mobile-desktop li:first-child div a {
+    overflow: hidden;
+    -moz-box-shadow: 0px 0px 0px 2px rgba(252, 252, 252, 0.1);
+    -webkit-box-shadow: 0px 0px 0px 2px rgba(252, 252, 252, 0.1);
+    box-shadow: 0px 0px 0px 2px rgba(252, 252, 252, 0.1);
+    height: 237px;
+    width: 134px;
+    background-size: 134px 237px; }
+    @media (min-width: 480px) {
+      /* line 185, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .project-mobile-desktop li:first-child div a {
+        -moz-box-shadow: 0px 0px 0px 2px rgba(252, 252, 252, 0.1);
+        -webkit-box-shadow: 0px 0px 0px 2px rgba(252, 252, 252, 0.1);
+        box-shadow: 0px 0px 0px 2px rgba(252, 252, 252, 0.1);
+        background-size: 200px 355px;
+        height: 355px;
+        width: 200px; } }
+  @media (min-width: 480px) {
+    /* line 199, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .project-mobile-desktop li:first-child div a:hover img {
+      margin-top: -100px; } }
+  @media (min-width: 480px) {
+    /* line 974, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .project-mobile-desktop li:first-child div {
+      top: 50px; } }
+/* line 982, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.project-mobile-desktop li:last-child div {
+  left: 20%;
+  z-index: 1;
+  background: #171c2f;
+  -moz-box-shadow: inset 0px 0px 0px 1px #171c2f, inset 0px 0px 0px 2px rgba(252, 252, 252, 0.5);
+  -webkit-box-shadow: inset 0px 0px 0px 1px #171c2f, inset 0px 0px 0px 2px rgba(252, 252, 252, 0.5);
+  box-shadow: inset 0px 0px 0px 1px #171c2f, inset 0px 0px 0px 2px rgba(252, 252, 252, 0.5);
+  border-radius: 10px;
+  padding: 24px; }
+  @media (min-width: 480px) {
+    /* line 982, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .project-mobile-desktop li:last-child div {
+      -moz-box-shadow: inset 0px 0px 0px 2px #171c2f, inset 0px 0px 0px 3px rgba(252, 252, 252, 0.3);
+      -webkit-box-shadow: inset 0px 0px 0px 2px #171c2f, inset 0px 0px 0px 3px rgba(252, 252, 252, 0.3);
+      box-shadow: inset 0px 0px 0px 2px #171c2f, inset 0px 0px 0px 3px rgba(252, 252, 252, 0.3);
+      border-radius: 15px;
+      padding: 36px; } }
+  /* line 215, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .project-mobile-desktop li:last-child div a {
+    overflow: hidden;
+    -moz-box-shadow: 0px 0px 0px 2px rgba(252, 252, 252, 0.1);
+    -webkit-box-shadow: 0px 0px 0px 2px rgba(252, 252, 252, 0.1);
+    box-shadow: 0px 0px 0px 2px rgba(252, 252, 252, 0.1);
+    height: 343px;
+    width: 458px;
+    background-size: 458px 343px; }
+    @media (min-width: 480px) {
+      /* line 215, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .project-mobile-desktop li:last-child div a {
+        background-size: 687px 515px;
+        -moz-box-shadow: 0px 0px 0px 2px rgba(252, 252, 252, 0.1);
+        -webkit-box-shadow: 0px 0px 0px 2px rgba(252, 252, 252, 0.1);
+        box-shadow: 0px 0px 0px 2px rgba(252, 252, 252, 0.1);
+        height: 515px;
+        width: 687px; } }
+  @media (min-width: 480px) {
+    /* line 229, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .project-mobile-desktop li:last-child div a:hover img {
+      margin-top: -180px; } }
+
+/* line 989, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.project-mobile {
+  max-width: 640px; }
+  /* line 991, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .project-mobile li div {
+    position: absolute;
+    top: 30px;
+    z-index: 2;
+    background: #171c2f;
+    -moz-box-shadow: inset 0px 0px 0px 1px #171c2f, inset 0px 0px 0px 2px rgba(252, 252, 252, 0.5);
+    -webkit-box-shadow: inset 0px 0px 0px 1px #171c2f, inset 0px 0px 0px 2px rgba(252, 252, 252, 0.5);
+    box-shadow: inset 0px 0px 0px 1px #171c2f, inset 0px 0px 0px 2px rgba(252, 252, 252, 0.5);
+    border-radius: 20px;
+    padding: 44px 10px; }
+    @media (min-width: 480px) {
+      /* line 991, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .project-mobile li div {
+        -moz-box-shadow: inset 0px 0px 0px 2px #171c2f, inset 0px 0px 0px 3px rgba(252, 252, 252, 0.3);
+        -webkit-box-shadow: inset 0px 0px 0px 2px #171c2f, inset 0px 0px 0px 3px rgba(252, 252, 252, 0.3);
+        box-shadow: inset 0px 0px 0px 2px #171c2f, inset 0px 0px 0px 3px rgba(252, 252, 252, 0.3);
+        border-radius: 30px;
+        padding: 66px 16px; } }
+    /* line 185, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .project-mobile li div a {
+      overflow: hidden;
+      -moz-box-shadow: 0px 0px 0px 2px rgba(252, 252, 252, 0.1);
+      -webkit-box-shadow: 0px 0px 0px 2px rgba(252, 252, 252, 0.1);
+      box-shadow: 0px 0px 0px 2px rgba(252, 252, 252, 0.1);
+      height: 237px;
+      width: 134px;
+      background-size: 134px 237px; }
+      @media (min-width: 480px) {
+        /* line 185, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+        .project-mobile li div a {
+          -moz-box-shadow: 0px 0px 0px 2px rgba(252, 252, 252, 0.1);
+          -webkit-box-shadow: 0px 0px 0px 2px rgba(252, 252, 252, 0.1);
+          box-shadow: 0px 0px 0px 2px rgba(252, 252, 252, 0.1);
+          background-size: 200px 355px;
+          height: 355px;
+          width: 200px; } }
+    @media (min-width: 480px) {
+      /* line 199, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .project-mobile li div a:hover img {
+        margin-top: -100px; } }
+    @media (min-width: 480px) {
+      /* line 991, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .project-mobile li div {
+        top: 50px; } }
+  /* line 1000, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .project-mobile li:first-child div {
+    left: 50%;
+    margin-left: -77.5px;
+    top: 0;
+    z-index: 3; }
+    @media (min-width: 480px) {
+      /* line 1000, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .project-mobile li:first-child div {
+        margin-left: -116px; } }
+    @media (min-width: 480px) {
+      /* line 1008, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .project-mobile li:first-child div a:hover img {
+        margin-top: -50px; } }
+  /* line 1014, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .project-mobile li:last-child div {
+    right: 0;
+    z-index: 1; }
+
+/* line 1021, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.project-desktop li div {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  background: #171c2f;
+  -moz-box-shadow: inset 0px 0px 0px 1px #171c2f, inset 0px 0px 0px 2px rgba(252, 252, 252, 0.5);
+  -webkit-box-shadow: inset 0px 0px 0px 1px #171c2f, inset 0px 0px 0px 2px rgba(252, 252, 252, 0.5);
+  box-shadow: inset 0px 0px 0px 1px #171c2f, inset 0px 0px 0px 2px rgba(252, 252, 252, 0.5);
+  border-radius: 10px;
+  padding: 24px; }
+  @media (min-width: 480px) {
+    /* line 1021, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .project-desktop li div {
+      -moz-box-shadow: inset 0px 0px 0px 2px #171c2f, inset 0px 0px 0px 3px rgba(252, 252, 252, 0.3);
+      -webkit-box-shadow: inset 0px 0px 0px 2px #171c2f, inset 0px 0px 0px 3px rgba(252, 252, 252, 0.3);
+      box-shadow: inset 0px 0px 0px 2px #171c2f, inset 0px 0px 0px 3px rgba(252, 252, 252, 0.3);
+      border-radius: 15px;
+      padding: 36px; } }
+  /* line 215, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .project-desktop li div a {
+    overflow: hidden;
+    -moz-box-shadow: 0px 0px 0px 2px rgba(252, 252, 252, 0.1);
+    -webkit-box-shadow: 0px 0px 0px 2px rgba(252, 252, 252, 0.1);
+    box-shadow: 0px 0px 0px 2px rgba(252, 252, 252, 0.1);
+    height: 343px;
+    width: 458px;
+    background-size: 458px 343px; }
+    @media (min-width: 480px) {
+      /* line 215, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .project-desktop li div a {
+        background-size: 687px 515px;
+        -moz-box-shadow: 0px 0px 0px 2px rgba(252, 252, 252, 0.1);
+        -webkit-box-shadow: 0px 0px 0px 2px rgba(252, 252, 252, 0.1);
+        box-shadow: 0px 0px 0px 2px rgba(252, 252, 252, 0.1);
+        height: 515px;
+        width: 687px; } }
+  @media (min-width: 480px) {
+    /* line 229, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .project-desktop li div a:hover img {
+      margin-top: -180px; } }
+
+/* line 1030, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.project-default li div {
+  position: absolute;
+  left: 0;
+  z-index: 1; }
+  /* line 236, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .project-default li div a {
+    height: 343px;
+    width: 458px;
+    background-size: 458px 343px; }
+    @media (min-width: 480px) {
+      /* line 236, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .project-default li div a {
+        background-size: 687px 515px;
+        height: 515px;
+        width: 687px; } }
+
+/* line 1038, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.preview-apple,
+.preview-apple:nth-child(even) {
+  background: #999 url(../images/build/icon-apple.svg) center 275px no-repeat;
+  background-size: 160px 160px;
+  color: #fcfcfc; }
+  @media (min-width: 640px) {
+    /* line 1038, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .preview-apple,
+    .preview-apple:nth-child(even) {
+      background: #999 url(../images/build/icon-apple.svg) 65% center no-repeat;
+      background-size: 160px 160px; } }
+  /* line 1047, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .preview-apple .cta,
+  .preview-apple .cta:visited,
+  .preview-apple:nth-child(even) .cta,
+  .preview-apple:nth-child(even) .cta:visited {
+    background: #fcfcfc;
+    color: #999;
+    text-shadow: none;
+    shadow: none;
+    -moz-box-shadow: 0 2px 10px rgba(23, 28, 47, 0), inset 0 0px 0 0 rgba(23, 28, 47, 0);
+    -webkit-box-shadow: 0 2px 10px rgba(23, 28, 47, 0), inset 0 0px 0 0 rgba(23, 28, 47, 0);
+    box-shadow: 0 2px 10px rgba(23, 28, 47, 0), inset 0 0px 0 0 rgba(23, 28, 47, 0); }
+  /* line 1055, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .preview-apple .cta:hover,
+  .preview-apple:nth-child(even) .cta:hover {
+    -moz-box-shadow: 0 2px 10px rgba(23, 28, 47, 0.3);
+    -webkit-box-shadow: 0 2px 10px rgba(23, 28, 47, 0.3);
+    box-shadow: 0 2px 10px rgba(23, 28, 47, 0.3); }
+  /* line 1059, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .preview-apple .cta:active,
+  .preview-apple:nth-child(even) .cta:active {
+    padding: 11px 16px 9px 16px;
+    -moz-box-shadow: inset 0 -1px 0 0 rgba(23, 28, 47, 0.6), 0 2px 10px rgba(23, 28, 47, 0.3);
+    -webkit-box-shadow: inset 0 -1px 0 0 rgba(23, 28, 47, 0.6), 0 2px 10px rgba(23, 28, 47, 0.3);
+    box-shadow: inset 0 -1px 0 0 rgba(23, 28, 47, 0.6), 0 2px 10px rgba(23, 28, 47, 0.3); }
+
+/* line 1069, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.detail-page-wrap {
+  clear: both;
+  padding: 30px 20px 40px 20px;
+  background: #f8f8f8;
+  border: 1px solid #E7E8EA; }
+  @media (min-width: 640px) {
+    /* line 1069, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .detail-page-wrap {
+      padding: 30px; } }
+
+/* line 1079, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.project-details {
+  max-width: 420px;
+  margin-bottom: 40px; }
+  @media (min-width: 800px) {
+    /* line 1079, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .project-details {
+      position: fixed;
+      float: left;
+      width: 250px; } }
+  @media (min-width: 960px) {
+    /* line 1079, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .project-details {
+      width: 300px; } }
+  /* line 1094, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .project-details h4 {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 0; }
+  /* line 1099, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .project-details .cta {
+    margin-bottom: 16px; }
+
+/* line 1104, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.project-image-col {
+  max-width: 1024px; }
+  @media (min-width: 800px) {
+    /* line 1104, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .project-image-col {
+      margin-top: 60px;
+      float: right;
+      width: calc(100% - 290px); } }
+  @media (min-width: 960px) {
+    /* line 1104, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .project-image-col {
+      width: calc(100% - 340px); } }
+  /* line 1114, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .project-image-col img {
+    display: block;
+    margin: 0 0 20px 0;
+    width: 100%; }
+    @media (min-width: 800px) {
+      /* line 1114, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .project-image-col img {
+        margin: 0 0 40px 0; } }
+  /* line 1122, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .project-image-col p {
+    margin: 0 0 20px 0; }
+    @media (min-width: 800px) {
+      /* line 1122, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .project-image-col p {
+        margin: 0 0 40px 0;
+        max-width: 600px; } }
+
+/* line 1135, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+footer {
+  background: #fcfcfc;
+  height: 44px;
+  line-height: 44px;
+  font-size: 14px;
+  color: #5a6276;
+  padding: 0 15px;
+  z-index: 9999;
+  position: relative;
+  -moz-box-shadow: 0px -1px 0 0 rgba(23, 28, 47, 0.25);
+  -webkit-box-shadow: 0px -1px 0 0 rgba(23, 28, 47, 0.25);
+  box-shadow: 0px -1px 0 0 rgba(23, 28, 47, 0.25); }
+  /* line 1145, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  footer p {
+    margin-bottom: 0; }
+
+/* line 1155, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.stuck {
+  position: fixed; }
+
+/* line 1159, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.outdated-browser {
+  font-family: Arial, "Lucida Grande", sans-serif;
+  color: #FCFCFC;
+  height: 100%;
+  background: #171C2F;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100; }
+  /* line 1171, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .outdated-browser .outdated-browser-wrap {
+    padding-top: 120px;
+    margin: 0 auto;
+    width: 600px; }
+    /* line 1175, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .outdated-browser .outdated-browser-wrap span {
+      background: url(../images/build/logo-old-browser.png) no-repeat;
+      display: block;
+      margin: 0 auto 30px auto;
+      overflow: hidden;
+      padding-top: 41px;
+      height: 0;
+      width: 50px; }
+    /* line 1184, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .outdated-browser .outdated-browser-wrap h6 {
+      font-style: normal;
+      font-size: 32px;
+      margin: 30px;
+      margin: 0 0 30px 0; }
+    /* line 1190, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .outdated-browser .outdated-browser-wrap p {
+      margin: 0 0 30px 0;
+      font-size: 12px;
+      line-height: 18px; }
+    /* line 1195, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .outdated-browser .outdated-browser-wrap .subhead {
+      font-size: 20px;
+      line-height: 28px; }
+    /* line 1199, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .outdated-browser .outdated-browser-wrap a {
+      color: #FCFCFC;
+      text-decoration: underline; }
+    /* line 1203, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .outdated-browser .outdated-browser-wrap a:hover {
+      color: #5A6276; }
+
+/* line 1213, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.blog {
+  background: #f8f8f8; }
+
+/* line 1217, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.post-date {
+  display: block;
+  font-size: 11px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-style: normal; }
+
+/* line 1223, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.rule {
+  color: rgba(23, 28, 47, 0.2);
+  display: block;
+  margin-bottom: 20px; }
+
+/* line 1230, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.post-detail .post-hero {
+  display: table;
+  color: #fcfcfc;
+  height: 200px;
+  background-size: 100%;
+  width: 100%; }
+  /* line 1236, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .post-detail .post-hero img {
+    display: block;
+    margin: 50px auto;
+    height: 125px;
+    width: 125px; }
+  @media (min-width: 640px) {
+    /* line 1230, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .post-detail .post-hero {
+      height: 300px; }
+      /* line 1244, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .post-detail .post-hero img {
+        margin: 50px auto;
+        height: 200px;
+        width: 200px; } }
+  @media (min-width: 800px) {
+    /* line 1230, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .post-detail .post-hero {
+      height: 500px; }
+      /* line 1252, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .post-detail .post-hero img {
+        margin: 125px auto;
+        height: 250px;
+        width: 250px; } }
+/* line 1259, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.post-detail .post-content {
+  padding: 30px 20px;
+  margin: 0 auto;
+  max-width: 600px; }
+  /* line 1263, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .post-detail .post-content img {
+    display: block;
+    margin-bottom: 30px;
+    width: 100%; }
+  /* line 1268, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .post-detail .post-content a {
+    border-bottom: 1px solid #5a6276; }
+  /* line 1271, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .post-detail .post-content a:hover {
+    border-bottom: 2px solid #5a6276; }
+  /* line 1274, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .post-detail .post-content ul {
+    display: block;
+    padding-left: 10px;
+    margin-bottom: 20px; }
+    /* line 1278, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .post-detail .post-content ul li {
+      padding-left: 10px;
+      border-left: 1px solid rgba(23, 28, 47, 0.2);
+      list-style-type: bullet;
+      margin-bottom: 10px; }
+
+/* line 1288, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.post-preview-list {
+  padding: 80px 0 50px 0; }
+  /* line 1290, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .post-preview-list .post-preview {
+    border: 1px solid #E7E8EA;
+    background: #fff;
+    padding: 20px;
+    margin: 0 auto 30px auto;
+    max-width: 600px; }
+
+/* line 1303, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.contact {
+  background: #fcfcfc; }
+  @media (min-width: 640px) {
+    /* line 1305, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .contact .contact-wrap {
+      display: flex; } }
+  /* line 1309, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .contact .contact-wrap .col-left {
+    padding: 30px 20px 30px 20px; }
+    @media (min-width: 640px) {
+      /* line 1309, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .contact .contact-wrap .col-left {
+        flex: 50%;
+        padding: 30px 20px 30px 30px; } }
+    @media (min-width: 800px) {
+      /* line 1309, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .contact .contact-wrap .col-left {
+        flex: 30%; } }
+    @media (min-width: 960px) {
+      /* line 1309, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .contact .contact-wrap .col-left {
+        flex: 25%; } }
+    /* line 1324, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .contact .contact-wrap .col-left .contact-social-list ul li a {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 18px;
+      padding-left: 36px;
+      -moz-transition: all 0.2s ease-out 0.1s;
+      -o-transition: all 0.2s ease-out 0.1s;
+      -webkit-transition: all 0.2s ease-out;
+      -webkit-transition-delay: 0.1s;
+      transition: all 0.2s ease-out 0.1s; }
+      /* line 1334, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .contact .contact-wrap .col-left .contact-social-list ul li a span svg {
+        fill: #5a6276;
+        height: 24px;
+        width: 24px;
+        margin-top: -12px;
+        top: 50%;
+        position: absolute;
+        left: 0;
+        -moz-transition: all 0.2s ease-out 0.1s;
+        -o-transition: all 0.2s ease-out 0.1s;
+        -webkit-transition: all 0.2s ease-out;
+        -webkit-transition-delay: 0.1s;
+        transition: all 0.2s ease-out 0.1s; }
+    /* line 1346, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .contact .contact-wrap .col-left .contact-social-list ul li a:hover {
+      color: #171c2f; }
+      /* line 1349, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .contact .contact-wrap .col-left .contact-social-list ul li a:hover span svg {
+        fill: #171c2f; }
+  @media (min-width: 640px) {
+    /* line 1358, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .contact .contact-wrap .col-right {
+      flex: 50%; } }
+  @media (min-width: 800px) {
+    /* line 1358, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .contact .contact-wrap .col-right {
+      flex: 70%; } }
+  @media (min-width: 960px) {
+    /* line 1358, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .contact .contact-wrap .col-right {
+      flex: 75%; } }
+  /* line 1370, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .contact .instafeed {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    /* line 1374, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+    .contact .instafeed li {
+      display: block;
+      flex: 50%; }
+      @media (min-width: 800px) {
+        /* line 1374, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+        .contact .instafeed li {
+          flex: 33.33%; } }
+      @media (min-width: 1200px) {
+        /* line 1374, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+        .contact .instafeed li {
+          flex: 25%; } }
+      /* line 1383, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+      .contact .instafeed li img {
+        width: 100%;
+        display: block;
+        height: auto; }
+
+/* line 1397, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.projects_archive h3 {
+  margin-bottom: 16px; }
+/* line 1400, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+.projects_archive ul {
+  margin-bottom: 40px; }
+  /* line 1402, /Users/twahlin/Documents/GitHub/tom-wahlin-v4/source/stylesheets/all.css.scss */
+  .projects_archive ul li {
+    margin-bottom: 8px; }

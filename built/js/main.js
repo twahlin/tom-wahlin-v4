@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".nav-toggle").click(function(){$(".masthead").toggleClass("nav-push"),$(".masthead-wrap nav ul li a").toggleClass("nav-open")}),window.addEventListener("load",function(){setTimeout(function(){window.scrollTo(0,1)},0)})});
